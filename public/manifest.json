@@ -3,6 +3,7 @@
   "name": "OGP Dev Tool",
   "description": "Chrome Extension, TypeScript, Visual Studio Code",
   "version": "1.0",
+  "devtools_page": "devtools_page.html",
   "options_ui": {
     "page": "options.html"
   },

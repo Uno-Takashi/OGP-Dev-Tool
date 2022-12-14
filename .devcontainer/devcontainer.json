@@ -10,8 +10,9 @@
         "editor.formatOnPaste": true
     },
     "extensions": [
-        "ms-azuretools.vscode-docker",
-        "yzhang.markdown-all-in-one",
-        "dsznajder.es7-react-js-snippets"
-    ]
+		"ms-azuretools.vscode-docker",
+		"yzhang.markdown-all-in-one",
+		"dsznajder.es7-react-js-snippets",
+		"ecmel.vscode-html-css"
+	]
 }
