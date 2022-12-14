@@ -9,3 +9,4 @@ services:
     tty: true
     volumes:
       - ./:/app
+      - ~/.ssh:/root/.ssh/
