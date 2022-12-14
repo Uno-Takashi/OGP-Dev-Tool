@@ -1,0 +1,11 @@
+version: '3'
+services:
+  typescript:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'typescript'
+    command: npm run watch
+    tty: true
+    volumes:
+      - ./:/app

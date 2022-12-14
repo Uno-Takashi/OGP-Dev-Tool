@@ -1,0 +1,16 @@
+{
+    "name": "Typescript",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "typescript",
+    "workspaceFolder": "/app/",
+    "settings": {
+        "editor.formatOnSave": true, // ファイルセーブ時にフォーマットかけるように設定
+        "editor.formatOnPaste": true
+    },
+    "extensions": [
+        "ms-azuretools.vscode-docker",
+        "yzhang.markdown-all-in-one"
+    ]
+}
