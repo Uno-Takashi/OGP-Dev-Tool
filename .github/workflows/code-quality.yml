@@ -1,0 +1,16 @@
+name: Code Quality
+on:
+  push:
+
+jobs:
+  njsscan:
+    runs-on: ubuntu
+    name: njsscan check
+    steps:
+      - name: Checkout from Repos
+        uses: actions/checkout@v2
+      - name: run nodejs-scan
+        id: njsscan
+        uses: ajinabraham/njsscan-action@master
+        with:
+          args: "./src"
