@@ -12,6 +12,10 @@ module.exports = {
       devtools_page: path.join(srcDir, 'devtools_page.tsx'),
       devtools_panel: path.join(srcDir, 'devtools_panel.tsx'),
     },
+    watchOptions: {
+        ignored: /node_modules/,
+        poll: 5000
+    },
     output: {
         path: path.join(__dirname, "../dist/js"),
         filename: "[name].js",
