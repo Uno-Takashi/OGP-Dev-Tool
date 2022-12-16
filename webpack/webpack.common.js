@@ -10,6 +10,7 @@ module.exports = {
       background: path.join(srcDir, 'background.ts'),
       content_script: path.join(srcDir, 'content_script.tsx'),
       devtools_page: path.join(srcDir, 'devtools_page.tsx'),
+      devtools_panel: path.join(srcDir, 'devtools_panel.tsx'),
     },
     output: {
         path: path.join(__dirname, "../dist/js"),
@@ -34,6 +35,10 @@ module.exports = {
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
+        alias: {
+        querystring: "querystring-es3",
+        process: "process/browser",
+        },
     },
     plugins: [
         new CopyPlugin({
