@@ -1,7 +1,10 @@
+import { OGPMetaParser } from "./MetaData"
+
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  console.log(sender);
   const metas = document.getElementsByTagName("meta");
-  sendResponse({ meta: metas[0], });
+  const ogpmp = new OGPMetaParser(metas);
+  ogpmp.build();
+  sendResponse(ogpmp.to_json());
   return true;
 });
 
