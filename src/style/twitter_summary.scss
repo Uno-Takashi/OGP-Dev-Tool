@@ -1,0 +1,30 @@
+.twitter_summary_pc {
+    display: flex;
+    border-radius: 0.85714em;
+    border: 1px solid #E1E8ED;
+    overflow: hidden;
+    max-height: 125px;
+    height: 100%;
+    width: 560px;
+}
+
+.preview_img {
+    background-color: unset;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    text-align: center;
+    max-width: 100%;
+    position: relative !important;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.preview_text {
+    width: auto;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}

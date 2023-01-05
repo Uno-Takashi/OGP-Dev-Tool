@@ -14,6 +14,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import "./style/panel.scss"
+import "./style/twitter_summary.scss"
 
 
 
@@ -33,13 +34,33 @@ const Panel = () => {
         );
     }
 
-    function createData(
+    function create_table_data(
         tag: string,
         ogp_type: string,
         content: string,
         content_value: string = "",
     ) {
         return { tag, ogp_type, content, content_value };
+    }
+
+    function get_background_url() {
+        let background_url = ""
+        metaInfo["ogp"].forEach((meta) => {
+            if (meta["ogp_type"] == "og:image") {
+                background_url = meta["content_value"];
+            }
+        });
+        return "url(" + background_url + ")"
+    }
+
+    function get_title() {
+        let title = ""
+        metaInfo["ogp"].forEach((meta) => {
+            if (meta["ogp_type"] == "og:title") {
+                title = meta["content_value"];
+            }
+        });
+        return title
     }
 
     if (isLoading) {
@@ -51,10 +72,9 @@ const Panel = () => {
         )
     }
     else {
-        console.log(metaInfo);
         const rows: any[] = []
         metaInfo["ogp"].forEach((row) => (
-            rows.push(createData(row["tag"], row["ogp_type"], row["content"], row["content_value"]))
+            rows.push(create_table_data(row["tag"], row["ogp_type"], row["content"], row["content_value"]))
         ))
 
         return (
@@ -65,16 +85,18 @@ const Panel = () => {
                 <IconButton >
                     <Brightness4Icon />
                 </IconButton>
-                <IconButton >
+                <IconButton onClick={() => {
+                    chrome.tabs.create({ url: "https://github.com/Uno-Takashi/OGP-Dev-Tool" });
+                }}>
                     <GitHubIcon />
                 </IconButton>
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 350 }} aria-label="ogp info" className="ogp_info_table">
                         <TableHead>
                             <TableRow>
-                                <TableCell align="left">OGP Type</TableCell>
-                                <TableCell align="left">tag</TableCell>
-                                <TableCell align="left">Content</TableCell>
+                                <TableCell align="center">OGP Type</TableCell>
+                                <TableCell align="center">tag</TableCell>
+                                <TableCell align="center">Content</TableCell>
                                 <TableCell align="left">Content value</TableCell>
                             </TableRow>
                         </TableHead>
@@ -82,15 +104,24 @@ const Panel = () => {
                             {rows.map((row) => (
                                 <TableRow>
                                     <TableCell align="center">{row.ogp_type}</TableCell>
-                                    <TableCell align="left">{row.tag}</TableCell>
-                                    <TableCell align="left">{row.content}</TableCell>
+                                    <TableCell align="center">{row.tag}</TableCell>
+                                    <TableCell align="center">{row.content}</TableCell>
                                     <TableCell align="left" className="ogp_content_cell">{row.content_value}</TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
                     </Table>
                 </TableContainer>
-            </React.Fragment>
+                <div className="twitter_summary_pc">
+                    <div className="preview_img" style={{ background: get_background_url() }}>
+                    </div>
+                    <div className="preview_text">
+                        <p className="preview_title">{get_title()}</p>
+                        <p className="preview_description"></p>
+                    </div>
+                </div>
+
+            </React.Fragment >
         );
     }
 }
