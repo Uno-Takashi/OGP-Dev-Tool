@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import CircularProgress from '@mui/material/CircularProgress';
 import CachedIcon from '@mui/icons-material/Cached';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkIcon from '@mui/icons-material/Link';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import IconButton from '@mui/material/IconButton';
 import Table from '@mui/material/Table';
@@ -12,7 +14,9 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+import Link from '@mui/material/Link';
 import "./style/panel.scss"
 import "./style/twitter_summary.scss"
 
@@ -61,6 +65,15 @@ const Panel = () => {
             }
         });
         return title
+    }
+    function get_description() {
+        let description = ""
+        metaInfo["ogp"].forEach((meta) => {
+            if (meta["ogp_type"] == "og:description") {
+                description = meta["content_value"];
+            }
+        });
+        return description
     }
 
     if (isLoading) {
@@ -112,12 +125,19 @@ const Panel = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
+                <Link href="#" underline="none" color="inherit">
+                <Typography  variant="h6" component="h2">
+                    <TwitterIcon sx={{ color: "#1DA1F2" ,verticalAlign: "middle"}} ></TwitterIcon>
+                    Twitter
+                    <LinkIcon sx={{ verticalAlign: "middle"}} fontSize="small"></LinkIcon>
+                </Typography >
+                </Link>
                 <div className="twitter_summary_pc">
                     <div className="preview_img" style={{ background: get_background_url() }}>
                     </div>
                     <div className="preview_text">
                         <p className="preview_title">{get_title()}</p>
-                        <p className="preview_description"></p>
+                        <p className="preview_description">{get_description()}</p>
                     </div>
                 </div>
 
