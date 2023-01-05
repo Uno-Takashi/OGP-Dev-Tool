@@ -28,3 +28,29 @@
     padding: 6px 8px;
     box-sizing: border-box;
 }
+
+.preview_description{
+    margin-top: 0;
+    line-height: 17px;
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-height: 20px;
+    word-break: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    color: #606770;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}

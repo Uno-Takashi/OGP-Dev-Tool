@@ -125,7 +125,7 @@ const Panel = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Link href="#" underline="none" color="inherit">
+                <Link href="#" onClick={()=>{chrome.tabs.create({ url: "https://cards-dev.twitter.com/validator" });}} underline="none" color="inherit">
                 <Typography  variant="h6" component="h2">
                     <TwitterIcon sx={{ color: "#1DA1F2" ,verticalAlign: "middle"}} ></TwitterIcon>
                     Twitter
