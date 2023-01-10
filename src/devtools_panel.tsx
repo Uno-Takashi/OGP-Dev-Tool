@@ -17,6 +17,7 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
 import "./style/panel.scss"
 import "./style/twitter_summary.scss"
 
@@ -125,21 +126,34 @@ const Panel = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Link href="#" onClick={()=>{chrome.tabs.create({ url: "https://cards-dev.twitter.com/validator" });}} underline="none" color="inherit">
-                <Typography  variant="h6" component="h2">
-                    <TwitterIcon sx={{ color: "#1DA1F2" ,verticalAlign: "middle"}} ></TwitterIcon>
-                    Twitter
-                    <LinkIcon sx={{ verticalAlign: "middle"}} fontSize="small"></LinkIcon>
-                </Typography >
-                </Link>
-                <div className="twitter_summary_pc">
-                    <div className="preview_img" style={{ background: get_background_url() }}>
-                    </div>
-                    <div className="preview_text">
-                        <p className="preview_title">{get_title()}</p>
-                        <p className="preview_description">{get_description()}</p>
-                    </div>
-                </div>
+
+                <Grid container spacing={1} className="sns_title">
+                    <Grid xs={12} >
+                        <Link href="#" onClick={()=>{chrome.tabs.create({ url: "https://cards-dev.twitter.com/validator" });}} underline="none" color="inherit">
+                            <Typography  variant="h6" component="h2">
+                                <TwitterIcon sx={{ color: "#1DA1F2" ,verticalAlign: "middle"}} ></TwitterIcon>
+                                Twitter
+                                <LinkIcon sx={{ verticalAlign: "middle"}} fontSize="small"></LinkIcon>
+                            </Typography >
+                        </Link>
+                    </Grid> 
+                </Grid> 
+
+                <Grid container spacing={2}>
+                    <Grid xs={12} md={6}>
+                    <Typography variant="subtitle1" component="h3">PC</Typography>
+                        <div className="twitter_summary_pc">
+                            <div className="preview_img" style={{ background: get_background_url() }}>
+                            </div>
+                            <div className="preview_text">
+                                <p className="preview_title">{get_title()}</p>
+                                <p className="preview_description">{get_description()}</p>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid xs={12} lg={6}>
+                    </Grid>
+                </Grid>
 
             </React.Fragment >
         );
