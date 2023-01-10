@@ -8,6 +8,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkIcon from '@mui/icons-material/Link';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import IconButton from '@mui/material/IconButton';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -56,6 +58,18 @@ const Panel = () => {
             }
         });
         return "url(" + background_url + ")"
+    }
+
+    function get_origin() {
+        let url = ""
+        metaInfo["ogp"].forEach((meta) => {
+            if (meta["ogp_type"] == "og:url") {
+                url = meta["content_value"];
+            }
+        });
+        const parser = new URL(url);
+        return parser.hostname.toString();
+
     }
 
     function get_title() {
@@ -127,22 +141,40 @@ const Panel = () => {
                     </Table>
                 </TableContainer>
 
-                <Grid container spacing={1} className="sns_title">
+                <Grid container className="sns_title">
                     <Grid xs={12} >
-                        <Link href="#" onClick={()=>{chrome.tabs.create({ url: "https://cards-dev.twitter.com/validator" });}} underline="none" color="inherit">
-                            <Typography  variant="h6" component="h2">
-                                <TwitterIcon sx={{ color: "#1DA1F2" ,verticalAlign: "middle"}} ></TwitterIcon>
+                        <Link href="#" onClick={() => { chrome.tabs.create({ url: "https://cards-dev.twitter.com/validator" }); }} underline="none" color="inherit">
+                            <Typography variant="h6" component="h2">
+                                <TwitterIcon sx={{ color: "#1DA1F2", verticalAlign: "middle" }} ></TwitterIcon>
                                 Twitter
-                                <LinkIcon sx={{ verticalAlign: "middle"}} fontSize="small"></LinkIcon>
+                                <LinkIcon sx={{ verticalAlign: "middle" }} fontSize="small"></LinkIcon>
                             </Typography >
                         </Link>
-                    </Grid> 
-                </Grid> 
+                    </Grid>
+                </Grid>
 
-                <Grid container spacing={2}>
+                <Grid container>
                     <Grid xs={12} md={6}>
-                    <Typography variant="subtitle1" component="h3">PC</Typography>
-                        <div className="twitter_summary_pc">
+                        <Typography variant="subtitle1" component="h3">
+                            <LaptopIcon sx={{ verticalAlign: "middle" }} ></LaptopIcon>
+                            PC ( Large )
+                        </Typography>
+                        <div className="twitter_summary_large">
+                            <div className="preview_img" style={{ background: get_background_url() }}>
+                            </div>
+                            <div className="preview_text">
+                                <p className="preview_url">{get_origin()}</p>
+                                <p className="preview_title">{get_title()}</p>
+                                <p className="preview_description">{get_description()}</p>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid xs={12} lg={6}>
+                        <Typography variant="subtitle1" component="h3">
+                            <SmartphoneIcon sx={{ verticalAlign: "middle" }} ></SmartphoneIcon>
+                            SmartPhone( Small )
+                        </Typography>
+                        <div className="twitter_summary_large">
                             <div className="preview_img" style={{ background: get_background_url() }}>
                             </div>
                             <div className="preview_text">
@@ -150,8 +182,6 @@ const Panel = () => {
                                 <p className="preview_description">{get_description()}</p>
                             </div>
                         </div>
-                    </Grid>
-                    <Grid xs={12} lg={6}>
                     </Grid>
                 </Grid>
 
