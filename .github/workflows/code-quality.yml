@@ -4,7 +4,7 @@ on:
 
 jobs:
   njsscan:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     name: njsscan check
     steps:
       - name: Checkout from Repos

@@ -157,7 +157,7 @@ const Panel = () => {
                     <Grid xs={12} md={6}>
                         <Typography variant="subtitle1" component="h3">
                             <LaptopIcon sx={{ verticalAlign: "middle" }} ></LaptopIcon>
-                            PC ( Large )
+                            Summary Card (PC)
                         </Typography>
                         <div className="twitter_summary_large">
                             <div className="preview_img" style={{ background: get_background_url() }}>
@@ -172,12 +172,27 @@ const Panel = () => {
                     <Grid xs={12} lg={6}>
                         <Typography variant="subtitle1" component="h3">
                             <SmartphoneIcon sx={{ verticalAlign: "middle" }} ></SmartphoneIcon>
-                            SmartPhone( Small )
+                            Summary Card (SmartPhone)
+                        </Typography>
+                        <div className="twitter_summary_small">
+                            <div className="preview_img" style={{ background: get_background_url() }}>
+                            </div>
+                            <div className="preview_text">
+                                <p className="preview_url">{get_origin()}</p>
+                                <p className="preview_title">{get_title()}</p>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid xs={12} md={6}>
+                        <Typography variant="subtitle1" component="h3">
+                            <LaptopIcon sx={{ verticalAlign: "middle" }} ></LaptopIcon>
+                            Summary with Large Image Card (PC)
                         </Typography>
                         <div className="twitter_summary_large">
                             <div className="preview_img" style={{ background: get_background_url() }}>
                             </div>
                             <div className="preview_text">
+                                <p className="preview_url">{get_origin()}</p>
                                 <p className="preview_title">{get_title()}</p>
                                 <p className="preview_description">{get_description()}</p>
                             </div>
