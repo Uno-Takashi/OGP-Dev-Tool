@@ -1,0 +1,130 @@
+.twitter_summary_large_image_large {
+    font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    border-radius: 0.85714em;
+    border: 1px solid #E1E8ED;
+    overflow: hidden;
+    max-height: 125px;
+    height: 100%;
+    width: 506px;
+
+    .preview_img {
+        background-color: unset;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        width: 125px;
+        min-width: 125px;
+        height: 125px;
+        text-align: center;
+        max-width: 100%;
+        position: relative !important;
+        background-color: #ccc;
+        text-align: center;
+    }
+
+    .preview_text {
+        width: calc(100% - 125px);
+        padding: 6px 8px;
+        box-sizing: border-box;
+    }
+
+    .preview_title {
+        font-size: 14px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .preview_url {
+        line-height: 17px;
+        font-size: 13px;
+        -webkit-line-clamp: 3;
+        line-height: 20px;
+        word-break: break-word;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        color: rgb(101, 119, 134);
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    .preview_description {
+        line-height: 17px;
+        font-size: 13px;
+        -webkit-line-clamp: 3;
+        line-height: 20px;
+        word-break: break-word;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        color: rgb(101, 119, 134);
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+}
+
+
+.preview_img {
+    background-color: unset;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    text-align: center;
+    max-width: 100%;
+    position: relative !important;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.preview_text {
+    width: auto;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.preview_title {
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.preview_url {
+    line-height: 17px;
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-height: 20px;
+    word-break: break-word;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    color: rgb(101, 119, 134);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}

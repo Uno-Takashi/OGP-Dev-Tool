@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "OGP Dev Tool",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "description": "A developer tool to simulate OGP drawing results.Localhost results can also be easily previewed.",
   "version": "1.0",
   "devtools_page": "devtools_page.html",
   "options_ui": {

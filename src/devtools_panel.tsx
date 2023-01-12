@@ -188,7 +188,7 @@ const Panel = () => {
                             <LaptopIcon sx={{ verticalAlign: "middle" }} ></LaptopIcon>
                             Summary with Large Image Card (PC)
                         </Typography>
-                        <div className="twitter_summary_large">
+                        <div className="twitter_summary_large_image_large">
                             <div className="preview_img" style={{ background: get_background_url() }}>
                             </div>
                             <div className="preview_text">
