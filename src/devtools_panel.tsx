@@ -22,6 +22,7 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import "./style/panel.scss"
 import "./style/twitter_summary.scss"
+import "./style/twitter_summary_large_image.scss"
 
 
 
@@ -61,14 +62,18 @@ const Panel = () => {
     }
 
     function get_origin() {
-        let url = ""
-        metaInfo["ogp"].forEach((meta) => {
-            if (meta["ogp_type"] == "og:url") {
-                url = meta["content_value"];
-            }
-        });
-        const parser = new URL(url);
-        return parser.hostname.toString();
+        try {
+            let url = ""
+            metaInfo["ogp"].forEach((meta) => {
+                if (meta["ogp_type"] == "og:url") {
+                    url = meta["content_value"];
+                }
+            });
+            const parser = new URL(url);
+            return parser.hostname.toString();
+        } catch (e) {
+            return "";
+        }
 
     }
 

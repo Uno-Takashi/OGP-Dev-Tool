@@ -1,11 +1,10 @@
 .twitter_summary_large_image_large {
     font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    display: flex;
+    display: block;
     border-radius: 0.85714em;
     border: 1px solid #E1E8ED;
     overflow: hidden;
-    max-height: 125px;
-    height: 100%;
+    height: auto;
     width: 506px;
 
     .preview_img {
@@ -24,7 +23,6 @@
     }
 
     .preview_text {
-        width: calc(100% - 125px);
         padding: 6px 8px;
         box-sizing: border-box;
     }

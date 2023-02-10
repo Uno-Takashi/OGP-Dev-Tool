@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Code Quality
 on:
   push:
@@ -33,3 +34,21 @@ jobs:
       - uses: peter-evans/create-pull-request@v2.4.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+=======
+name: Code Quality
+on:
+  push:
+
+jobs:
+  njsscan:
+    runs-on: ubuntu-latest
+    name: njsscan check
+    steps:
+      - name: Checkout from Repos
+        uses: actions/checkout@v2
+      - name: run nodejs-scan
+        id: njsscan
+        uses: ajinabraham/njsscan-action@master
+        with:
+          args: "./src"
+>>>>>>> 92eea6603badd9e4e5bd2e9c9c212b2aed38420a
