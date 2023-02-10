@@ -1,4 +1,4 @@
-# Chrome Extension TypeScript Starter
+# OGP Dev Tool
 
 ![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
 [![Code Quality](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml/badge.svg?branch=master)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml)

@@ -1,7 +1,7 @@
 {
-  "name": "obs-dev-tool",
+  "name": "obp-dev-tool",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
+  "description": "This is a validation simulator for developers to review OGP.",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
@@ -10,11 +10,11 @@
     "test": "npx jest",
     "style": "prettier --write \"src/**/*.{ts,tsx}\""
   },
-  "author": "",
+  "author": "Uno Takashi",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+    "url": "https://github.com/Uno-Takashi/OGP-Dev-Tool.git"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
