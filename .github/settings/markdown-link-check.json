@@ -1,0 +1,9 @@
+{
+    "httpHeaders": [
+        {
+            "headers": {
+                "Accept": "text/html"
+            }
+        }
+    ]
+}
