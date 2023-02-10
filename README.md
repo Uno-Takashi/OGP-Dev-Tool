@@ -1,6 +1,7 @@
 # Chrome Extension TypeScript Starter
 
 ![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+[![Code Quality](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml/badge.svg?branch=master)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml)
 
 Chrome Extension, TypeScript and Visual Studio Code
 
@@ -11,6 +12,7 @@ Chrome Extension, TypeScript and Visual Studio Code
 ## Option
 
 * [Visual Studio Code](https://code.visualstudio.com/)
+* [Developing inside a Container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/devcontainers/containers)
 
 ## Includes the following
 
@@ -19,11 +21,11 @@ Chrome Extension, TypeScript and Visual Studio Code
 * React
 * Jest
 * Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
+  * Chrome Storage
+  * Options Version 2
+  * content script
+  * count up badge number
+  * background
 
 ## Project Structure
 
@@ -34,7 +36,7 @@ Chrome Extension, TypeScript and Visual Studio Code
 
 ## Setup
 
-```
+```bash
 npm install
 ```
 
@@ -44,7 +46,7 @@ npm install
 
 ## Build
 
-```
+```bash
 npm run build
 ```
 
@@ -52,7 +54,7 @@ npm run build
 
 ### terminal
 
-```
+```bash
 npm run watch
 ```
 
@@ -67,4 +69,5 @@ type `Ctrl + Shift + B`
 Load `dist` directory
 
 ## Test
+
 `npx jest` or `npm run test`
