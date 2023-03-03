@@ -48,3 +48,12 @@ jobs:
           asset_path: ./release.zip
           asset_name: release.zip
           asset_content_type: application/zip
+      # - name: Upload to Chrome Web Store
+      #   uses: mobilefirstllc/cws-publish@latest
+      #   with:
+      #     action: "upload" # one of: upload, publish, testers
+      #     client_id: ${{ secrets.CLIENT }}
+      #     client_secret: ${{ secrets.SECRET }}
+      #     refresh_token: ${{ secrets.TOKEN }}
+      #     extension_id: "fehhelhhiplgdhpoebcgnhcdcfahmjjo"
+      #     zip_file: "release.zip"
