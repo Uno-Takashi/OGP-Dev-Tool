@@ -5,6 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import CachedIcon from '@mui/icons-material/Cached';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkIcon from '@mui/icons-material/Link';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import IconButton from '@mui/material/IconButton';
@@ -22,10 +23,10 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Tooltip from '@mui/material/Tooltip';
 import HelpIcon from '@mui/icons-material/Help';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import "./style/panel.scss"
 import "./style/twitter_summary.scss"
 import "./style/twitter_summary_large_image.scss"
-import { Help } from "@mui/icons-material";
 
 
 
@@ -117,17 +118,23 @@ const Panel = () => {
 
         return (
             <React.Fragment>
-                <IconButton onClick={update_metainfo}>
-                    <CachedIcon />
-                </IconButton>
-                <IconButton >
-                    <Brightness4Icon />
-                </IconButton>
-                <IconButton onClick={() => {
-                    chrome.tabs.create({ url: "https://github.com/Uno-Takashi/OGP-Dev-Tool" });
-                }}>
-                    <GitHubIcon />
-                </IconButton>
+                <Tooltip title="Reaload OGP Contents">
+                    <IconButton onClick={update_metainfo}>
+                        <CachedIcon />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Change mode (Not Work)">
+                    <IconButton >
+                        <Brightness4Icon />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Access to OGP Dev Tool Repository">
+                    <IconButton onClick={() => {
+                        chrome.tabs.create({ url: "https://github.com/Uno-Takashi/OGP-Dev-Tool" });
+                    }}>
+                        <GitHubIcon />
+                    </IconButton>
+                </Tooltip>
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 350 }} aria-label="ogp info" className="ogp_info_table">
                         <TableHead>
@@ -151,7 +158,14 @@ const Panel = () => {
                                     </TableCell>
                                     <TableCell align="center">{row.tag}</TableCell>
                                     <TableCell align="center">{row.content}</TableCell>
-                                    <TableCell align="left" className="ogp_content_cell">{row.content_value}</TableCell>
+                                    <TableCell align="left" className="ogp_content_cell">
+                                        {row.content_value}
+                                        <IconButton onClick={() => {
+                                            navigator.clipboard.writeText(row.content_value)
+                                        }}>
+                                            <ContentCopyIcon sx={{ fontSize: 15 }} />
+                                        </IconButton >
+                                    </TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
@@ -214,6 +228,17 @@ const Panel = () => {
                                 <p className="preview_title">{get_title()}</p>
                             </div>
                         </div>
+                    </Grid>
+                </Grid>
+                <Grid container className="sns_title">
+                    <Grid xs={12} >
+                        <Link href="#" onClick={() => { chrome.tabs.create({ url: "https://developers.facebook.com/tools/debug/" }); }} underline="none" color="inherit">
+                            <Typography variant="h6" component="h2">
+                                <FacebookIcon sx={{ color: "#1DA1F2", verticalAlign: "middle" }} ></FacebookIcon>
+                                Facebook
+                                <LinkIcon sx={{ verticalAlign: "middle" }} fontSize="small"></LinkIcon>
+                            </Typography >
+                        </Link>
                     </Grid>
                 </Grid>
 
