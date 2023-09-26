@@ -20,9 +20,12 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
+import HelpIcon from '@mui/icons-material/Help';
 import "./style/panel.scss"
 import "./style/twitter_summary.scss"
 import "./style/twitter_summary_large_image.scss"
+import { Help } from "@mui/icons-material";
 
 
 
@@ -44,11 +47,12 @@ const Panel = () => {
 
     function create_table_data(
         tag: string,
+        tip: string,
         ogp_type: string,
         content: string,
         content_value: string = "",
     ) {
-        return { tag, ogp_type, content, content_value };
+        return { tag, tip, ogp_type, content, content_value };
     }
 
     function get_background_url() {
@@ -86,6 +90,7 @@ const Panel = () => {
         });
         return title
     }
+
     function get_description() {
         let description = ""
         metaInfo["ogp"].forEach((meta) => {
@@ -107,7 +112,7 @@ const Panel = () => {
     else {
         const rows: any[] = []
         metaInfo["ogp"].forEach((row) => (
-            rows.push(create_table_data(row["tag"], row["ogp_type"], row["content"], row["content_value"]))
+            rows.push(create_table_data(row["tag"], row["tip"], row["ogp_type"], row["content"], row["content_value"]))
         ))
 
         return (
@@ -136,7 +141,14 @@ const Panel = () => {
                         <TableBody>
                             {rows.map((row) => (
                                 <TableRow>
-                                    <TableCell align="center">{row.ogp_type}</TableCell>
+                                    <TableCell align="center">
+                                        {row.ogp_type}
+                                        <Tooltip title={row.tip}>
+                                            <IconButton>
+                                                <HelpIcon sx={{ fontSize: 15 }} />
+                                            </IconButton>
+                                        </Tooltip>
+                                    </TableCell>
                                     <TableCell align="center">{row.tag}</TableCell>
                                     <TableCell align="center">{row.content}</TableCell>
                                     <TableCell align="left" className="ogp_content_cell">{row.content_value}</TableCell>
