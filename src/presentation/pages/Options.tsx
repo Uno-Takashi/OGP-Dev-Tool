@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -36,16 +36,12 @@ const LANGUAGES: { value: SupportedLanguage; label: string }[] = [
 
 function Options() {
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState<SupportedLanguage>('en');
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState<SupportedLanguage>(() => {
+    const stored = localStorage.getItem('language');
+    return (stored as SupportedLanguage) ?? 'en';
+  });
+  const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('isDarkMode') === 'true');
   const [saved, setSaved] = useState(false);
-
-  useEffect(() => {
-    const lang = localStorage.getItem('language');
-    if (lang) setLanguage(lang as SupportedLanguage);
-    const dark = localStorage.getItem('isDarkMode');
-    if (dark !== null) setIsDarkMode(dark === 'true');
-  }, []);
 
   const theme = createTheme({ palette: { mode: isDarkMode ? 'dark' : 'light' } });
 
