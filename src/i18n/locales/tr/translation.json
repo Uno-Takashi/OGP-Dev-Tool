@@ -7,6 +7,7 @@
     "exportJson": "JSON olarak dışa aktar",
     "exportHtml": "HTML olarak dışa aktar",
     "github": "GitHub'da kaynağı görüntüle",
+    "settings": "Ayarlar",
     "loading": "Yükleniyor...",
     "table": {
       "ogpType": "OGP Türü",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Open Graph Protocol Denetleyici",
     "currentUrl": "Geçerli URL",
+    "downloadUrl": "URL'yi metin dosyası olarak indir",
     "howToUse": "Nasıl kullanılır",
     "step1": "Sayfa aç",
     "step1Desc": "İncelemek istediğiniz web sitesine gidin",

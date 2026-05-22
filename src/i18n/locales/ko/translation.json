@@ -7,6 +7,7 @@
     "exportJson": "JSON으로 내보내기",
     "exportHtml": "HTML로 내보내기",
     "github": "GitHub에서 소스 보기",
+    "settings": "설정",
     "loading": "로딩 중...",
     "table": {
       "ogpType": "OGP 유형",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Open Graph Protocol 검사기",
     "currentUrl": "현재 URL",
+    "downloadUrl": "URL을 텍스트 파일로 다운로드",
     "howToUse": "사용 방법",
     "step1": "페이지 열기",
     "step1Desc": "검사하려는 웹사이트로 이동하세요",

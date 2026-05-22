@@ -7,6 +7,7 @@
     "exportJson": "Ekspor sebagai JSON",
     "exportHtml": "Ekspor sebagai HTML",
     "github": "Lihat kode sumber di GitHub",
+    "settings": "Pengaturan",
     "loading": "Memuat...",
     "table": {
       "ogpType": "Tipe OGP",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Inspektor Open Graph Protocol",
     "currentUrl": "URL saat ini",
+    "downloadUrl": "Unduh URL sebagai file teks",
     "howToUse": "Cara menggunakan",
     "step1": "Buka halaman",
     "step1Desc": "Navigasi ke situs web yang ingin Anda periksa",

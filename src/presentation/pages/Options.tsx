@@ -69,7 +69,11 @@ function Options() {
           <Select
             value={language}
             label={t('options.language')}
-            onChange={(e: SelectChangeEvent) => setLanguage(e.target.value as SupportedLanguage)}
+            onChange={(e: SelectChangeEvent) => {
+              const lang = e.target.value as SupportedLanguage;
+              setLanguage(lang);
+              i18n.changeLanguage(lang);
+            }}
           >
             {LANGUAGES.map((l) => (
               <MenuItem key={l.value} value={l.value}>

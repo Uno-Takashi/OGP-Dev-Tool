@@ -7,6 +7,7 @@
     "exportJson": "Exportar como JSON",
     "exportHtml": "Exportar como HTML",
     "github": "Ver código-fonte no GitHub",
+    "settings": "Configurações",
     "loading": "Carregando...",
     "table": {
       "ogpType": "Tipo OGP",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Inspetor Open Graph Protocol",
     "currentUrl": "URL atual",
+    "downloadUrl": "Baixar URL como arquivo de texto",
     "howToUse": "Como usar",
     "step1": "Abrir uma página",
     "step1Desc": "Navegue até o site que deseja inspecionar",
