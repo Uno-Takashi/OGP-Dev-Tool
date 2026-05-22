@@ -20,7 +20,7 @@ export function ShadcnPreview({ imageUrl, title, description, origin, siteName }
   return (
     <>
       <Grid container sx={{ mt: 2, mb: 1 }}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Typography variant="h6" component="h2" sx={{ fontWeight: 600 }}>
             {t('preview.shadcn.title')}
           </Typography>

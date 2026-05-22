@@ -29,7 +29,7 @@ export function AntDesignPreview({ imageUrl, title, description, origin }: Props
   return (
     <>
       <Grid container sx={{ mt: 2, mb: 1 }}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <MuiTypography variant="h6" component="h2">
             {t('preview.antd.title')}
           </MuiTypography>

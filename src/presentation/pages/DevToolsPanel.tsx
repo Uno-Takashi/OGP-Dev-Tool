@@ -85,7 +85,7 @@ function Panel() {
       </AppBar>
 
       {isInitialLoad ? (
-        <Box display="flex" justifyContent="center" alignItems="center" minHeight={200}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 200 }}>
           <CircularProgress />
           <Typography sx={{ ml: 2 }}>{t('panel.loading')}</Typography>
         </Box>

@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import { useTranslation } from 'react-i18next';
@@ -57,7 +57,7 @@ export function OGPTable({ tags }: Props) {
                 {row.ogpType}
                 <Tooltip title={t(row.tipKey)} arrow>
                   <IconButton size="small">
-                    <HelpOutlineIcon sx={{ fontSize: 14 }} />
+                    <InfoOutlinedIcon sx={{ fontSize: 14 }} />
                   </IconButton>
                 </Tooltip>
               </TableCell>

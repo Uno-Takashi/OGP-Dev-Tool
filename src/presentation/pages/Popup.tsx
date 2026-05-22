@@ -22,7 +22,7 @@ function Popup() {
       <Typography variant="h6" gutterBottom>
         OGP Dev Tool
       </Typography>
-      <Typography variant="caption" color="text.secondary" display="block">
+      <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>
         Current URL
       </Typography>
       <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>

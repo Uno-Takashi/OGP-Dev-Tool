@@ -27,7 +27,7 @@ export function TwitterPreview({ imageUrl, title, description, origin }: Props) 
   return (
     <>
       <Grid container className="sns_title" sx={{ mt: 2, mb: 1 }}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Link
             href="#"
             onClick={(e: React.MouseEvent) => {
@@ -46,7 +46,7 @@ export function TwitterPreview({ imageUrl, title, description, origin }: Props) 
         </Grid>
       </Grid>
 
-      <Grid item xs={12} sx={{ mb: 2 }}>
+      <Grid size={12} sx={{ mb: 2 }}>
         <Typography variant="subtitle1" component="h3">
           <LaptopIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
           {t('preview.x.summaryLargeImagePc')}
@@ -62,7 +62,7 @@ export function TwitterPreview({ imageUrl, title, description, origin }: Props) 
       </Grid>
 
       <Grid container sx={{ mb: 2 }}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Typography variant="subtitle1" component="h3">
             <LaptopIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
             {t('preview.x.summaryCardPc')}
@@ -76,7 +76,7 @@ export function TwitterPreview({ imageUrl, title, description, origin }: Props) 
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} lg={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant="subtitle1" component="h3">
             <SmartphoneIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
             {t('preview.x.summaryCardSp')}

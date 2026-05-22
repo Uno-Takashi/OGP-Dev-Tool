@@ -19,7 +19,7 @@ export function MUIPreview({ imageUrl, title, description, origin }: Props) {
   return (
     <>
       <Grid container sx={{ mt: 2, mb: 1 }}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Typography variant="h6" component="h2">
             {t('preview.mui.title')}
           </Typography>
@@ -40,7 +40,7 @@ export function MUIPreview({ imageUrl, title, description, origin }: Props) {
           <Typography gutterBottom variant="h6" component="h3" noWrap>
             {title}
           </Typography>
-          <Typography variant="caption" color="text.secondary" display="block" gutterBottom>
+          <Typography variant="caption" color="text.secondary" gutterBottom sx={{ display: 'block' }}>
             {origin}
           </Typography>
           <Typography

@@ -20,7 +20,7 @@ export function FacebookPreview({ imageUrl, title, description, origin }: Props)
   return (
     <>
       <Grid container className="sns_title" sx={{ mt: 2, mb: 1 }}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Link
             href="#"
             onClick={(e: React.MouseEvent) => {
