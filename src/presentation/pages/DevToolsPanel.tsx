@@ -99,6 +99,15 @@ function Panel() {
               <CachedIcon />
             </IconButton>
           </Tooltip>
+          <Tooltip title={t('panel.autoReload')}>
+            <Switch
+              checked={isAutoReload}
+              onChange={handleAutoReloadToggle}
+              size="small"
+              color="primary"
+              slotProps={{ input: { 'aria-label': t('panel.autoReload') } }}
+            />
+          </Tooltip>
           <Tooltip title={t('panel.exportJson')}>
             <span>
               <IconButton
@@ -122,15 +131,6 @@ function Panel() {
                 <CodeIcon />
               </IconButton>
             </span>
-          </Tooltip>
-          <Tooltip title={t('panel.autoReload')}>
-            <Switch
-              checked={isAutoReload}
-              onChange={handleAutoReloadToggle}
-              size="small"
-              color="primary"
-              slotProps={{ input: { 'aria-label': t('panel.autoReload') } }}
-            />
           </Tooltip>
           <DarkModeToggle />
           <Tooltip title={t('panel.github')}>
