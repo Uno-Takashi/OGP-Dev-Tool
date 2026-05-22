@@ -27,7 +27,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build
         run: npm run build
@@ -43,3 +43,13 @@ jobs:
           body: ${{ github.event.inputs.release_note }}
           files: release.zip
           generate_release_notes: true
+
+      - name: Upload to Chrome Web Store
+        uses: tarnhelm/chrome-webstore-upload-action@v1
+        with:
+          extension-id: ${{ secrets.EXTENSION_ID }}
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          refresh-token: ${{ secrets.REFRESH_TOKEN }}
+          zip-path: release.zip
+          publish: true
