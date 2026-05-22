@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "Tải lại dữ liệu OGP",
+    "reloadSuccess": "Dữ liệu OGP đã được tải lại",
+    "toggleDarkMode": "Chuyển đổi chế độ tối",
+    "github": "Xem mã nguồn trên GitHub",
+    "loading": "Đang tải...",
+    "table": {
+      "ogpType": "Loại OGP",
+      "tag": "Thẻ",
+      "content": "Thuộc tính nội dung",
+      "contentValue": "Giá trị nội dung",
+      "copy": "Sao chép vào clipboard",
+      "copied": "Đã sao chép!"
+    }
+  },
+  "preview": {
+    "sectionTitle": "Xem trước",
+    "x": {
+      "title": "Thẻ X",
+      "validator": "Mở trình xác thực thẻ X",
+      "summaryLargeImagePc": "Tóm tắt với hình ảnh lớn (PC)",
+      "summaryCardPc": "Thẻ tóm tắt (PC)",
+      "summaryCardSp": "Thẻ tóm tắt (Điện thoại thông minh)"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "Mở trình gỡ lỗi Facebook",
+      "preview": "Xem trước liên kết Facebook"
+    },
+    "shadcn": {
+      "title": "Xem trước thẻ shadcn/ui"
+    },
+    "antd": {
+      "title": "Xem trước thẻ Ant Design"
+    },
+    "mui": {
+      "title": "Xem trước thẻ Material UI"
+    }
+  },
+  "options": {
+    "title": "Tùy chọn OGP Dev Tool",
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "save": "Lưu",
+    "saved": "Đã lưu!"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "URL hiện tại",
+    "openDevtools": "Mở trong DevTools"
+  },
+  "common": {
+    "language": "Ngôn ngữ",
+    "darkMode": "Chế độ tối",
+    "lightMode": "Chế độ sáng"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "URL trang – phải là URL tuyệt đối.",
+      "ogType":              "Loại nội dung: website, article, blog, product, v.v.",
+      "ogTitle":             "Tiêu đề trang, thường không có tên trang web.",
+      "ogDescription":       "Mô tả trang, thường 15–30 từ.",
+      "ogSiteName":          "Tên trang web.",
+      "ogLocale":            "Ngôn ngữ và lãnh thổ nội dung, ví dụ vi_VN hoặc en_US.",
+      "ogImage":             "URL hình ảnh thu nhỏ (tuyệt đối). Khuyến nghị 1200×630 px trở lên.",
+      "ogImageSecureUrl":    "URL HTTPS cho hình ảnh (dùng khi trang được phục vụ qua HTTPS).",
+      "ogImageType":         "Kiểu MIME của hình ảnh, ví dụ image/jpeg hoặc image/png.",
+      "ogImageWidth":        "Chiều rộng hình ảnh tính bằng pixel.",
+      "ogImageHeight":       "Chiều cao hình ảnh tính bằng pixel.",
+      "ogImageAlt":          "Văn bản thay thế cho hình ảnh, được sử dụng bởi trình đọc màn hình.",
+      "twitterCard":         "Loại thẻ X: summary, summary_large_image, app hoặc player.",
+      "twitterSite":         "Tài khoản X (@tênngườidùng) của trang web.",
+      "twitterCreator":      "Tài khoản X (@tênngườidùng) của tác giả nội dung.",
+      "twitterTitle":        "Tiêu đề cho thẻ X. Ghi đè og:title nếu được đặt.",
+      "twitterDescription":  "Mô tả cho thẻ X. Ghi đè og:description nếu được đặt.",
+      "twitterImage":        "URL hình ảnh cho thẻ X. Ghi đè og:image nếu được đặt.",
+      "fbAppId":             "ID ứng dụng Facebook. Phải được đăng ký trên Meta for Developers.",
+      "articleAuthor":       "URL hồ sơ của tác giả bài viết.",
+      "articlePublishedTime":"Dấu thời gian xuất bản ISO 8601, ví dụ 2024-01-01T00:00:00+00:00.",
+      "articleModifiedTime": "Dấu thời gian sửa đổi lần cuối ISO 8601.",
+      "articleSection":      "Tên danh mục hoặc phần của bài viết."
+    }
+  }
+}

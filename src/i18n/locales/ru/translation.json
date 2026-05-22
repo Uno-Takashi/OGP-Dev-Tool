@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "Перезагрузить данные OGP",
+    "reloadSuccess": "Данные OGP перезагружены",
+    "toggleDarkMode": "Переключить тёмный режим",
+    "github": "Просмотреть исходный код на GitHub",
+    "loading": "Загрузка...",
+    "table": {
+      "ogpType": "Тип OGP",
+      "tag": "Тег",
+      "content": "Атрибут контента",
+      "contentValue": "Значение контента",
+      "copy": "Скопировать в буфер обмена",
+      "copied": "Скопировано!"
+    }
+  },
+  "preview": {
+    "sectionTitle": "Предпросмотр",
+    "x": {
+      "title": "Карточка X",
+      "validator": "Открыть валидатор карточки X",
+      "summaryLargeImagePc": "Сводка с большим изображением (ПК)",
+      "summaryCardPc": "Карточка сводки (ПК)",
+      "summaryCardSp": "Карточка сводки (Смартфон)"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "Открыть отладчик Facebook",
+      "preview": "Предпросмотр ссылки Facebook"
+    },
+    "shadcn": {
+      "title": "Предпросмотр карточки shadcn/ui"
+    },
+    "antd": {
+      "title": "Предпросмотр карточки Ant Design"
+    },
+    "mui": {
+      "title": "Предпросмотр карточки Material UI"
+    }
+  },
+  "options": {
+    "title": "Настройки OGP Dev Tool",
+    "language": "Язык",
+    "theme": "Тема",
+    "save": "Сохранить",
+    "saved": "Сохранено!"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "Текущий URL",
+    "openDevtools": "Открыть в DevTools"
+  },
+  "common": {
+    "language": "Язык",
+    "darkMode": "Тёмный режим",
+    "lightMode": "Светлый режим"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "URL страницы — должен быть абсолютным.",
+      "ogType":              "Тип контента: website, article, blog, product и т.д.",
+      "ogTitle":             "Заголовок страницы, обычно без названия сайта.",
+      "ogDescription":       "Описание страницы, обычно 15–30 слов.",
+      "ogSiteName":          "Название сайта.",
+      "ogLocale":            "Язык и регион контента, например ru_RU или en_US.",
+      "ogImage":             "URL миниатюры изображения (абсолютный). Рекомендуется 1200×630 пикс. или больше.",
+      "ogImageSecureUrl":    "HTTPS URL изображения (используется когда страница обслуживается через HTTPS).",
+      "ogImageType":         "MIME-тип изображения, например image/jpeg или image/png.",
+      "ogImageWidth":        "Ширина изображения в пикселях.",
+      "ogImageHeight":       "Высота изображения в пикселях.",
+      "ogImageAlt":          "Альтернативный текст для изображения, используется экранными дикторами.",
+      "twitterCard":         "Тип карточки X: summary, summary_large_image, app или player.",
+      "twitterSite":         "Аккаунт X (@имя_пользователя) сайта.",
+      "twitterCreator":      "Аккаунт X (@имя_пользователя) автора контента.",
+      "twitterTitle":        "Заголовок для карточки X. Переопределяет og:title если задан.",
+      "twitterDescription":  "Описание для карточки X. Переопределяет og:description если задано.",
+      "twitterImage":        "URL изображения для карточки X. Переопределяет og:image если задан.",
+      "fbAppId":             "ID приложения Facebook. Должен быть зарегистрирован в Meta for Developers.",
+      "articleAuthor":       "URL профиля автора статьи.",
+      "articlePublishedTime":"Временная метка публикации ISO 8601, например 2024-01-01T00:00:00+00:00.",
+      "articleModifiedTime": "Временная метка последнего изменения ISO 8601.",
+      "articleSection":      "Название категории или раздела статьи."
+    }
+  }
+}

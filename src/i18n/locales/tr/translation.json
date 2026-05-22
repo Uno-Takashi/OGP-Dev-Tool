@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "OGP verilerini yenile",
+    "reloadSuccess": "OGP verileri yenilendi",
+    "toggleDarkMode": "Karanlık modu değiştir",
+    "github": "GitHub'da kaynağı görüntüle",
+    "loading": "Yükleniyor...",
+    "table": {
+      "ogpType": "OGP Türü",
+      "tag": "Etiket",
+      "content": "İçerik Özelliği",
+      "contentValue": "İçerik Değeri",
+      "copy": "Panoya kopyala",
+      "copied": "Kopyalandı!"
+    }
+  },
+  "preview": {
+    "sectionTitle": "Önizleme",
+    "x": {
+      "title": "X Kartı",
+      "validator": "X Kart Doğrulayıcısını aç",
+      "summaryLargeImagePc": "Büyük Resimli Özet (PC)",
+      "summaryCardPc": "Özet Kartı (PC)",
+      "summaryCardSp": "Özet Kartı (Akıllı Telefon)"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "Facebook Hata Ayıklayıcısını aç",
+      "preview": "Facebook Bağlantı Önizlemesi"
+    },
+    "shadcn": {
+      "title": "shadcn/ui Kart Önizlemesi"
+    },
+    "antd": {
+      "title": "Ant Design Kart Önizlemesi"
+    },
+    "mui": {
+      "title": "Material UI Kart Önizlemesi"
+    }
+  },
+  "options": {
+    "title": "OGP Dev Tool Seçenekler",
+    "language": "Dil",
+    "theme": "Tema",
+    "save": "Kaydet",
+    "saved": "Kaydedildi!"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "Geçerli URL",
+    "openDevtools": "DevTools'da aç"
+  },
+  "common": {
+    "language": "Dil",
+    "darkMode": "Karanlık Mod",
+    "lightMode": "Aydınlık Mod"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "Sayfa URL'si – mutlak bir URL olmalıdır.",
+      "ogType":              "İçerik türü: website, article, blog, product vb.",
+      "ogTitle":             "Sayfa başlığı, genellikle site adı olmadan.",
+      "ogDescription":       "Sayfa açıklaması, genellikle 15–30 kelime.",
+      "ogSiteName":          "Sitenin adı.",
+      "ogLocale":            "İçeriğin dili ve bölgesi, örn. tr_TR veya en_US.",
+      "ogImage":             "Küçük resim URL'si (mutlak). 1200×630 px veya daha büyük önerilir.",
+      "ogImageSecureUrl":    "Görüntü için HTTPS URL'si (sayfa HTTPS üzerinden sunulduğunda kullanılır).",
+      "ogImageType":         "Görüntünün MIME türü, örn. image/jpeg veya image/png.",
+      "ogImageWidth":        "Görüntü genişliği piksel cinsinden.",
+      "ogImageHeight":       "Görüntü yüksekliği piksel cinsinden.",
+      "ogImageAlt":          "Görüntü için alternatif metin, ekran okuyucular tarafından kullanılır.",
+      "twitterCard":         "X kart türü: summary, summary_large_image, app veya player.",
+      "twitterSite":         "Web sitesinin X (@kullanıcıadı) hesabı.",
+      "twitterCreator":      "İçerik yazarının X (@kullanıcıadı) hesabı.",
+      "twitterTitle":        "X kartı için başlık. Ayarlandığında og:title'ı geçersiz kılar.",
+      "twitterDescription":  "X kartı için açıklama. Ayarlandığında og:description'ı geçersiz kılar.",
+      "twitterImage":        "X kartı için görüntü URL'si. Ayarlandığında og:image'ı geçersiz kılar.",
+      "fbAppId":             "Facebook Uygulama Kimliği. Meta for Developers'da kayıtlı olmalıdır.",
+      "articleAuthor":       "Makale yazarının profil URL'si.",
+      "articlePublishedTime":"ISO 8601 yayın zaman damgası, örn. 2024-01-01T00:00:00+00:00.",
+      "articleModifiedTime": "ISO 8601 son değişiklik zaman damgası.",
+      "articleSection":      "Makalenin kategori veya bölüm adı."
+    }
+  }
+}
