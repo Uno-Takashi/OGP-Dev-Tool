@@ -59,7 +59,7 @@
     "step2": "DevTools öffnen",
     "step2Desc": "Drücke F12 oder Rechtsklick → Untersuchen",
     "step3": "OGP-Tab auswählen",
-    "step3Desc": "Klicke auf » am Ende der DevTools-Tab-Leiste und wähle „OGP"",
+    "step3Desc": "Klicke auf » am Ende der DevTools-Tab-Leiste und wähle \"OGP\"",
     "step4": "OGP prüfen",
     "step4Desc": "Metadatentabelle, Social-Vorschauen ansehen und als JSON oder HTML exportieren"
   },

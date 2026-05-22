@@ -53,7 +53,7 @@ function Popup() {
             sx={{ width: 32, height: 32 }}
           />
           <Box>
-            <Typography variant="subtitle1" fontWeight={700} lineHeight={1.2}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.2 }}>
               OGP Dev Tool
             </Typography>
             <Typography variant="caption" color="text.secondary">
@@ -64,7 +64,7 @@ function Popup() {
 
         <Divider sx={{ mb: 1.5 }} />
 
-        <Typography variant="caption" color="text.secondary" display="block" gutterBottom>
+        <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }} gutterBottom>
           {t('popup.currentUrl')}
         </Typography>
         <Box
@@ -89,9 +89,7 @@ function Popup() {
         <Typography
           variant="caption"
           color="text.secondary"
-          fontWeight={600}
-          display="block"
-          sx={{ mb: 0.5, textTransform: 'uppercase', letterSpacing: 0.5 }}
+          sx={{ mb: 0.5, fontWeight: 600, display: 'block', textTransform: 'uppercase', letterSpacing: 0.5 }}
         >
           {t('popup.howToUse')}
         </Typography>
@@ -115,8 +113,10 @@ function Popup() {
               <ListItemText
                 primary={step.label}
                 secondary={step.desc}
-                primaryTypographyProps={{ variant: 'body2', fontWeight: 600 }}
-                secondaryTypographyProps={{ variant: 'caption', display: 'block', mt: 0.25 }}
+                slotProps={{
+                  primary: { variant: 'body2', sx: { fontWeight: 600 } },
+                  secondary: { variant: 'caption', sx: { display: 'block', mt: 0.25 } },
+                }}
               />
             </ListItem>
           ))}
