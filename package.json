@@ -49,7 +49,7 @@
     "@storybook/addon-onboarding": "^10.4.0",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.3",
     "@storybook/react-webpack5": "^10.4.0",
-    "@types/chrome": "^0.0.300",
+    "@types/chrome": "^0.1.42",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
