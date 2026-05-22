@@ -46,12 +46,7 @@ function Popup() {
       <CssBaseline />
       <Box sx={{ width: 360, p: 2 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-          <Box
-            component="img"
-            src="icon32.png"
-            alt="OGP Dev Tool"
-            sx={{ width: 32, height: 32 }}
-          />
+          <Box component="img" src="icon32.png" alt="OGP Dev Tool" sx={{ width: 32, height: 32 }} />
           <Box>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.2 }}>
               OGP Dev Tool
@@ -89,7 +84,13 @@ function Popup() {
         <Typography
           variant="caption"
           color="text.secondary"
-          sx={{ mb: 0.5, fontWeight: 600, display: 'block', textTransform: 'uppercase', letterSpacing: 0.5 }}
+          sx={{
+            mb: 0.5,
+            fontWeight: 600,
+            display: 'block',
+            textTransform: 'uppercase',
+            letterSpacing: 0.5,
+          }}
         >
           {t('popup.howToUse')}
         </Typography>
