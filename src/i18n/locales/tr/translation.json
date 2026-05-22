@@ -1,9 +1,11 @@
-{
+﻿{
   "panel": {
     "title": "OGP Dev Tool",
     "reload": "OGP verilerini yenile",
     "reloadSuccess": "OGP verileri yenilendi",
     "autoReload": "Gezinmede otomatik yenile",
+    "exportJson": "JSON olarak dışa aktar",
+    "exportHtml": "HTML olarak dışa aktar",
     "github": "GitHub'da kaynağı görüntüle",
     "loading": "Yükleniyor...",
     "table": {

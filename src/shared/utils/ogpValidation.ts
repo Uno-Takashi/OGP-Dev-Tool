@@ -45,9 +45,9 @@ const VALIDATORS: Record<string, (v: string) => boolean> = {
 
 export function validateOGPValue(ogpType: string, value: string | null): ValidationStatus {
   if (value === null || value === '') return 'missing';
-  // eslint-disable-next-line security/detect-object-injection
   const validate = Object.prototype.hasOwnProperty.call(VALIDATORS, ogpType)
-    ? VALIDATORS[ogpType]
+    ? // eslint-disable-next-line security/detect-object-injection
+      VALIDATORS[ogpType]
     : undefined;
   if (!validate) return 'valid';
   return validate(value) ? 'valid' : 'invalid';

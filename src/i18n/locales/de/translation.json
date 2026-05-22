@@ -1,9 +1,11 @@
-{
+﻿{
   "panel": {
     "title": "OGP Dev Tool",
     "reload": "OGP-Daten neu laden",
     "reloadSuccess": "OGP-Daten wurden neu geladen",
     "autoReload": "Beim Navigieren automatisch neu laden",
+    "exportJson": "Als JSON exportieren",
+    "exportHtml": "Als HTML exportieren",
     "github": "Quellcode auf GitHub anzeigen",
     "loading": "Wird geladen...",
     "table": {
