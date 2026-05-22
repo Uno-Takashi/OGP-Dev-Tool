@@ -42,7 +42,7 @@ export function LanguageSwitcher() {
     const lang = event.target.value as SupportedLanguage;
     dispatch(setLanguage(lang));
     i18n.changeLanguage(lang);
-    chrome.storage.sync.set({ language: lang });
+    localStorage.setItem('language', lang);
   };
 
   return (

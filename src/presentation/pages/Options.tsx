@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -36,25 +36,21 @@ const LANGUAGES: { value: SupportedLanguage; label: string }[] = [
 
 function Options() {
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState<SupportedLanguage>('en');
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState<SupportedLanguage>(() => {
+    const stored = localStorage.getItem('language');
+    return (stored as SupportedLanguage) ?? 'en';
+  });
+  const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('isDarkMode') === 'true');
   const [saved, setSaved] = useState(false);
-
-  useEffect(() => {
-    chrome.storage.sync.get(['language', 'isDarkMode'], (result) => {
-      if (result.language) setLanguage(result.language as SupportedLanguage);
-      if (result.isDarkMode !== undefined) setIsDarkMode(result.isDarkMode as boolean);
-    });
-  }, []);
 
   const theme = createTheme({ palette: { mode: isDarkMode ? 'dark' : 'light' } });
 
   function handleSave() {
-    chrome.storage.sync.set({ language, isDarkMode }, () => {
-      i18n.changeLanguage(language);
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    });
+    localStorage.setItem('language', language);
+    localStorage.setItem('isDarkMode', String(isDarkMode));
+    i18n.changeLanguage(language);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
   }
 
   return (
