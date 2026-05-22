@@ -3,6 +3,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import LayersIcon from '@mui/icons-material/Layers';
 import { useTranslation } from 'react-i18next';
 
 interface Props {
@@ -20,6 +21,7 @@ export function MUIPreview({ imageUrl, title, description, origin }: Props) {
       <Grid container sx={{ mt: 2, mb: 1 }}>
         <Grid size={12}>
           <Typography variant="h6" component="h2">
+            <LayersIcon sx={{ color: '#007FFF', verticalAlign: 'middle', mr: 0.5 }} />
             {t('preview.mui.title')}
           </Typography>
         </Grid>
