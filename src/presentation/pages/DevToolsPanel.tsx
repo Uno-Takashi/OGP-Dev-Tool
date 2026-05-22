@@ -55,9 +55,9 @@ function Panel() {
   useEffect(() => {
     if (!isAutoReload) return;
 
-    let timerId: ReturnType<typeof setTimeout>;
+    let timerId: ReturnType<typeof setTimeout> | undefined;
     const handleNavigated = () => {
-      clearTimeout(timerId);
+      if (timerId !== undefined) clearTimeout(timerId);
       timerId = setTimeout(() => {
         dispatch(fetchOGPData(chrome.devtools.inspectedWindow.tabId));
       }, 300);
@@ -66,7 +66,7 @@ function Panel() {
     chrome.devtools.network.onNavigated.addListener(handleNavigated);
     return () => {
       chrome.devtools.network.onNavigated.removeListener(handleNavigated);
-      clearTimeout(timerId);
+      if (timerId !== undefined) clearTimeout(timerId);
     };
   }, [isAutoReload, dispatch]);
 
@@ -99,6 +99,7 @@ function Panel() {
               onChange={handleAutoReloadToggle}
               size="small"
               color="primary"
+              slotProps={{ input: { 'aria-label': t('panel.autoReload') } }}
             />
           </Tooltip>
           <DarkModeToggle />

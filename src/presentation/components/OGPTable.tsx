@@ -21,17 +21,14 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useTranslation } from 'react-i18next';
 import type { OGPTag } from '../../domain/entities/OGPMetadata';
 import { useCopyToClipboard } from '../../shared/hooks/useCopyToClipboard';
-import { validateOGPValue } from '../../shared/utils/ogpValidation';
+import { validateOGPValue, isAtHandle } from '../../shared/utils/ogpValidation';
 
 function isUrl(value: string | null): boolean {
   if (!value) return false;
   return value.startsWith('http://') || value.startsWith('https://');
 }
 
-function isAtHandle(value: string | null): boolean {
-  if (!value) return false;
-  return /^@[A-Za-z0-9_]{1,50}$/.test(value);
-}
+const TWITTER_HANDLE_TYPES = new Set(['twitter:site', 'twitter:creator']);
 
 interface CopyButtonProps {
   text: string | null;
@@ -164,12 +161,14 @@ export function OGPTable({ tags }: Props) {
                   {row.contentValue}
                   {row.contentValue !== null && <CopyButton text={row.contentValue} />}
                   {isUrl(row.contentValue) && <LinkButton url={row.contentValue!} />}
-                  {isAtHandle(row.contentValue) && (
-                    <LinkButton
-                      url={`https://x.com/${row.contentValue!.slice(1)}`}
-                      tooltipKey="panel.table.openProfile"
-                    />
-                  )}
+                  {TWITTER_HANDLE_TYPES.has(row.ogpType) &&
+                    row.contentValue !== null &&
+                    isAtHandle(row.contentValue) && (
+                      <LinkButton
+                        url={`https://x.com/${row.contentValue.slice(1)}`}
+                        tooltipKey="panel.table.openProfile"
+                      />
+                    )}
                 </TableCell>
               </TableRow>
             ))}
