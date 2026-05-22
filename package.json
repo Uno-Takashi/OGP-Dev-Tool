@@ -24,8 +24,8 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.4.0",
-    "@mui/material": "^6.4.0",
+    "@mui/icons-material": "^9.0.1",
+    "@mui/material": "^9.0.1",
     "@reduxjs/toolkit": "^2.5.0",
     "antd": "^5.24.0",
     "assert": "^2.1.0",
