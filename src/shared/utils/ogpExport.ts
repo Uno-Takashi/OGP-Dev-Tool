@@ -21,7 +21,7 @@ export function exportOGPAsJson(tags: OGPTag[]): void {
 }
 
 function escapeAttr(value: string): string {
-  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  return value.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
 }
 
 export function exportOGPAsHtml(tags: OGPTag[]): void {
