@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "重新加载OGP数据",
     "reloadSuccess": "OGP数据已重新加载",
-    "toggleDarkMode": "切换深色模式",
     "github": "在GitHub上查看源码",
     "loading": "加载中...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "预览",
     "x": {
       "title": "X卡片",
-      "validator": "打开X卡片验证工具",
       "summaryLargeImagePc": "大图摘要卡片（PC）",
       "summaryCardPc": "摘要卡片（PC）",
       "summaryCardSp": "摘要卡片（智能手机）"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "打开Facebook调试工具",
-      "preview": "Facebook链接预览"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "shadcn/ui 卡片预览"
@@ -47,14 +42,13 @@
   "options": {
     "title": "OGP Dev Tool 设置",
     "language": "语言",
-    "theme": "主题",
     "save": "保存",
     "saved": "已保存！"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "当前URL",
-    "openDevtools": "在DevTools中打开"
+    "openDevtools": "打开 DevTools → OGP 标签页以检查 OGP 元数据。"
   },
   "common": {
     "language": "语言",

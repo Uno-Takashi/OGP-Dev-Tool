@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "Recargar datos OGP",
     "reloadSuccess": "Datos OGP recargados",
-    "toggleDarkMode": "Alternar modo oscuro",
     "github": "Ver código fuente en GitHub",
     "loading": "Cargando...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Vista previa",
     "x": {
       "title": "Tarjeta X",
-      "validator": "Abrir validador de tarjeta X",
       "summaryLargeImagePc": "Resumen con imagen grande (PC)",
       "summaryCardPc": "Tarjeta de resumen (PC)",
       "summaryCardSp": "Tarjeta de resumen (Smartphone)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Abrir depurador de Facebook",
-      "preview": "Vista previa de enlace de Facebook"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "Vista previa de tarjeta shadcn/ui"
@@ -47,14 +42,13 @@
   "options": {
     "title": "Opciones OGP Dev Tool",
     "language": "Idioma",
-    "theme": "Tema",
     "save": "Guardar",
     "saved": "¡Guardado!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "URL actual",
-    "openDevtools": "Abrir en DevTools"
+    "openDevtools": "Abre DevTools → pestaña OGP para inspeccionar los metadatos OGP."
   },
   "common": {
     "language": "Idioma",

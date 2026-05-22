@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "OGP verilerini yenile",
     "reloadSuccess": "OGP verileri yenilendi",
-    "toggleDarkMode": "Karanlık modu değiştir",
     "github": "GitHub'da kaynağı görüntüle",
     "loading": "Yükleniyor...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Önizleme",
     "x": {
       "title": "X Kartı",
-      "validator": "X Kart Doğrulayıcısını aç",
       "summaryLargeImagePc": "Büyük Resimli Özet (PC)",
       "summaryCardPc": "Özet Kartı (PC)",
       "summaryCardSp": "Özet Kartı (Akıllı Telefon)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Facebook Hata Ayıklayıcısını aç",
-      "preview": "Facebook Bağlantı Önizlemesi"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "shadcn/ui Kart Önizlemesi"
@@ -47,14 +42,13 @@
   "options": {
     "title": "OGP Dev Tool Seçenekler",
     "language": "Dil",
-    "theme": "Tema",
     "save": "Kaydet",
     "saved": "Kaydedildi!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "Geçerli URL",
-    "openDevtools": "DevTools'da aç"
+    "openDevtools": "OGP meta verilerini incelemek için DevTools → OGP sekmesini açın."
   },
   "common": {
     "language": "Dil",

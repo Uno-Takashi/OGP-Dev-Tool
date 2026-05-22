@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "Muat ulang data OGP",
     "reloadSuccess": "Data OGP berhasil dimuat ulang",
-    "toggleDarkMode": "Alihkan mode gelap",
     "github": "Lihat kode sumber di GitHub",
     "loading": "Memuat...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Pratinjau",
     "x": {
       "title": "Kartu X",
-      "validator": "Buka validator kartu X",
       "summaryLargeImagePc": "Ringkasan dengan gambar besar (PC)",
       "summaryCardPc": "Kartu ringkasan (PC)",
       "summaryCardSp": "Kartu ringkasan (Smartphone)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Buka debugger Facebook",
-      "preview": "Pratinjau tautan Facebook"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "Pratinjau kartu shadcn/ui"
@@ -47,14 +42,13 @@
   "options": {
     "title": "Opsi OGP Dev Tool",
     "language": "Bahasa",
-    "theme": "Tema",
     "save": "Simpan",
     "saved": "Tersimpan!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "URL saat ini",
-    "openDevtools": "Buka di DevTools"
+    "openDevtools": "Buka DevTools → tab OGP untuk memeriksa metadata OGP."
   },
   "common": {
     "language": "Bahasa",

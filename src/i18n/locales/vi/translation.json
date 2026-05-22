@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "Tải lại dữ liệu OGP",
     "reloadSuccess": "Dữ liệu OGP đã được tải lại",
-    "toggleDarkMode": "Chuyển đổi chế độ tối",
     "github": "Xem mã nguồn trên GitHub",
     "loading": "Đang tải...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Xem trước",
     "x": {
       "title": "Thẻ X",
-      "validator": "Mở trình xác thực thẻ X",
       "summaryLargeImagePc": "Tóm tắt với hình ảnh lớn (PC)",
       "summaryCardPc": "Thẻ tóm tắt (PC)",
       "summaryCardSp": "Thẻ tóm tắt (Điện thoại thông minh)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Mở trình gỡ lỗi Facebook",
-      "preview": "Xem trước liên kết Facebook"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "Xem trước thẻ shadcn/ui"
@@ -47,14 +42,13 @@
   "options": {
     "title": "Tùy chọn OGP Dev Tool",
     "language": "Ngôn ngữ",
-    "theme": "Giao diện",
     "save": "Lưu",
     "saved": "Đã lưu!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "URL hiện tại",
-    "openDevtools": "Mở trong DevTools"
+    "openDevtools": "Mở DevTools → tab OGP để kiểm tra siêu dữ liệu OGP."
   },
   "common": {
     "language": "Ngôn ngữ",

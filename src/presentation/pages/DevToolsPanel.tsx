@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import AppBar from '@mui/material/AppBar';
@@ -16,8 +16,6 @@ import CachedIcon from '@mui/icons-material/Cached';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useTranslation } from 'react-i18next';
 import '../../i18n';
-import { SUPPORTED_LANGUAGES } from '../../i18n';
-import type { SupportedLanguage } from '../../i18n';
 import { store } from '../store';
 import { AppThemeProvider } from '../contexts/ThemeContext';
 import { DarkModeToggle } from '../components/common/DarkModeToggle';
@@ -30,10 +28,9 @@ import { AntDesignPreview } from '../components/previews/AntDesignPreview';
 import { MUIPreview } from '../components/previews/MUIPreview';
 import { useOGPData, useAppDispatch, useAppSelector } from '../hooks/useOGPData';
 import { fetchOGPData } from '../store/ogpSlice';
-import { setLanguage, setDarkMode } from '../store/uiSlice';
 
 function Panel() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const { tags, isLoading, error, imageUrl, title, description, origin, siteName } = useOGPData();
   const hasLoaded = useAppSelector((state) => state.ogp.hasLoaded);
@@ -42,20 +39,7 @@ function Panel() {
   const isExplicitReload = useRef(false);
 
   useEffect(() => {
-    const lang = localStorage.getItem('language') as SupportedLanguage | null;
-    if (lang && SUPPORTED_LANGUAGES.includes(lang)) {
-      dispatch(setLanguage(lang));
-      i18n.changeLanguage(lang);
-    }
-    const dark = localStorage.getItem('isDarkMode');
-    if (dark !== null) {
-      dispatch(setDarkMode(dark === 'true'));
-    }
-  }, [dispatch, i18n]);
-
-  useEffect(() => {
-    const tabId = chrome.devtools.inspectedWindow.tabId;
-    dispatch(fetchOGPData(tabId));
+    dispatch(fetchOGPData(chrome.devtools.inspectedWindow.tabId));
   }, [dispatch]);
 
   useEffect(() => {
@@ -65,10 +49,10 @@ function Panel() {
     }
   }, [isLoading]);
 
-  const handleReload = () => {
+  const handleReload = useCallback(() => {
     isExplicitReload.current = true;
     dispatch(fetchOGPData(chrome.devtools.inspectedWindow.tabId));
-  };
+  }, [dispatch]);
 
   const isInitialLoad = !hasLoaded && isLoading;
   const isReloading = hasLoaded && isLoading;

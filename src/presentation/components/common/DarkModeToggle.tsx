@@ -1,4 +1,4 @@
-import React from 'react';
+import { useCallback } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -12,11 +12,10 @@ export function DarkModeToggle() {
   const dispatch = useAppDispatch();
   const isDarkMode = useAppSelector((state) => state.ui.isDarkMode);
 
-  const handleToggle = () => {
-    const next = !isDarkMode;
+  const handleToggle = useCallback(() => {
     dispatch(toggleDarkMode());
-    localStorage.setItem('isDarkMode', String(next));
-  };
+    localStorage.setItem('isDarkMode', String(!isDarkMode));
+  }, [dispatch, isDarkMode]);
 
   return (
     <Tooltip title={isDarkMode ? t('common.lightMode') : t('common.darkMode')}>

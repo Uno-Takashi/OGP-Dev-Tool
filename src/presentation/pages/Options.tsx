@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -43,7 +43,10 @@ function Options() {
   const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('isDarkMode') === 'true');
   const [saved, setSaved] = useState(false);
 
-  const theme = createTheme({ palette: { mode: isDarkMode ? 'dark' : 'light' } });
+  const theme = useMemo(
+    () => createTheme({ palette: { mode: isDarkMode ? 'dark' : 'light' } }),
+    [isDarkMode]
+  );
 
   function handleSave() {
     localStorage.setItem('language', language);

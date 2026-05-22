@@ -1,4 +1,4 @@
-import React from 'react';
+import type { MouseEvent } from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
@@ -23,7 +23,7 @@ export function FacebookPreview({ imageUrl, title, description, origin }: Props)
         <Grid size={12}>
           <Link
             href="#"
-            onClick={(e: React.MouseEvent) => {
+            onClick={(e: MouseEvent) => {
               e.preventDefault();
               chrome.tabs.create({ url: 'https://developers.facebook.com/tools/debug/' });
             }}

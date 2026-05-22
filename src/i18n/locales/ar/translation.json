@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "إعادة تحميل بيانات OGP",
     "reloadSuccess": "تم إعادة تحميل بيانات OGP",
-    "toggleDarkMode": "تبديل الوضع الداكن",
     "github": "عرض الكود المصدري على GitHub",
     "loading": "جار التحميل...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "معاينة",
     "x": {
       "title": "بطاقة X",
-      "validator": "فتح مدقق بطاقة X",
       "summaryLargeImagePc": "ملخص بصورة كبيرة (PC)",
       "summaryCardPc": "بطاقة الملخص (PC)",
       "summaryCardSp": "بطاقة الملخص (هاتف ذكي)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "فتح مصحح Facebook",
-      "preview": "معاينة رابط Facebook"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "معاينة بطاقة shadcn/ui"
@@ -47,14 +42,13 @@
   "options": {
     "title": "إعدادات OGP Dev Tool",
     "language": "اللغة",
-    "theme": "السمة",
     "save": "حفظ",
     "saved": "تم الحفظ!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "الرابط الحالي",
-    "openDevtools": "فتح في DevTools"
+    "openDevtools": "افتح DevTools → تبويب OGP لفحص بيانات OGP."
   },
   "common": {
     "language": "اللغة",

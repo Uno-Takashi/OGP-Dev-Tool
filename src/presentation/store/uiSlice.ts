@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import { SUPPORTED_LANGUAGES } from '../../i18n';
 import type { SupportedLanguage } from '../../i18n';
 
 interface UIState {
@@ -7,9 +8,14 @@ interface UIState {
   language: SupportedLanguage;
 }
 
+const storedLang = localStorage.getItem('language') as SupportedLanguage | null;
+
 const initialState: UIState = {
-  isDarkMode: false,
-  language: 'en',
+  isDarkMode: localStorage.getItem('isDarkMode') === 'true',
+  language:
+    storedLang && (SUPPORTED_LANGUAGES as readonly string[]).includes(storedLang)
+      ? storedLang
+      : 'en',
 };
 
 const uiSlice = createSlice({
