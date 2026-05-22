@@ -25,7 +25,9 @@ export function AntDesignPreview({ imageUrl, title, description, origin }: Props
       <Grid container sx={{ mt: 2, mb: 1 }}>
         <Grid size={12}>
           <MuiTypography variant="h6" component="h2">
-            <AntDesignOutlined style={{ color: '#1677ff', marginRight: 4, verticalAlign: 'middle' }} />
+            <AntDesignOutlined
+              style={{ color: '#1677ff', marginRight: 4, verticalAlign: 'middle' }}
+            />
             {t('preview.antd.title')}
           </MuiTypography>
         </Grid>
