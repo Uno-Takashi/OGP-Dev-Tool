@@ -16,7 +16,8 @@
       "status": "Status",
       "filterValid": "Alleen geldig",
       "valid": "Correct geconfigureerd",
-      "invalid": "Opmaakprobleem"
+      "invalid": "Opmaakprobleem",
+      "openLink": "Openen in nieuw tabblad"
     }
   },
   "preview": {
@@ -62,29 +63,29 @@
   },
   "ogp": {
     "tips": {
-      "ogUrl":               "Pagina-URL – moet een absolute URL zijn.",
-      "ogType":              "Inhoudstype: website, article, blog, product, enz.",
-      "ogTitle":             "Paginatitel, meestal zonder de sitenaam.",
-      "ogDescription":       "Paginabeschrijving, doorgaans 15–30 woorden.",
-      "ogSiteName":          "Naam van de site.",
-      "ogLocale":            "Taal en regio van de inhoud, bijv. nl_NL of en_US.",
-      "ogImage":             "URL van de miniatuurafbeelding (absoluut). 1200×630 px of groter aanbevolen.",
-      "ogImageSecureUrl":    "HTTPS-URL voor de afbeelding (gebruikt wanneer de pagina via HTTPS wordt aangeboden).",
-      "ogImageType":         "MIME-type van de afbeelding, bijv. image/jpeg of image/png.",
-      "ogImageWidth":        "Breedte van de afbeelding in pixels.",
-      "ogImageHeight":       "Hoogte van de afbeelding in pixels.",
-      "ogImageAlt":          "Alternatieve tekst voor de afbeelding, gebruikt door schermlezers.",
-      "twitterCard":         "X-kaarttype: summary, summary_large_image, app of player.",
-      "twitterSite":         "X (@gebruikersnaam) van de website.",
-      "twitterCreator":      "X (@gebruikersnaam) van de maker van de inhoud.",
-      "twitterTitle":        "Titel voor de X-kaart. Overschrijft og:title indien ingesteld.",
-      "twitterDescription":  "Beschrijving voor de X-kaart. Overschrijft og:description indien ingesteld.",
-      "twitterImage":        "Afbeeldings-URL voor de X-kaart. Overschrijft og:image indien ingesteld.",
-      "fbAppId":             "Facebook App ID. Moet worden geregistreerd bij Meta for Developers.",
-      "articleAuthor":       "Profiel-URL van de auteur van het artikel.",
-      "articlePublishedTime":"ISO 8601 publicatietijdstempel, bijv. 2024-01-01T00:00:00+00:00.",
+      "ogUrl": "Pagina-URL – moet een absolute URL zijn.",
+      "ogType": "Inhoudstype: website, article, blog, product, enz.",
+      "ogTitle": "Paginatitel, meestal zonder de sitenaam.",
+      "ogDescription": "Paginabeschrijving, doorgaans 15–30 woorden.",
+      "ogSiteName": "Naam van de site.",
+      "ogLocale": "Taal en regio van de inhoud, bijv. nl_NL of en_US.",
+      "ogImage": "URL van de miniatuurafbeelding (absoluut). 1200×630 px of groter aanbevolen.",
+      "ogImageSecureUrl": "HTTPS-URL voor de afbeelding (gebruikt wanneer de pagina via HTTPS wordt aangeboden).",
+      "ogImageType": "MIME-type van de afbeelding, bijv. image/jpeg of image/png.",
+      "ogImageWidth": "Breedte van de afbeelding in pixels.",
+      "ogImageHeight": "Hoogte van de afbeelding in pixels.",
+      "ogImageAlt": "Alternatieve tekst voor de afbeelding, gebruikt door schermlezers.",
+      "twitterCard": "X-kaarttype: summary, summary_large_image, app of player.",
+      "twitterSite": "X (@gebruikersnaam) van de website.",
+      "twitterCreator": "X (@gebruikersnaam) van de maker van de inhoud.",
+      "twitterTitle": "Titel voor de X-kaart. Overschrijft og:title indien ingesteld.",
+      "twitterDescription": "Beschrijving voor de X-kaart. Overschrijft og:description indien ingesteld.",
+      "twitterImage": "Afbeeldings-URL voor de X-kaart. Overschrijft og:image indien ingesteld.",
+      "fbAppId": "Facebook App ID. Moet worden geregistreerd bij Meta for Developers.",
+      "articleAuthor": "Profiel-URL van de auteur van het artikel.",
+      "articlePublishedTime": "ISO 8601 publicatietijdstempel, bijv. 2024-01-01T00:00:00+00:00.",
       "articleModifiedTime": "ISO 8601 tijdstempel van laatste wijziging.",
-      "articleSection":      "Categorie- of sectienaam van het artikel."
+      "articleSection": "Categorie- of sectienaam van het artikel."
     }
   }
 }

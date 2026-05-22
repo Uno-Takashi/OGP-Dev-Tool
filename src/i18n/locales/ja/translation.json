@@ -16,7 +16,8 @@
       "status": "状態",
       "filterValid": "正常のみ表示",
       "valid": "正しく設定されています",
-      "invalid": "フォーマットに問題があります"
+      "invalid": "フォーマットに問題があります",
+      "openLink": "新しいタブで開く"
     }
   },
   "preview": {
@@ -62,29 +63,29 @@
   },
   "ogp": {
     "tips": {
-      "ogUrl":               "ページのURLを指定します。絶対パスで指定してください。",
-      "ogType":              "ページの種類を指定します。website、article、blog、product などを指定します。",
-      "ogTitle":             "ページのタイトルを指定します。一般的にサイト名は含めません。",
-      "ogDescription":       "ページの説明文を指定します。一般的に15〜30語が推奨されます。",
-      "ogSiteName":          "サイト名を指定します。",
-      "ogLocale":            "コンテンツの言語・地域を指定します。例: ja_JP、en_US",
-      "ogImage":             "サムネイル画像のURL（絶対パス）を指定します。1200×630px 以上を推奨します。",
-      "ogImageSecureUrl":    "HTTPSで配信する場合の画像URLを指定します。",
-      "ogImageType":         "画像のMIMEタイプを指定します。例: image/jpeg、image/png",
-      "ogImageWidth":        "画像の幅をピクセルで指定します。",
-      "ogImageHeight":       "画像の高さをピクセルで指定します。",
-      "ogImageAlt":          "画像の代替テキストを指定します。スクリーンリーダー向けです。",
-      "twitterCard":         "Xカードの種類を指定します。summary、summary_large_image、app、player のいずれかを指定します。",
-      "twitterSite":         "サイト管理者のX（@ユーザー名）を指定します。",
-      "twitterCreator":      "コンテンツ作成者のX（@ユーザー名）を指定します。",
-      "twitterTitle":        "XカードのタイトルをArticle指定します。og:title を上書きします。",
-      "twitterDescription":  "Xカードの説明文を指定します。og:description を上書きします。",
-      "twitterImage":        "Xカードの画像URLを指定します。og:image を上書きします。",
-      "fbAppId":             "FacebookアプリIDを指定します。Meta for Developers での取得が必要です。",
-      "articleAuthor":       "記事の著者プロフィールURLを指定します。",
-      "articlePublishedTime":"記事の公開日時をISO 8601形式で指定します。例: 2024-01-01T00:00:00+09:00",
+      "ogUrl": "ページのURLを指定します。絶対パスで指定してください。",
+      "ogType": "ページの種類を指定します。website、article、blog、product などを指定します。",
+      "ogTitle": "ページのタイトルを指定します。一般的にサイト名は含めません。",
+      "ogDescription": "ページの説明文を指定します。一般的に15〜30語が推奨されます。",
+      "ogSiteName": "サイト名を指定します。",
+      "ogLocale": "コンテンツの言語・地域を指定します。例: ja_JP、en_US",
+      "ogImage": "サムネイル画像のURL（絶対パス）を指定します。1200×630px 以上を推奨します。",
+      "ogImageSecureUrl": "HTTPSで配信する場合の画像URLを指定します。",
+      "ogImageType": "画像のMIMEタイプを指定します。例: image/jpeg、image/png",
+      "ogImageWidth": "画像の幅をピクセルで指定します。",
+      "ogImageHeight": "画像の高さをピクセルで指定します。",
+      "ogImageAlt": "画像の代替テキストを指定します。スクリーンリーダー向けです。",
+      "twitterCard": "Xカードの種類を指定します。summary、summary_large_image、app、player のいずれかを指定します。",
+      "twitterSite": "サイト管理者のX（@ユーザー名）を指定します。",
+      "twitterCreator": "コンテンツ作成者のX（@ユーザー名）を指定します。",
+      "twitterTitle": "XカードのタイトルをArticle指定します。og:title を上書きします。",
+      "twitterDescription": "Xカードの説明文を指定します。og:description を上書きします。",
+      "twitterImage": "Xカードの画像URLを指定します。og:image を上書きします。",
+      "fbAppId": "FacebookアプリIDを指定します。Meta for Developers での取得が必要です。",
+      "articleAuthor": "記事の著者プロフィールURLを指定します。",
+      "articlePublishedTime": "記事の公開日時をISO 8601形式で指定します。例: 2024-01-01T00:00:00+09:00",
       "articleModifiedTime": "記事の最終更新日時をISO 8601形式で指定します。",
-      "articleSection":      "記事のカテゴリー・セクション名を指定します。"
+      "articleSection": "記事のカテゴリー・セクション名を指定します。"
     }
   }
 }

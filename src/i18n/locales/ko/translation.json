@@ -16,7 +16,8 @@
       "status": "상태",
       "filterValid": "유효한 항목만",
       "valid": "올바르게 설정됨",
-      "invalid": "형식 오류"
+      "invalid": "형식 오류",
+      "openLink": "새 탭에서 열기"
     }
   },
   "preview": {
@@ -62,29 +63,29 @@
   },
   "ogp": {
     "tips": {
-      "ogUrl":               "페이지 URL – 절대 URL이어야 합니다.",
-      "ogType":              "콘텐츠 유형: website, article, blog, product 등.",
-      "ogTitle":             "페이지 제목, 일반적으로 사이트 이름은 포함하지 않습니다.",
-      "ogDescription":       "페이지 설명, 일반적으로 15–30단어.",
-      "ogSiteName":          "사이트 이름.",
-      "ogLocale":            "콘텐츠의 언어 및 지역, 예: ko_KR 또는 en_US.",
-      "ogImage":             "썸네일 이미지 URL (절대경로). 1200×630 px 이상 권장.",
-      "ogImageSecureUrl":    "이미지의 HTTPS URL (페이지가 HTTPS로 제공될 때 사용).",
-      "ogImageType":         "이미지의 MIME 유형, 예: image/jpeg 또는 image/png.",
-      "ogImageWidth":        "이미지 너비(픽셀).",
-      "ogImageHeight":       "이미지 높이(픽셀).",
-      "ogImageAlt":          "이미지의 대체 텍스트, 스크린 리더에서 사용됩니다.",
-      "twitterCard":         "X 카드 유형: summary, summary_large_image, app 또는 player.",
-      "twitterSite":         "웹사이트의 X (@사용자명).",
-      "twitterCreator":      "콘텐츠 작성자의 X (@사용자명).",
-      "twitterTitle":        "X 카드 제목. 설정 시 og:title을 덮어씁니다.",
-      "twitterDescription":  "X 카드 설명. 설정 시 og:description을 덮어씁니다.",
-      "twitterImage":        "X 카드 이미지 URL. 설정 시 og:image를 덮어씁니다.",
-      "fbAppId":             "Facebook 앱 ID. Meta for Developers에서 등록해야 합니다.",
-      "articleAuthor":       "기사 작성자의 프로필 URL.",
-      "articlePublishedTime":"ISO 8601 게시 타임스탬프, 예: 2024-01-01T00:00:00+00:00.",
+      "ogUrl": "페이지 URL – 절대 URL이어야 합니다.",
+      "ogType": "콘텐츠 유형: website, article, blog, product 등.",
+      "ogTitle": "페이지 제목, 일반적으로 사이트 이름은 포함하지 않습니다.",
+      "ogDescription": "페이지 설명, 일반적으로 15–30단어.",
+      "ogSiteName": "사이트 이름.",
+      "ogLocale": "콘텐츠의 언어 및 지역, 예: ko_KR 또는 en_US.",
+      "ogImage": "썸네일 이미지 URL (절대경로). 1200×630 px 이상 권장.",
+      "ogImageSecureUrl": "이미지의 HTTPS URL (페이지가 HTTPS로 제공될 때 사용).",
+      "ogImageType": "이미지의 MIME 유형, 예: image/jpeg 또는 image/png.",
+      "ogImageWidth": "이미지 너비(픽셀).",
+      "ogImageHeight": "이미지 높이(픽셀).",
+      "ogImageAlt": "이미지의 대체 텍스트, 스크린 리더에서 사용됩니다.",
+      "twitterCard": "X 카드 유형: summary, summary_large_image, app 또는 player.",
+      "twitterSite": "웹사이트의 X (@사용자명).",
+      "twitterCreator": "콘텐츠 작성자의 X (@사용자명).",
+      "twitterTitle": "X 카드 제목. 설정 시 og:title을 덮어씁니다.",
+      "twitterDescription": "X 카드 설명. 설정 시 og:description을 덮어씁니다.",
+      "twitterImage": "X 카드 이미지 URL. 설정 시 og:image를 덮어씁니다.",
+      "fbAppId": "Facebook 앱 ID. Meta for Developers에서 등록해야 합니다.",
+      "articleAuthor": "기사 작성자의 프로필 URL.",
+      "articlePublishedTime": "ISO 8601 게시 타임스탬프, 예: 2024-01-01T00:00:00+00:00.",
       "articleModifiedTime": "ISO 8601 마지막 수정 타임스탬프.",
-      "articleSection":      "기사의 카테고리 또는 섹션 이름."
+      "articleSection": "기사의 카테고리 또는 섹션 이름."
     }
   }
 }
