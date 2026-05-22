@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "Tải lại dữ liệu OGP",
     "reloadSuccess": "Dữ liệu OGP đã được tải lại",
+    "autoReload": "Tự động tải lại khi điều hướng",
     "github": "Xem mã nguồn trên GitHub",
     "loading": "Đang tải...",
     "table": {
@@ -16,7 +17,8 @@
       "filterValid": "Chỉ hợp lệ",
       "valid": "Đã cấu hình đúng",
       "invalid": "Lỗi định dạng",
-      "openLink": "Mở trong tab mới"
+      "openLink": "Mở trong tab mới",
+      "openProfile": "Mở hồ sơ X"
     }
   },
   "preview": {

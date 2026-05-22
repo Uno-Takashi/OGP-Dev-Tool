@@ -17,7 +17,8 @@
       "filterValid": "Valid only",
       "valid": "Correctly configured",
       "invalid": "Value has a format issue",
-      "openLink": "Open in new tab"
+      "openLink": "Open in new tab",
+      "openProfile": "Open X profile"
     }
   },
   "preview": {

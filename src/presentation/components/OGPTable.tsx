@@ -28,6 +28,11 @@ function isUrl(value: string | null): boolean {
   return value.startsWith('http://') || value.startsWith('https://');
 }
 
+function isAtHandle(value: string | null): boolean {
+  if (!value) return false;
+  return /^@[A-Za-z0-9_]{1,50}$/.test(value);
+}
+
 interface CopyButtonProps {
   text: string | null;
 }
@@ -51,13 +56,14 @@ function CopyButton({ text }: CopyButtonProps) {
 
 interface LinkButtonProps {
   url: string;
+  tooltipKey?: string;
 }
 
-function LinkButton({ url }: LinkButtonProps) {
+function LinkButton({ url, tooltipKey = 'panel.table.openLink' }: LinkButtonProps) {
   const { t } = useTranslation();
 
   return (
-    <Tooltip title={t('panel.table.openLink')}>
+    <Tooltip title={t(tooltipKey)}>
       <IconButton size="small" onClick={() => chrome.tabs.create({ url })}>
         <OpenInNewIcon sx={{ fontSize: 14 }} />
       </IconButton>
@@ -158,6 +164,12 @@ export function OGPTable({ tags }: Props) {
                   {row.contentValue}
                   <CopyButton text={row.contentValue} />
                   {isUrl(row.contentValue) && <LinkButton url={row.contentValue!} />}
+                  {isAtHandle(row.contentValue) && (
+                    <LinkButton
+                      url={`https://x.com/${row.contentValue!.slice(1)}`}
+                      tooltipKey="panel.table.openProfile"
+                    />
+                  )}
                 </TableCell>
               </TableRow>
             ))}

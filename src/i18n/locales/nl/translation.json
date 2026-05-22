@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "OGP-gegevens herladen",
     "reloadSuccess": "OGP-gegevens herladen",
+    "autoReload": "Automatisch herladen bij navigatie",
     "github": "Broncode bekijken op GitHub",
     "loading": "Laden...",
     "table": {
@@ -16,7 +17,8 @@
       "filterValid": "Alleen geldig",
       "valid": "Correct geconfigureerd",
       "invalid": "Opmaakprobleem",
-      "openLink": "Openen in nieuw tabblad"
+      "openLink": "Openen in nieuw tabblad",
+      "openProfile": "X-profiel openen"
     }
   },
   "preview": {
