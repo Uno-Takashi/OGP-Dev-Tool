@@ -163,7 +163,7 @@ function App() {
   );
 }
 
-const container = document.getElementById('root');
+const container = document.querySelector('#root');
 if (container) {
   const root = createRoot(container);
   root.render(<App />);

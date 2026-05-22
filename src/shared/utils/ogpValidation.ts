@@ -2,7 +2,7 @@ export type ValidationStatus = 'valid' | 'invalid' | 'missing';
 
 const isAbsoluteUrl = (v: string) => /^https?:\/\/.+\..+/.test(v);
 const isHttpsUrl    = (v: string) => /^https:\/\/.+\..+/.test(v);
-const isPositiveInt = (v: string) => /^\d+$/.test(v) && parseInt(v, 10) > 0;
+const isPositiveInt = (v: string) => /^\d+$/.test(v) && Number.parseInt(v, 10) > 0;
 // eslint-disable-next-line security/detect-unsafe-regex
 const isMimeType    = (v: string) => /^[\w][\w!#$&\-^]*\/[\w][\w!#$&\-^]*(;.*)?$/.test(v);
 // OGP locale uses underscore: en_US, ja_JP, zh_CN, or bare language code: en
@@ -11,7 +11,7 @@ const isLocale      = (v: string) => /^[a-z]{2,8}(_[A-Z]{2,3})?$/.test(v);
 // X/Twitter handle: @username (1–50 chars, alphanumeric + underscore)
 const isAtHandle    = (v: string) => /^@[A-Za-z0-9_]{1,50}$/.test(v);
 // ISO 8601 date-time: must contain a date separator and parse successfully
-const isIso8601     = (v: string) => v.includes('-') && !isNaN(Date.parse(v));
+const isIso8601     = (v: string) => v.includes('-') && !Number.isNaN(Date.parse(v));
 const isNumericStr  = (v: string) => /^\d+$/.test(v);
 const isNonEmpty    = (v: string) => v.trim().length > 0;
 

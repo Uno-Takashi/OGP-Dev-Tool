@@ -33,10 +33,10 @@ const TAG_DEFINITIONS: TagDefinition[] = [
   { tag: 'meta', tipKey: 'ogp.tips.articleSection',       name: 'property', ogpType: 'article:section',        content: 'content' },
 ];
 
-export function parseOGPTags(metas: HTMLCollection): OGPTag[] {
+export function parseOGPTags(metas: NodeListOf<HTMLMetaElement>): OGPTag[] {
   return TAG_DEFINITIONS.map((def) => {
     let contentValue: string | null = null;
-    for (const meta of Array.from(metas)) {
+    for (const meta of metas) {
       if (
         meta.tagName.toLowerCase() === def.tag &&
         meta.getAttribute(def.name) === def.ogpType
@@ -49,6 +49,6 @@ export function parseOGPTags(metas: HTMLCollection): OGPTag[] {
   });
 }
 
-export function toJSON(metas: HTMLCollection): { ogp: OGPTag[] } {
+export function toJSON(metas: NodeListOf<HTMLMetaElement>): { ogp: OGPTag[] } {
   return { ogp: parseOGPTags(metas) };
 }
