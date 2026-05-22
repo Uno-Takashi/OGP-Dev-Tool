@@ -6,6 +6,7 @@ import type { SupportedLanguage } from '../../i18n';
 interface UIState {
   isDarkMode: boolean;
   language: SupportedLanguage;
+  isAutoReload: boolean;
 }
 
 const storedLang = localStorage.getItem('language') as SupportedLanguage | null;
@@ -16,6 +17,7 @@ const initialState: UIState = {
     storedLang && (SUPPORTED_LANGUAGES as readonly string[]).includes(storedLang)
       ? storedLang
       : 'en',
+  isAutoReload: localStorage.getItem('isAutoReload') === 'true',
 };
 
 const uiSlice = createSlice({
@@ -31,8 +33,11 @@ const uiSlice = createSlice({
     setLanguage(state, action: PayloadAction<SupportedLanguage>) {
       state.language = action.payload;
     },
+    setAutoReload(state, action: PayloadAction<boolean>) {
+      state.isAutoReload = action.payload;
+    },
   },
 });
 
-export const { toggleDarkMode, setDarkMode, setLanguage } = uiSlice.actions;
+export const { toggleDarkMode, setDarkMode, setLanguage, setAutoReload } = uiSlice.actions;
 export default uiSlice.reducer;

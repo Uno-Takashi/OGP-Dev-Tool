@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import LinearProgress from '@mui/material/LinearProgress';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import Switch from '@mui/material/Switch';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -28,12 +29,14 @@ import { AntDesignPreview } from '../components/previews/AntDesignPreview';
 import { MUIPreview } from '../components/previews/MUIPreview';
 import { useOGPData, useAppDispatch, useAppSelector } from '../hooks/useOGPData';
 import { fetchOGPData } from '../store/ogpSlice';
+import { setAutoReload } from '../store/uiSlice';
 
 function Panel() {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const { tags, isLoading, error, imageUrl, title, description, origin, siteName } = useOGPData();
   const hasLoaded = useAppSelector((state) => state.ogp.hasLoaded);
+  const isAutoReload = useAppSelector((state) => state.ui.isAutoReload);
 
   const [showToast, setShowToast] = useState(false);
   const isExplicitReload = useRef(false);
@@ -49,10 +52,34 @@ function Panel() {
     }
   }, [isLoading]);
 
+  useEffect(() => {
+    if (!isAutoReload) return;
+
+    let timerId: ReturnType<typeof setTimeout>;
+    const handleNavigated = () => {
+      clearTimeout(timerId);
+      timerId = setTimeout(() => {
+        dispatch(fetchOGPData(chrome.devtools.inspectedWindow.tabId));
+      }, 300);
+    };
+
+    chrome.devtools.network.onNavigated.addListener(handleNavigated);
+    return () => {
+      chrome.devtools.network.onNavigated.removeListener(handleNavigated);
+      clearTimeout(timerId);
+    };
+  }, [isAutoReload, dispatch]);
+
   const handleReload = useCallback(() => {
     isExplicitReload.current = true;
     dispatch(fetchOGPData(chrome.devtools.inspectedWindow.tabId));
   }, [dispatch]);
+
+  const handleAutoReloadToggle = useCallback(() => {
+    const next = !isAutoReload;
+    localStorage.setItem('isAutoReload', String(next));
+    dispatch(setAutoReload(next));
+  }, [isAutoReload, dispatch]);
 
   const isInitialLoad = !hasLoaded && isLoading;
   const isReloading = hasLoaded && isLoading;
@@ -65,6 +92,14 @@ function Panel() {
             <IconButton onClick={handleReload} color="inherit" size="small" disabled={isLoading}>
               <CachedIcon />
             </IconButton>
+          </Tooltip>
+          <Tooltip title={t('panel.autoReload')}>
+            <Switch
+              checked={isAutoReload}
+              onChange={handleAutoReloadToggle}
+              size="small"
+              color="primary"
+            />
           </Tooltip>
           <DarkModeToggle />
           <Tooltip title={t('panel.github')}>

@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "OGPデータを再読み込み",
     "reloadSuccess": "OGPデータを再読み込みしました",
+    "autoReload": "ページ遷移時に自動リロード",
     "github": "GitHubでソースを見る",
     "loading": "読み込み中...",
     "table": {
