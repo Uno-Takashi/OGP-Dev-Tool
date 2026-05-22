@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "Ricarica dati OGP",
     "reloadSuccess": "Dati OGP ricaricati",
+    "autoReload": "Ricarica automatica alla navigazione",
     "github": "Visualizza sorgente su GitHub",
     "loading": "Caricamento...",
     "table": {
@@ -16,7 +17,8 @@
       "filterValid": "Solo validi",
       "valid": "Configurato correttamente",
       "invalid": "Problema di formato",
-      "openLink": "Apri in nuova scheda"
+      "openLink": "Apri in nuova scheda",
+      "openProfile": "Apri profilo X"
     }
   },
   "preview": {

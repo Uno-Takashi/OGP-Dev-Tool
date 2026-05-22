@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "Muat ulang data OGP",
     "reloadSuccess": "Data OGP berhasil dimuat ulang",
+    "autoReload": "Muat ulang otomatis saat navigasi",
     "github": "Lihat kode sumber di GitHub",
     "loading": "Memuat...",
     "table": {
@@ -16,7 +17,8 @@
       "filterValid": "Hanya valid",
       "valid": "Dikonfigurasi dengan benar",
       "invalid": "Masalah format",
-      "openLink": "Buka di tab baru"
+      "openLink": "Buka di tab baru",
+      "openProfile": "Buka profil X"
     }
   },
   "preview": {

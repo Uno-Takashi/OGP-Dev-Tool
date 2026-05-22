@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "OGP verilerini yenile",
     "reloadSuccess": "OGP verileri yenilendi",
+    "autoReload": "Gezinmede otomatik yenile",
     "github": "GitHub'da kaynağı görüntüle",
     "loading": "Yükleniyor...",
     "table": {
@@ -16,7 +17,8 @@
       "filterValid": "Yalnızca geçerli",
       "valid": "Doğru yapılandırıldı",
       "invalid": "Biçim sorunu",
-      "openLink": "Yeni sekmede aç"
+      "openLink": "Yeni sekmede aç",
+      "openProfile": "X profilini aç"
     }
   },
   "preview": {

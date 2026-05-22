@@ -17,7 +17,8 @@
       "filterValid": "仅显示有效",
       "valid": "配置正确",
       "invalid": "格式有问题",
-      "openLink": "在新标签页中打开"
+      "openLink": "在新标签页中打开",
+      "openProfile": "打开 X 主页"
     }
   },
   "preview": {

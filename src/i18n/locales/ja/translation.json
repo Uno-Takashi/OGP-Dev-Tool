@@ -17,7 +17,8 @@
       "filterValid": "正常のみ表示",
       "valid": "正しく設定されています",
       "invalid": "フォーマットに問題があります",
-      "openLink": "新しいタブで開く"
+      "openLink": "新しいタブで開く",
+      "openProfile": "Xのプロフィールを開く"
     }
   },
   "preview": {

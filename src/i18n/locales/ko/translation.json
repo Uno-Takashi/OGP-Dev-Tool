@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "OGP 데이터 새로고침",
     "reloadSuccess": "OGP 데이터가 새로고침되었습니다",
+    "autoReload": "탐색 시 자동 새로고침",
     "github": "GitHub에서 소스 보기",
     "loading": "로딩 중...",
     "table": {
@@ -16,7 +17,8 @@
       "filterValid": "유효한 항목만",
       "valid": "올바르게 설정됨",
       "invalid": "형식 오류",
-      "openLink": "새 탭에서 열기"
+      "openLink": "새 탭에서 열기",
+      "openProfile": "X 프로필 열기"
     }
   },
   "preview": {

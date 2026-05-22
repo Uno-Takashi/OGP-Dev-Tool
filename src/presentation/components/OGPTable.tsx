@@ -21,12 +21,14 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useTranslation } from 'react-i18next';
 import type { OGPTag } from '../../domain/entities/OGPMetadata';
 import { useCopyToClipboard } from '../../shared/hooks/useCopyToClipboard';
-import { validateOGPValue } from '../../shared/utils/ogpValidation';
+import { validateOGPValue, isAtHandle } from '../../shared/utils/ogpValidation';
 
 function isUrl(value: string | null): boolean {
   if (!value) return false;
   return value.startsWith('http://') || value.startsWith('https://');
 }
+
+const TWITTER_HANDLE_TYPES = new Set(['twitter:site', 'twitter:creator']);
 
 interface CopyButtonProps {
   text: string | null;
@@ -51,13 +53,14 @@ function CopyButton({ text }: CopyButtonProps) {
 
 interface LinkButtonProps {
   url: string;
+  tooltipKey?: string;
 }
 
-function LinkButton({ url }: LinkButtonProps) {
+function LinkButton({ url, tooltipKey = 'panel.table.openLink' }: LinkButtonProps) {
   const { t } = useTranslation();
 
   return (
-    <Tooltip title={t('panel.table.openLink')}>
+    <Tooltip title={t(tooltipKey)}>
       <IconButton size="small" onClick={() => chrome.tabs.create({ url })}>
         <OpenInNewIcon sx={{ fontSize: 14 }} />
       </IconButton>
@@ -156,8 +159,16 @@ export function OGPTable({ tags }: Props) {
                 </TableCell>
                 <TableCell align="left" sx={{ maxWidth: 200, wordBreak: 'break-all' }}>
                   {row.contentValue}
-                  <CopyButton text={row.contentValue} />
+                  {row.contentValue !== null && <CopyButton text={row.contentValue} />}
                   {isUrl(row.contentValue) && <LinkButton url={row.contentValue!} />}
+                  {TWITTER_HANDLE_TYPES.has(row.ogpType) &&
+                    row.contentValue !== null &&
+                    isAtHandle(row.contentValue) && (
+                      <LinkButton
+                        url={`https://x.com/${row.contentValue.slice(1)}`}
+                        tooltipKey="panel.table.openProfile"
+                      />
+                    )}
                 </TableCell>
               </TableRow>
             ))}
