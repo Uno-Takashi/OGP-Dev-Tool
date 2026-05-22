@@ -5,16 +5,16 @@
 [![Supply Chain](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/supply-chain.yml/badge.svg)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/supply-chain.yml)
 [![Storybook](https://img.shields.io/badge/Storybook-Docs-FF4785?logo=storybook&logoColor=white)](https://uno-takashi.github.io/OGP-Dev-Tool/)
 
-OGP Dev Tool is a Chrome extension for developers to preview how Open Graph Protocol (OGP) metadata is rendered on social networks and UI component libraries — including **localhost** without any uploads.
+OGP Dev Tool is a Chrome DevTools extension for developers to instantly preview how Open Graph Protocol (OGP) metadata renders on social networks and UI component libraries — including **localhost** without any uploads.
 
 ## Features
 
-- Live preview of OGP metadata for the inspected page in Chrome DevTools
-- Visual previews: **Twitter/X**, **Facebook**, **shadcn/ui**, **Ant Design**, **Material UI**
-- Dark mode toggle
-- UI language switching: 🇺🇸 English / 🇯🇵 日本語 / 🇨🇳 中文
-- Copy-to-clipboard for each metadata value
-- Works on localhost
+- Live OGP metadata table with per-field validation and copy-to-clipboard
+- **Click-to-open** link icon on URL values
+- Visual card previews: **X (Twitter)**, **Facebook**, **shadcn/ui**, **Ant Design**, **Material UI**
+- Dark mode toggle, persisted per-browser
+- **15-language UI**: English, 日本語, 中文, Deutsch, Français, Español, Português, 한국어, Русский, العربية, Italiano, Nederlands, Türkçe, Tiếng Việt, Bahasa Indonesia
+- Works on localhost — no upload required
 
 ## Storybook
 
@@ -70,7 +70,7 @@ Starts webpack watch mode inside a Node 22 container.
 4. Click **Load unpacked** → select the `dist/` directory
 
 <details>
-<summary>🔍 How to test the extension in Chrome</summary>
+<summary>How to test the extension in Chrome</summary>
 
 #### 1. Build and load
 
@@ -124,7 +124,7 @@ src/
 │   ├── components/   # OGPTable, DarkModeToggle, LanguageSwitcher, previews
 │   ├── pages/        # DevToolsPanel, Popup, Options
 │   └── store/        # Redux Toolkit slices
-├── i18n/             # react-i18next config + locale JSON (en/ja/zh)
+├── i18n/             # react-i18next config + 15 locale JSON files
 ├── chrome/           # Extension entry files (background, content_script)
 └── shared/           # Utility hooks (useCopyToClipboard)
 ```
@@ -138,7 +138,7 @@ See [AGENT.md](./AGENT.md) for full architecture documentation.
 | Build + Test | Push / PR to `main` |
 | Code Quality | Every push |
 | Supply Chain (npm audit, OSSF Scorecard) | Push to `main` + weekly |
-| Publish to Chrome Web Store | GitHub Release |
+| Release (version bump + Chrome Web Store) | Manual dispatch |
 | Deploy Storybook to GitHub Pages | Push to `main` |
 
 ## License
