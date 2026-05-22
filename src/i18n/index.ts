@@ -19,8 +19,21 @@ import viTranslation from './locales/vi/translation.json';
 import idTranslation from './locales/id/translation.json';
 
 export const SUPPORTED_LANGUAGES = [
-  'en', 'ja', 'zh', 'de', 'fr', 'es', 'pt',
-  'ko', 'ru', 'ar', 'it', 'nl', 'tr', 'vi', 'id',
+  'en',
+  'ja',
+  'zh',
+  'de',
+  'fr',
+  'es',
+  'pt',
+  'ko',
+  'ru',
+  'ar',
+  'it',
+  'nl',
+  'tr',
+  'vi',
+  'id',
 ] as const;
 
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];

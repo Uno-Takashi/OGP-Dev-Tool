@@ -33,8 +33,7 @@ export function ShadcnPreview({ imageUrl, title, description, origin, siteName }
           border: '1px solid',
           borderColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)',
           bgcolor: isDarkMode ? 'hsl(222.2,84%,4.9%)' : '#ffffff',
-          boxShadow:
-            '0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1)',
+          boxShadow: '0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1)',
           overflow: 'hidden',
           fontFamily: '"Inter", "Geist", -apple-system, sans-serif',
           mb: 2,

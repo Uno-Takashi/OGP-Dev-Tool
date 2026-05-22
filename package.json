@@ -11,7 +11,8 @@
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "type-check": "tsc --noEmit",
-    "format": "prettier --write \"src/**/*.{ts,tsx,json}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json}\" \"public/manifest.json\" \"tsconfig.json\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,json}\" \"public/manifest.json\" \"tsconfig.json\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

@@ -20,9 +20,8 @@ const initialState: OGPState = {
 const repository = new ChromeOGPRepository();
 const fetchUseCase = new FetchOGPDataUseCase(repository);
 
-export const fetchOGPData = createAsyncThunk<OGPTag[], number>(
-  'ogp/fetch',
-  async (tabId) => fetchUseCase.execute(tabId)
+export const fetchOGPData = createAsyncThunk<OGPTag[], number>('ogp/fetch', async (tabId) =>
+  fetchUseCase.execute(tabId)
 );
 
 const ogpSlice = createSlice({
