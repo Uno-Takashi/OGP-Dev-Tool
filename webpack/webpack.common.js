@@ -20,6 +20,9 @@ module.exports = {
         path: path.join(__dirname, "../dist/js"),
         filename: "[name].js",
     },
+    performance: {
+        hints: false,
+    },
     optimization: {
         splitChunks: {
             name: "vendor",
