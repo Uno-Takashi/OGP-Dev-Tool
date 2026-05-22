@@ -1,8 +1,30 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import SvgIcon from '@mui/material/SvgIcon';
 import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../hooks/useOGPData';
+
+function ShadcnIcon(props: React.ComponentProps<typeof SvgIcon>) {
+  return (
+    <SvgIcon {...props} viewBox="0 0 256 256">
+      <path
+        d="M208 128L128 208"
+        stroke="currentColor"
+        strokeWidth="32"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M192 40L40 192"
+        stroke="currentColor"
+        strokeWidth="32"
+        strokeLinecap="round"
+        fill="none"
+      />
+    </SvgIcon>
+  );
+}
 
 interface Props {
   imageUrl: string | null;
@@ -21,6 +43,7 @@ export function ShadcnPreview({ imageUrl, title, description, origin, siteName }
       <Grid container sx={{ mt: 2, mb: 1 }}>
         <Grid size={12}>
           <Typography variant="h6" component="h2" sx={{ fontWeight: 600 }}>
+            <ShadcnIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
             {t('preview.shadcn.title')}
           </Typography>
         </Grid>
