@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "Open Graph Protocol 检查器",
     "currentUrl": "当前URL",
-    "openDevtools": "打开 DevTools → OGP 标签页以检查 OGP 元数据。"
+    "howToUse": "使用方法",
+    "step1": "打开页面",
+    "step1Desc": "导航至您想检查的网站",
+    "step2": "打开DevTools",
+    "step2Desc": "按 F12，或右键点击 → 检查",
+    "step3": "选择OGP标签",
+    "step3Desc": "点击DevTools标签栏末尾的 »，然后选择「OGP」",
+    "step4": "检查OGP",
+    "step4Desc": "查看元数据表、社交预览，并导出为JSON或HTML"
   },
   "common": {
     "language": "语言",

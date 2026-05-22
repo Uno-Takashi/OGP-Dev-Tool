@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "Inspetor Open Graph Protocol",
     "currentUrl": "URL atual",
-    "openDevtools": "Abra DevTools → aba OGP para inspecionar os metadados OGP."
+    "howToUse": "Como usar",
+    "step1": "Abrir uma página",
+    "step1Desc": "Navegue até o site que deseja inspecionar",
+    "step2": "Abrir DevTools",
+    "step2Desc": "Pressione F12, ou clique direito → Inspecionar",
+    "step3": "Selecionar a aba OGP",
+    "step3Desc": "Clique em » no final da barra de abas do DevTools e selecione \"OGP\"",
+    "step4": "Inspecionar OGP",
+    "step4Desc": "Veja a tabela de metadados, visualizações sociais e exporte como JSON ou HTML"
   },
   "common": {
     "language": "Idioma",
