@@ -15,7 +15,7 @@ export function DarkModeToggle() {
   const handleToggle = () => {
     const next = !isDarkMode;
     dispatch(toggleDarkMode());
-    chrome.storage.sync.set({ isDarkMode: next });
+    localStorage.setItem('isDarkMode', String(next));
   };
 
   return (

@@ -41,20 +41,20 @@ function Options() {
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
-    chrome.storage.sync.get(['language', 'isDarkMode'], (result) => {
-      if (result.language) setLanguage(result.language as SupportedLanguage);
-      if (result.isDarkMode !== undefined) setIsDarkMode(result.isDarkMode as boolean);
-    });
+    const lang = localStorage.getItem('language');
+    if (lang) setLanguage(lang as SupportedLanguage);
+    const dark = localStorage.getItem('isDarkMode');
+    if (dark !== null) setIsDarkMode(dark === 'true');
   }, []);
 
   const theme = createTheme({ palette: { mode: isDarkMode ? 'dark' : 'light' } });
 
   function handleSave() {
-    chrome.storage.sync.set({ language, isDarkMode }, () => {
-      i18n.changeLanguage(language);
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    });
+    localStorage.setItem('language', language);
+    localStorage.setItem('isDarkMode', String(isDarkMode));
+    i18n.changeLanguage(language);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
   }
 
   return (

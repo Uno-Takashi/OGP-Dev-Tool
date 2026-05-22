@@ -42,16 +42,15 @@ function Panel() {
   const isExplicitReload = useRef(false);
 
   useEffect(() => {
-    chrome.storage.sync.get(['language', 'isDarkMode'], (result) => {
-      if (result.language && SUPPORTED_LANGUAGES.includes(result.language as SupportedLanguage)) {
-        const lang = result.language as SupportedLanguage;
-        dispatch(setLanguage(lang));
-        i18n.changeLanguage(lang);
-      }
-      if (typeof result.isDarkMode === 'boolean') {
-        dispatch(setDarkMode(result.isDarkMode));
-      }
-    });
+    const lang = localStorage.getItem('language') as SupportedLanguage | null;
+    if (lang && SUPPORTED_LANGUAGES.includes(lang)) {
+      dispatch(setLanguage(lang));
+      i18n.changeLanguage(lang);
+    }
+    const dark = localStorage.getItem('isDarkMode');
+    if (dark !== null) {
+      dispatch(setDarkMode(dark === 'true'));
+    }
   }, [dispatch, i18n]);
 
   useEffect(() => {
