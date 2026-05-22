@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "重新加载OGP数据",
     "reloadSuccess": "OGP数据已重新加载",
+    "autoReload": "页面跳转时自动重载",
     "github": "在GitHub上查看源码",
     "loading": "加载中...",
     "table": {

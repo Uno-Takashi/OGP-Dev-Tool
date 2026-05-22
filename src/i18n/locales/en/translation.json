@@ -3,6 +3,7 @@
     "title": "OGP Dev Tool",
     "reload": "Reload OGP data",
     "reloadSuccess": "OGP data reloaded",
+    "autoReload": "Auto Reload on navigation",
     "github": "View Source on GitHub",
     "loading": "Loading...",
     "table": {
