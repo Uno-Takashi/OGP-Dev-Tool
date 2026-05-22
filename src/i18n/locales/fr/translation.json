@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "Recharger les données OGP",
+    "reloadSuccess": "Données OGP rechargées",
+    "toggleDarkMode": "Basculer le mode sombre",
+    "github": "Voir le code source sur GitHub",
+    "loading": "Chargement...",
+    "table": {
+      "ogpType": "Type OGP",
+      "tag": "Balise",
+      "content": "Attribut de contenu",
+      "contentValue": "Valeur du contenu",
+      "copy": "Copier dans le presse-papier",
+      "copied": "Copié !"
+    }
+  },
+  "preview": {
+    "sectionTitle": "Aperçu",
+    "x": {
+      "title": "Carte X",
+      "validator": "Ouvrir le validateur de carte X",
+      "summaryLargeImagePc": "Résumé avec grande image (PC)",
+      "summaryCardPc": "Carte de résumé (PC)",
+      "summaryCardSp": "Carte de résumé (Smartphone)"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "Ouvrir le débogueur Facebook",
+      "preview": "Aperçu du lien Facebook"
+    },
+    "shadcn": {
+      "title": "Aperçu de carte shadcn/ui"
+    },
+    "antd": {
+      "title": "Aperçu de carte Ant Design"
+    },
+    "mui": {
+      "title": "Aperçu de carte Material UI"
+    }
+  },
+  "options": {
+    "title": "Options OGP Dev Tool",
+    "language": "Langue",
+    "theme": "Thème",
+    "save": "Enregistrer",
+    "saved": "Enregistré !"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "URL actuelle",
+    "openDevtools": "Ouvrir dans DevTools"
+  },
+  "common": {
+    "language": "Langue",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "URL de la page – doit être une URL absolue.",
+      "ogType":              "Type de contenu : website, article, blog, product, etc.",
+      "ogTitle":             "Titre de la page, généralement sans le nom du site.",
+      "ogDescription":       "Description de la page, typiquement 15–30 mots.",
+      "ogSiteName":          "Nom du site.",
+      "ogLocale":            "Langue et territoire du contenu, ex. fr_FR ou en_US.",
+      "ogImage":             "URL de l'image miniature (absolue). 1200×630 px ou plus recommandé.",
+      "ogImageSecureUrl":    "URL HTTPS de l'image (utilisée quand la page est servie en HTTPS).",
+      "ogImageType":         "Type MIME de l'image, ex. image/jpeg ou image/png.",
+      "ogImageWidth":        "Largeur de l'image en pixels.",
+      "ogImageHeight":       "Hauteur de l'image en pixels.",
+      "ogImageAlt":          "Texte alternatif de l'image, utilisé par les lecteurs d'écran.",
+      "twitterCard":         "Type de carte X : summary, summary_large_image, app ou player.",
+      "twitterSite":         "Compte X (@nomutilisateur) du site.",
+      "twitterCreator":      "Compte X (@nomutilisateur) de l'auteur du contenu.",
+      "twitterTitle":        "Titre pour la carte X. Remplace og:title si défini.",
+      "twitterDescription":  "Description pour la carte X. Remplace og:description si défini.",
+      "twitterImage":        "URL de l'image pour la carte X. Remplace og:image si défini.",
+      "fbAppId":             "ID d'application Facebook. Doit être enregistré sur Meta for Developers.",
+      "articleAuthor":       "URL du profil de l'auteur de l'article.",
+      "articlePublishedTime":"Horodatage de publication ISO 8601, ex. 2024-01-01T00:00:00+00:00.",
+      "articleModifiedTime": "Horodatage de dernière modification ISO 8601.",
+      "articleSection":      "Nom de la catégorie ou section de l'article."
+    }
+  }
+}

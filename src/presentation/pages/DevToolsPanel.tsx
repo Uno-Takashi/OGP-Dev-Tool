@@ -16,6 +16,8 @@ import CachedIcon from '@mui/icons-material/Cached';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useTranslation } from 'react-i18next';
 import '../../i18n';
+import { SUPPORTED_LANGUAGES } from '../../i18n';
+import type { SupportedLanguage } from '../../i18n';
 import { store } from '../store';
 import { AppThemeProvider } from '../contexts/ThemeContext';
 import { DarkModeToggle } from '../components/common/DarkModeToggle';
@@ -28,15 +30,29 @@ import { AntDesignPreview } from '../components/previews/AntDesignPreview';
 import { MUIPreview } from '../components/previews/MUIPreview';
 import { useOGPData, useAppDispatch, useAppSelector } from '../hooks/useOGPData';
 import { fetchOGPData } from '../store/ogpSlice';
+import { setLanguage, setDarkMode } from '../store/uiSlice';
 
 function Panel() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const dispatch = useAppDispatch();
   const { tags, isLoading, error, imageUrl, title, description, origin, siteName } = useOGPData();
   const hasLoaded = useAppSelector((state) => state.ogp.hasLoaded);
 
   const [showToast, setShowToast] = useState(false);
   const isExplicitReload = useRef(false);
+
+  useEffect(() => {
+    chrome.storage.sync.get(['language', 'isDarkMode'], (result) => {
+      if (result.language && SUPPORTED_LANGUAGES.includes(result.language as SupportedLanguage)) {
+        const lang = result.language as SupportedLanguage;
+        dispatch(setLanguage(lang));
+        i18n.changeLanguage(lang);
+      }
+      if (typeof result.isDarkMode === 'boolean') {
+        dispatch(setDarkMode(result.isDarkMode));
+      }
+    });
+  }, [dispatch, i18n]);
 
   useEffect(() => {
     const tabId = chrome.devtools.inspectedWindow.tabId;

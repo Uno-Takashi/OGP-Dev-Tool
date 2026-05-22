@@ -1,0 +1,3 @@
+[files]
+# Exclude locale translation files — they contain non-English words that typos flags as misspellings
+extend-exclude = ["src/i18n/locales/**"]

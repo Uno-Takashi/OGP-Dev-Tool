@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "OGP 데이터 새로고침",
+    "reloadSuccess": "OGP 데이터가 새로고침되었습니다",
+    "toggleDarkMode": "다크 모드 전환",
+    "github": "GitHub에서 소스 보기",
+    "loading": "로딩 중...",
+    "table": {
+      "ogpType": "OGP 유형",
+      "tag": "태그",
+      "content": "콘텐츠 속성",
+      "contentValue": "콘텐츠 값",
+      "copy": "클립보드에 복사",
+      "copied": "복사됨!"
+    }
+  },
+  "preview": {
+    "sectionTitle": "미리보기",
+    "x": {
+      "title": "X 카드",
+      "validator": "X 카드 유효성 검사기 열기",
+      "summaryLargeImagePc": "큰 이미지 요약 (PC)",
+      "summaryCardPc": "요약 카드 (PC)",
+      "summaryCardSp": "요약 카드 (스마트폰)"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "Facebook 디버거 열기",
+      "preview": "Facebook 링크 미리보기"
+    },
+    "shadcn": {
+      "title": "shadcn/ui 카드 미리보기"
+    },
+    "antd": {
+      "title": "Ant Design 카드 미리보기"
+    },
+    "mui": {
+      "title": "Material UI 카드 미리보기"
+    }
+  },
+  "options": {
+    "title": "OGP Dev Tool 설정",
+    "language": "언어",
+    "theme": "테마",
+    "save": "저장",
+    "saved": "저장되었습니다!"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "현재 URL",
+    "openDevtools": "DevTools에서 열기"
+  },
+  "common": {
+    "language": "언어",
+    "darkMode": "다크 모드",
+    "lightMode": "라이트 모드"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "페이지 URL – 절대 URL이어야 합니다.",
+      "ogType":              "콘텐츠 유형: website, article, blog, product 등.",
+      "ogTitle":             "페이지 제목, 일반적으로 사이트 이름은 포함하지 않습니다.",
+      "ogDescription":       "페이지 설명, 일반적으로 15–30단어.",
+      "ogSiteName":          "사이트 이름.",
+      "ogLocale":            "콘텐츠의 언어 및 지역, 예: ko_KR 또는 en_US.",
+      "ogImage":             "썸네일 이미지 URL (절대경로). 1200×630 px 이상 권장.",
+      "ogImageSecureUrl":    "이미지의 HTTPS URL (페이지가 HTTPS로 제공될 때 사용).",
+      "ogImageType":         "이미지의 MIME 유형, 예: image/jpeg 또는 image/png.",
+      "ogImageWidth":        "이미지 너비(픽셀).",
+      "ogImageHeight":       "이미지 높이(픽셀).",
+      "ogImageAlt":          "이미지의 대체 텍스트, 스크린 리더에서 사용됩니다.",
+      "twitterCard":         "X 카드 유형: summary, summary_large_image, app 또는 player.",
+      "twitterSite":         "웹사이트의 X (@사용자명).",
+      "twitterCreator":      "콘텐츠 작성자의 X (@사용자명).",
+      "twitterTitle":        "X 카드 제목. 설정 시 og:title을 덮어씁니다.",
+      "twitterDescription":  "X 카드 설명. 설정 시 og:description을 덮어씁니다.",
+      "twitterImage":        "X 카드 이미지 URL. 설정 시 og:image를 덮어씁니다.",
+      "fbAppId":             "Facebook 앱 ID. Meta for Developers에서 등록해야 합니다.",
+      "articleAuthor":       "기사 작성자의 프로필 URL.",
+      "articlePublishedTime":"ISO 8601 게시 타임스탬프, 예: 2024-01-01T00:00:00+00:00.",
+      "articleModifiedTime": "ISO 8601 마지막 수정 타임스탬프.",
+      "articleSection":      "기사의 카테고리 또는 섹션 이름."
+    }
+  }
+}

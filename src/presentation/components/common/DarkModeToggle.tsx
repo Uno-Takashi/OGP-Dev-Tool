@@ -12,9 +12,15 @@ export function DarkModeToggle() {
   const dispatch = useAppDispatch();
   const isDarkMode = useAppSelector((state) => state.ui.isDarkMode);
 
+  const handleToggle = () => {
+    const next = !isDarkMode;
+    dispatch(toggleDarkMode());
+    chrome.storage.sync.set({ isDarkMode: next });
+  };
+
   return (
     <Tooltip title={isDarkMode ? t('common.lightMode') : t('common.darkMode')}>
-      <IconButton onClick={() => dispatch(toggleDarkMode())} color="inherit">
+      <IconButton onClick={handleToggle} color="inherit">
         {isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
       </IconButton>
     </Tooltip>
