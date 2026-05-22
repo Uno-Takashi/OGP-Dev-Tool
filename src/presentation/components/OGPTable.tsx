@@ -17,10 +17,16 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutlined';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useTranslation } from 'react-i18next';
 import type { OGPTag } from '../../domain/entities/OGPMetadata';
 import { useCopyToClipboard } from '../../shared/hooks/useCopyToClipboard';
 import { validateOGPValue } from '../../shared/utils/ogpValidation';
+
+function isUrl(value: string | null): boolean {
+  if (!value) return false;
+  return value.startsWith('http://') || value.startsWith('https://');
+}
 
 interface CopyButtonProps {
   text: string | null;
@@ -34,6 +40,25 @@ function CopyButton({ text }: CopyButtonProps) {
     <Tooltip title={copied ? t('panel.table.copied') : t('panel.table.copy')}>
       <IconButton size="small" onClick={() => copy(text ?? '')} color={copied ? 'success' : 'default'}>
         {copied ? <CheckIcon sx={{ fontSize: 14 }} /> : <ContentCopyIcon sx={{ fontSize: 14 }} />}
+      </IconButton>
+    </Tooltip>
+  );
+}
+
+interface LinkButtonProps {
+  url: string;
+}
+
+function LinkButton({ url }: LinkButtonProps) {
+  const { t } = useTranslation();
+
+  return (
+    <Tooltip title={t('panel.table.openLink')}>
+      <IconButton
+        size="small"
+        onClick={() => chrome.tabs.create({ url })}
+      >
+        <OpenInNewIcon sx={{ fontSize: 14 }} />
       </IconButton>
     </Tooltip>
   );
@@ -125,6 +150,7 @@ export function OGPTable({ tags }: Props) {
                 <TableCell align="left" sx={{ maxWidth: 200, wordBreak: 'break-all' }}>
                   {row.contentValue}
                   <CopyButton text={row.contentValue} />
+                  {isUrl(row.contentValue) && <LinkButton url={row.contentValue!} />}
                 </TableCell>
               </TableRow>
             ))}

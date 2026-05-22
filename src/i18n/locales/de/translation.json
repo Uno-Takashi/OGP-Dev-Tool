@@ -16,7 +16,8 @@
       "status": "Status",
       "filterValid": "Nur gültige",
       "valid": "Korrekt konfiguriert",
-      "invalid": "Formatproblem"
+      "invalid": "Formatproblem",
+      "openLink": "In neuem Tab öffnen"
     }
   },
   "preview": {
@@ -62,29 +63,29 @@
   },
   "ogp": {
     "tips": {
-      "ogUrl":               "Seiten-URL – muss eine absolute URL sein.",
-      "ogType":              "Inhaltstyp: website, article, blog, product usw.",
-      "ogTitle":             "Seitentitel, normalerweise ohne den Website-Namen.",
-      "ogDescription":       "Seitenbeschreibung, typischerweise 15–30 Wörter.",
-      "ogSiteName":          "Name der Website.",
-      "ogLocale":            "Sprache und Region des Inhalts, z.B. de_DE oder en_US.",
-      "ogImage":             "Vorschaubild-URL (absolut). 1200×630 px oder größer empfohlen.",
-      "ogImageSecureUrl":    "HTTPS-URL für das Bild (verwendet wenn die Seite über HTTPS bereitgestellt wird).",
-      "ogImageType":         "MIME-Typ des Bildes, z.B. image/jpeg oder image/png.",
-      "ogImageWidth":        "Bildbreite in Pixeln.",
-      "ogImageHeight":       "Bildhöhe in Pixeln.",
-      "ogImageAlt":          "Alternativtext für das Bild, verwendet von Screenreadern.",
-      "twitterCard":         "X-Kartentyp: summary, summary_large_image, app oder player.",
-      "twitterSite":         "X (@Benutzername) der Website.",
-      "twitterCreator":      "X (@Benutzername) des Inhaltsautors.",
-      "twitterTitle":        "Titel für die X-Karte. Überschreibt og:title wenn gesetzt.",
-      "twitterDescription":  "Beschreibung für die X-Karte. Überschreibt og:description wenn gesetzt.",
-      "twitterImage":        "Bild-URL für die X-Karte. Überschreibt og:image wenn gesetzt.",
-      "fbAppId":             "Facebook-App-ID. Muss bei Meta for Developers registriert sein.",
-      "articleAuthor":       "Profil-URL des Artikelautors.",
-      "articlePublishedTime":"ISO 8601 Veröffentlichungszeitstempel, z.B. 2024-01-01T00:00:00+00:00.",
+      "ogUrl": "Seiten-URL – muss eine absolute URL sein.",
+      "ogType": "Inhaltstyp: website, article, blog, product usw.",
+      "ogTitle": "Seitentitel, normalerweise ohne den Website-Namen.",
+      "ogDescription": "Seitenbeschreibung, typischerweise 15–30 Wörter.",
+      "ogSiteName": "Name der Website.",
+      "ogLocale": "Sprache und Region des Inhalts, z.B. de_DE oder en_US.",
+      "ogImage": "Vorschaubild-URL (absolut). 1200×630 px oder größer empfohlen.",
+      "ogImageSecureUrl": "HTTPS-URL für das Bild (verwendet wenn die Seite über HTTPS bereitgestellt wird).",
+      "ogImageType": "MIME-Typ des Bildes, z.B. image/jpeg oder image/png.",
+      "ogImageWidth": "Bildbreite in Pixeln.",
+      "ogImageHeight": "Bildhöhe in Pixeln.",
+      "ogImageAlt": "Alternativtext für das Bild, verwendet von Screenreadern.",
+      "twitterCard": "X-Kartentyp: summary, summary_large_image, app oder player.",
+      "twitterSite": "X (@Benutzername) der Website.",
+      "twitterCreator": "X (@Benutzername) des Inhaltsautors.",
+      "twitterTitle": "Titel für die X-Karte. Überschreibt og:title wenn gesetzt.",
+      "twitterDescription": "Beschreibung für die X-Karte. Überschreibt og:description wenn gesetzt.",
+      "twitterImage": "Bild-URL für die X-Karte. Überschreibt og:image wenn gesetzt.",
+      "fbAppId": "Facebook-App-ID. Muss bei Meta for Developers registriert sein.",
+      "articleAuthor": "Profil-URL des Artikelautors.",
+      "articlePublishedTime": "ISO 8601 Veröffentlichungszeitstempel, z.B. 2024-01-01T00:00:00+00:00.",
       "articleModifiedTime": "ISO 8601 Zeitstempel der letzten Änderung.",
-      "articleSection":      "Kategorie oder Abschnittsname des Artikels."
+      "articleSection": "Kategorie oder Abschnittsname des Artikels."
     }
   }
 }

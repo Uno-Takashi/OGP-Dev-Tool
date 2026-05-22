@@ -16,7 +16,8 @@
       "status": "الحالة",
       "filterValid": "الصحيحة فقط",
       "valid": "مُهيَّأ بشكل صحيح",
-      "invalid": "مشكلة في التنسيق"
+      "invalid": "مشكلة في التنسيق",
+      "openLink": "فتح في تبويب جديد"
     }
   },
   "preview": {
@@ -62,29 +63,29 @@
   },
   "ogp": {
     "tips": {
-      "ogUrl":               "رابط الصفحة – يجب أن يكون رابطاً مطلقاً.",
-      "ogType":              "نوع المحتوى: website, article, blog, product, إلخ.",
-      "ogTitle":             "عنوان الصفحة، عادةً بدون اسم الموقع.",
-      "ogDescription":       "وصف الصفحة، عادةً 15–30 كلمة.",
-      "ogSiteName":          "اسم الموقع.",
-      "ogLocale":            "لغة ومنطقة المحتوى، مثل ar_SA أو en_US.",
-      "ogImage":             "رابط صورة المصغرة (مطلق). يُنصح بـ 1200×630 بكسل أو أكبر.",
-      "ogImageSecureUrl":    "رابط HTTPS للصورة (يُستخدم عندما تُقدَّم الصفحة عبر HTTPS).",
-      "ogImageType":         "نوع MIME للصورة، مثل image/jpeg أو image/png.",
-      "ogImageWidth":        "عرض الصورة بالبكسل.",
-      "ogImageHeight":       "ارتفاع الصورة بالبكسل.",
-      "ogImageAlt":          "النص البديل للصورة، يُستخدم بواسطة قارئات الشاشة.",
-      "twitterCard":         "نوع بطاقة X: summary أو summary_large_image أو app أو player.",
-      "twitterSite":         "حساب X (@اسم_المستخدم) للموقع.",
-      "twitterCreator":      "حساب X (@اسم_المستخدم) لمؤلف المحتوى.",
-      "twitterTitle":        "عنوان بطاقة X. يُحل محل og:title إذا تم تعيينه.",
-      "twitterDescription":  "وصف بطاقة X. يُحل محل og:description إذا تم تعيينه.",
-      "twitterImage":        "رابط صورة بطاقة X. يُحل محل og:image إذا تم تعيينه.",
-      "fbAppId":             "معرّف تطبيق Facebook. يجب تسجيله في Meta for Developers.",
-      "articleAuthor":       "رابط ملف تعريف مؤلف المقال.",
-      "articlePublishedTime":"طابع وقت النشر بتنسيق ISO 8601، مثل 2024-01-01T00:00:00+00:00.",
+      "ogUrl": "رابط الصفحة – يجب أن يكون رابطاً مطلقاً.",
+      "ogType": "نوع المحتوى: website, article, blog, product, إلخ.",
+      "ogTitle": "عنوان الصفحة، عادةً بدون اسم الموقع.",
+      "ogDescription": "وصف الصفحة، عادةً 15–30 كلمة.",
+      "ogSiteName": "اسم الموقع.",
+      "ogLocale": "لغة ومنطقة المحتوى، مثل ar_SA أو en_US.",
+      "ogImage": "رابط صورة المصغرة (مطلق). يُنصح بـ 1200×630 بكسل أو أكبر.",
+      "ogImageSecureUrl": "رابط HTTPS للصورة (يُستخدم عندما تُقدَّم الصفحة عبر HTTPS).",
+      "ogImageType": "نوع MIME للصورة، مثل image/jpeg أو image/png.",
+      "ogImageWidth": "عرض الصورة بالبكسل.",
+      "ogImageHeight": "ارتفاع الصورة بالبكسل.",
+      "ogImageAlt": "النص البديل للصورة، يُستخدم بواسطة قارئات الشاشة.",
+      "twitterCard": "نوع بطاقة X: summary أو summary_large_image أو app أو player.",
+      "twitterSite": "حساب X (@اسم_المستخدم) للموقع.",
+      "twitterCreator": "حساب X (@اسم_المستخدم) لمؤلف المحتوى.",
+      "twitterTitle": "عنوان بطاقة X. يُحل محل og:title إذا تم تعيينه.",
+      "twitterDescription": "وصف بطاقة X. يُحل محل og:description إذا تم تعيينه.",
+      "twitterImage": "رابط صورة بطاقة X. يُحل محل og:image إذا تم تعيينه.",
+      "fbAppId": "معرّف تطبيق Facebook. يجب تسجيله في Meta for Developers.",
+      "articleAuthor": "رابط ملف تعريف مؤلف المقال.",
+      "articlePublishedTime": "طابع وقت النشر بتنسيق ISO 8601، مثل 2024-01-01T00:00:00+00:00.",
       "articleModifiedTime": "طابع وقت آخر تعديل بتنسيق ISO 8601.",
-      "articleSection":      "اسم فئة أو قسم المقال."
+      "articleSection": "اسم فئة أو قسم المقال."
     }
   }
 }

@@ -16,7 +16,8 @@
       "status": "Status",
       "filterValid": "Hanya valid",
       "valid": "Dikonfigurasi dengan benar",
-      "invalid": "Masalah format"
+      "invalid": "Masalah format",
+      "openLink": "Buka di tab baru"
     }
   },
   "preview": {
@@ -62,29 +63,29 @@
   },
   "ogp": {
     "tips": {
-      "ogUrl":               "URL halaman – harus berupa URL absolut.",
-      "ogType":              "Tipe konten: website, article, blog, product, dll.",
-      "ogTitle":             "Judul halaman, biasanya tanpa nama situs.",
-      "ogDescription":       "Deskripsi halaman, biasanya 15–30 kata.",
-      "ogSiteName":          "Nama situs.",
-      "ogLocale":            "Bahasa dan wilayah konten, mis. id_ID atau en_US.",
-      "ogImage":             "URL gambar thumbnail (absolut). Disarankan 1200×630 px atau lebih besar.",
-      "ogImageSecureUrl":    "URL HTTPS untuk gambar (digunakan saat halaman disajikan melalui HTTPS).",
-      "ogImageType":         "Tipe MIME gambar, mis. image/jpeg atau image/png.",
-      "ogImageWidth":        "Lebar gambar dalam piksel.",
-      "ogImageHeight":       "Tinggi gambar dalam piksel.",
-      "ogImageAlt":          "Teks alternatif untuk gambar, digunakan oleh pembaca layar.",
-      "twitterCard":         "Tipe kartu X: summary, summary_large_image, app, atau player.",
-      "twitterSite":         "Akun X (@namapengguna) situs web.",
-      "twitterCreator":      "Akun X (@namapengguna) penulis konten.",
-      "twitterTitle":        "Judul untuk kartu X. Menggantikan og:title jika disetel.",
-      "twitterDescription":  "Deskripsi untuk kartu X. Menggantikan og:description jika disetel.",
-      "twitterImage":        "URL gambar untuk kartu X. Menggantikan og:image jika disetel.",
-      "fbAppId":             "ID Aplikasi Facebook. Harus terdaftar di Meta for Developers.",
-      "articleAuthor":       "URL profil penulis artikel.",
-      "articlePublishedTime":"Stempel waktu penerbitan ISO 8601, mis. 2024-01-01T00:00:00+00:00.",
+      "ogUrl": "URL halaman – harus berupa URL absolut.",
+      "ogType": "Tipe konten: website, article, blog, product, dll.",
+      "ogTitle": "Judul halaman, biasanya tanpa nama situs.",
+      "ogDescription": "Deskripsi halaman, biasanya 15–30 kata.",
+      "ogSiteName": "Nama situs.",
+      "ogLocale": "Bahasa dan wilayah konten, mis. id_ID atau en_US.",
+      "ogImage": "URL gambar thumbnail (absolut). Disarankan 1200×630 px atau lebih besar.",
+      "ogImageSecureUrl": "URL HTTPS untuk gambar (digunakan saat halaman disajikan melalui HTTPS).",
+      "ogImageType": "Tipe MIME gambar, mis. image/jpeg atau image/png.",
+      "ogImageWidth": "Lebar gambar dalam piksel.",
+      "ogImageHeight": "Tinggi gambar dalam piksel.",
+      "ogImageAlt": "Teks alternatif untuk gambar, digunakan oleh pembaca layar.",
+      "twitterCard": "Tipe kartu X: summary, summary_large_image, app, atau player.",
+      "twitterSite": "Akun X (@namapengguna) situs web.",
+      "twitterCreator": "Akun X (@namapengguna) penulis konten.",
+      "twitterTitle": "Judul untuk kartu X. Menggantikan og:title jika disetel.",
+      "twitterDescription": "Deskripsi untuk kartu X. Menggantikan og:description jika disetel.",
+      "twitterImage": "URL gambar untuk kartu X. Menggantikan og:image jika disetel.",
+      "fbAppId": "ID Aplikasi Facebook. Harus terdaftar di Meta for Developers.",
+      "articleAuthor": "URL profil penulis artikel.",
+      "articlePublishedTime": "Stempel waktu penerbitan ISO 8601, mis. 2024-01-01T00:00:00+00:00.",
       "articleModifiedTime": "Stempel waktu modifikasi terakhir ISO 8601.",
-      "articleSection":      "Nama kategori atau bagian artikel."
+      "articleSection": "Nama kategori atau bagian artikel."
     }
   }
 }
