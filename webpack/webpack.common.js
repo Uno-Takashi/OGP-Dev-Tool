@@ -5,16 +5,16 @@ const srcDir = path.join(__dirname, "..", "src");
 
 module.exports = {
     entry: {
-      popup: path.join(srcDir, 'popup.tsx'),
-      options: path.join(srcDir, 'options.tsx'),
-      background: path.join(srcDir, 'background.ts'),
-      content_script: path.join(srcDir, 'content_script.tsx'),
-      devtools_page: path.join(srcDir, 'devtools_page.tsx'),
-      devtools_panel: path.join(srcDir, 'devtools_panel.tsx'),
+        popup: path.join(srcDir, "presentation", "pages", "Popup.tsx"),
+        options: path.join(srcDir, "presentation", "pages", "Options.tsx"),
+        background: path.join(srcDir, "chrome", "background.ts"),
+        content_script: path.join(srcDir, "chrome", "content_script.tsx"),
+        devtools_page: path.join(srcDir, "chrome", "devtools_page.tsx"),
+        devtools_panel: path.join(srcDir, "presentation", "pages", "DevToolsPanel.tsx"),
     },
     watchOptions: {
         ignored: /node_modules/,
-        poll: 5000
+        poll: 5000,
     },
     output: {
         path: path.join(__dirname, "../dist/js"),
@@ -24,8 +24,8 @@ module.exports = {
         splitChunks: {
             name: "vendor",
             chunks(chunk) {
-              return chunk.name !== 'background';
-            }
+                return chunk.name !== "background";
+            },
         },
     },
     module: {
@@ -37,28 +37,30 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [
-                  // Creates `style` nodes from JS strings
-                  "style-loader",
-                  // Translates CSS into CommonJS
-                  "css-loader",
-                  // Compiles Sass to CSS
-                  "sass-loader",
-                ],
-              },
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader", "postcss-loader"],
+            },
         ],
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
         alias: {
-        querystring: "querystring-es3",
-        process: "process/browser",
+            querystring: "querystring-es3",
+        },
+        fallback: {
+            process: require.resolve("process/browser.js"),
+            buffer: require.resolve("buffer/"),
         },
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            Buffer: ["buffer", "Buffer"],
+        }),
         new CopyPlugin({
             patterns: [{ from: ".", to: "../", context: "public" }],
-            options: {},
         }),
     ],
 };

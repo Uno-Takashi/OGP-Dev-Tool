@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "重新加载OGP数据",
+    "reloadSuccess": "OGP数据已重新加载",
+    "toggleDarkMode": "切换深色模式",
+    "github": "在GitHub上查看源码",
+    "loading": "加载中...",
+    "table": {
+      "ogpType": "OGP类型",
+      "tag": "标签",
+      "content": "内容属性",
+      "contentValue": "内容值",
+      "copy": "复制到剪贴板",
+      "copied": "已复制！"
+    }
+  },
+  "preview": {
+    "sectionTitle": "预览",
+    "x": {
+      "title": "X卡片",
+      "validator": "打开X卡片验证工具",
+      "summaryLargeImagePc": "大图摘要卡片（PC）",
+      "summaryCardPc": "摘要卡片（PC）",
+      "summaryCardSp": "摘要卡片（智能手机）"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "打开Facebook调试工具",
+      "preview": "Facebook链接预览"
+    },
+    "shadcn": {
+      "title": "shadcn/ui 卡片预览"
+    },
+    "antd": {
+      "title": "Ant Design 卡片预览"
+    },
+    "mui": {
+      "title": "Material UI 卡片预览"
+    }
+  },
+  "options": {
+    "title": "OGP Dev Tool 设置",
+    "language": "语言",
+    "theme": "主题",
+    "save": "保存",
+    "saved": "已保存！"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "当前URL",
+    "openDevtools": "在DevTools中打开"
+  },
+  "common": {
+    "language": "语言",
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "指定页面URL，必须使用绝对路径。",
+      "ogType":              "指定页面类型，如 website、article、blog、product 等。",
+      "ogTitle":             "指定页面标题，通常不包含网站名称。",
+      "ogDescription":       "指定页面描述，一般推荐15~30个词。",
+      "ogSiteName":          "指定网站名称。",
+      "ogLocale":            "指定内容的语言和地区，例如 zh_CN、en_US。",
+      "ogImage":             "指定缩略图URL（绝对路径），推荐1200×630像素以上。",
+      "ogImageSecureUrl":    "指定HTTPS协议的图片URL。",
+      "ogImageType":         "指定图片的MIME类型，例如 image/jpeg、image/png。",
+      "ogImageWidth":        "指定图片宽度（像素）。",
+      "ogImageHeight":       "指定图片高度（像素）。",
+      "ogImageAlt":          "指定图片的替代文字，供屏幕阅读器使用。",
+      "twitterCard":         "指定X卡片类型：summary、summary_large_image、app 或 player。",
+      "twitterSite":         "指定网站的X账号（@用户名）。",
+      "twitterCreator":      "指定内容创作者的X账号（@用户名）。",
+      "twitterTitle":        "指定X卡片标题，设置后将覆盖 og:title。",
+      "twitterDescription":  "指定X卡片描述，设置后将覆盖 og:description。",
+      "twitterImage":        "指定X卡片图片URL，设置后将覆盖 og:image。",
+      "fbAppId":             "指定Facebook应用ID，需在Meta for Developers中申请。",
+      "articleAuthor":       "指定文章作者的个人主页URL。",
+      "articlePublishedTime":"以ISO 8601格式指定文章发布时间，例如 2024-01-01T00:00:00+08:00。",
+      "articleModifiedTime": "以ISO 8601格式指定文章最后修改时间。",
+      "articleSection":      "指定文章的分类或栏目名称。"
+    }
+  }
+}

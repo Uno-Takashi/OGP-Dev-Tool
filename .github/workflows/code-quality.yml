@@ -1,37 +1,38 @@
-name: Code Quality
+name: code-quality
+
 on:
   push:
+  pull_request:
 
 jobs:
-  njsscan:
+  security-scan:
     runs-on: ubuntu-latest
-    name: njsscan check
     steps:
-      - name: Checkout from Repos
-        uses: actions/checkout@v2
-      - name: run nodejs-scan
-        id: njsscan
+      - uses: actions/checkout@v4
+      - name: Run njsscan
         uses: ajinabraham/njsscan-action@master
         with:
           args: "./src"
-  markdown-link-check:
+
+  markdown-links:
     runs-on: ubuntu-latest
-    name: markdown link check
     steps:
-      - name: Checkout from Repos
-        uses: actions/checkout@v2
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - uses: actions/checkout@v4
+      - name: Check Markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          config-file: "./.github/settings/markdown-link-check.json"
-  misspell-checker:
-    runs-on: ubuntu-latest
-    name: missspell check
-    steps:
-      - name: Checkout from Repos
-        uses: actions/checkout@v2
-      - uses: sobolevn/misspell-fixer-action@master
-  actionlint:
+          config-file: ".github/settings/markdown-link-check.json"
+
+  spell-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: reviewdog/action-actionlint@v1
+      - uses: actions/checkout@v4
+      - name: Check spelling
+        uses: client9/misspell-action@master
+
+  action-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint GitHub Actions
+        uses: reviewdog/action-actionlint@v1

@@ -1,18 +1,38 @@
 {
-    "name": "Tcompoypescript",
-    "dockerComposeFile": [
-        "../docker-compose.yml"
-    ],
-    "service": "typescript",
-    "workspaceFolder": "/app/",
-    "settings": {
-        "editor.formatOnSave": true, // ファイルセーブ時にフォーマットかけるように設定
-        "editor.formatOnPaste": true
-    },
-    "extensions": [
-		"ms-azuretools.vscode-docker",
-		"yzhang.markdown-all-in-one",
-		"dsznajder.es7-react-js-snippets",
-		"ecmel.vscode-html-css"
-	]
+  "name": "OGP Dev Tool",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "typescript",
+  "workspaceFolder": "/app/",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "typescript.tsdk": "./node_modules/typescript/lib",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "eslint.useFlatConfig": true,
+        "i18n-ally.localesPaths": ["src/i18n/locales"],
+        "i18n-ally.sourceLanguage": "en",
+        "files.eol": "\n"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets",
+        "bradlc.vscode-tailwindcss",
+        "lokalise.i18n-ally",
+        "syler.sass-indented",
+        "orta.vscode-jest",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-github-actions",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens"
+      ]
+    }
+  }
 }

@@ -1,59 +1,45 @@
-name: Release
+name: release
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Next Version"
+        description: "Release version (e.g. 1.2.0)"
         required: true
-        default: "x.y.z"
+        type: string
       release_note:
-        description: "release note"
+        description: "Release notes"
         required: false
+        type: string
+
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
-      - uses: actions/checkout@v2
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Package extension
+        run: zip -r release.zip dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.event.inputs.version }}
-          release_name: Release v${{ github.event.inputs.version }}
-          body: |
-            ${{ github.event.inputs.release_note }}
-          draft: false
-          prerelease: false
-      - name: Build Release
-        run: |
-          npm ci
-          npm run build
-      - name: Zip dist
-        uses: montudor/action-zip@v1
-        with:
-          args: zip -qq -r release.zip dist
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./release.zip
-          asset_name: release.zip
-          asset_content_type: application/zip
-      # - name: Upload to Chrome Web Store
-      #   uses: mobilefirstllc/cws-publish@latest
-      #   with:
-      #     action: "upload" # one of: upload, publish, testers
-      #     client_id: ${{ secrets.CLIENT }}
-      #     client_secret: ${{ secrets.SECRET }}
-      #     refresh_token: ${{ secrets.TOKEN }}
-      #     extension_id: "fehhelhhiplgdhpoebcgnhcdcfahmjjo"
-      #     zip_file: "release.zip"
+          name: v${{ github.event.inputs.version }}
+          body: ${{ github.event.inputs.release_note }}
+          files: release.zip
+          generate_release_notes: true

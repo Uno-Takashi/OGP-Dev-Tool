@@ -1,80 +1,146 @@
 # OGP Dev Tool
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
-[![Code Quality](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml/badge.svg?branch=master)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml)
+[![build](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/build.yml)
+[![Code Quality](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml/badge.svg)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml)
+[![Supply Chain](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/supply-chain.yml/badge.svg)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/supply-chain.yml)
+[![Storybook](https://img.shields.io/badge/Storybook-Docs-FF4785?logo=storybook&logoColor=white)](https://uno-takashi.github.io/OGP-Dev-Tool/)
 
-OGP Dev Tool is a tool to check how OGP is displayed on web services such as X, Facebook, etc. By providing it as Chrome Extensions, you can test OGP on your localhost without complicated uploads. 
+OGP Dev Tool is a Chrome extension for developers to preview how Open Graph Protocol (OGP) metadata is rendered on social networks and UI component libraries — including **localhost** without any uploads.
 
-## 📈Elevator Pitch
+## Features
 
-- Sites on localhost can also be tested.
-- Provided as Chrome Extensions.
+- Live preview of OGP metadata for the inspected page in Chrome DevTools
+- Visual previews: **Twitter/X**, **Facebook**, **shadcn/ui**, **Ant Design**, **Material UI**
+- Dark mode toggle
+- UI language switching: 🇺🇸 English / 🇯🇵 日本語 / 🇨🇳 中文
+- Copy-to-clipboard for each metadata value
+- Works on localhost
 
-## ⚒️Develop
+## Storybook
+
+Component documentation is published via GitHub Pages:
+
+👉 **https://uno-takashi.github.io/OGP-Dev-Tool/**
+
+To run Storybook locally:
+
+```bash
+npm run storybook
+```
+
+## Development
 
 ### Prerequisites
 
-* [node + npm](https://nodejs.org/) (Current Version)
+- [Node.js 22+](https://nodejs.org/)
+- npm
 
-### Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Developing inside a Container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/devcontainers/containers)
-
-### Includes the following
-
-* TypeScript
-* Webpack
-* React
-* Jest
-* Example Code
-  * Chrome Storage
-  * Options Version 2
-  * content script
-  * count up badge number
-  * background
-
-### Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
-
-### Setup
+### Install
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
-### Import as Visual Studio Code project
+### Commands
 
-...
+| Command | Description |
+|---|---|
+| `npm run watch` | Dev build with watch mode |
+| `npm run build` | Production build |
+| `npm run storybook` | Launch Storybook dev server |
+| `npm run build-storybook` | Build Storybook static output |
+| `npm run type-check` | TypeScript type check |
+| `npm run lint` | ESLint |
+| `npm run test` | Jest tests |
+| `npm run format` | Prettier format |
 
-### Build
+### Docker
+
+```bash
+docker compose up
+```
+
+Starts webpack watch mode inside a Node 22 container.
+
+### Load extension in Chrome
+
+1. Run `npm run build`
+2. Open `chrome://extensions`
+3. Enable **Developer mode**
+4. Click **Load unpacked** → select the `dist/` directory
+
+<details>
+<summary>🔍 How to test the extension in Chrome</summary>
+
+#### 1. Build and load
 
 ```bash
 npm run build
+# or with Docker
+docker compose run --rm typescript npm run build
 ```
 
-### Build in watch mode
+1. Open `chrome://extensions` in Chrome
+2. Toggle **Developer mode** on (top right)
+3. Click **Load unpacked** → select the `dist/` folder
 
-#### terminal
+#### 2. Open the DevTools panel (main feature)
+
+1. Navigate to any page with OGP tags (or `localhost`)
+2. Open DevTools with `F12`
+3. Click `»` at the end of the tab bar → select **OGP**
+
+OGP metadata and social previews will appear in the panel.
+
+#### 3. Hot reload during development
 
 ```bash
-npm run watch
+npm run watch   # auto-rebuilds on file change
 ```
 
-#### Visual Studio Code
+After `dist/` updates, reload the extension in Chrome:
+- Go to `chrome://extensions` → click the **↺ refresh** icon on the extension card
+- Then reload the DevTools panel with `Ctrl+R`
 
-Run watch mode.
+#### 4. Debugging each part
 
-type `Ctrl + Shift + B`
+| Target | How |
+|---|---|
+| DevTools panel | Right-click inside panel → Inspect |
+| Content script | Page DevTools → Sources tab |
+| Background service worker | `chrome://extensions` → "Service Worker" link |
+| Popup | Right-click toolbar icon → Inspect popup |
 
-### Load extension to chrome
+</details>
 
-Load `dist` directory
+### Project Structure
 
-### Test
+```
+src/
+├── domain/           # Business logic entities and repository interfaces
+├── application/      # Use cases
+├── infrastructure/   # Chrome API adapter, DOM parser
+├── presentation/     # React components, pages, store, hooks
+│   ├── components/   # OGPTable, DarkModeToggle, LanguageSwitcher, previews
+│   ├── pages/        # DevToolsPanel, Popup, Options
+│   └── store/        # Redux Toolkit slices
+├── i18n/             # react-i18next config + locale JSON (en/ja/zh)
+├── chrome/           # Extension entry files (background, content_script)
+└── shared/           # Utility hooks (useCopyToClipboard)
+```
 
-`npx jest` or `npm run test`
+See [AGENT.md](./AGENT.md) for full architecture documentation.
+
+## CI/CD
+
+| Workflow | Trigger |
+|---|---|
+| Build + Test | Push / PR to `main` |
+| Code Quality | Every push |
+| Supply Chain (npm audit, OSSF Scorecard) | Push to `main` + weekly |
+| Publish to Chrome Web Store | GitHub Release |
+| Deploy Storybook to GitHub Pages | Push to `main` |
+
+## License
+
+MIT

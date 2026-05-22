@@ -1,0 +1,86 @@
+{
+  "panel": {
+    "title": "OGP Dev Tool",
+    "reload": "Reload OGP data",
+    "reloadSuccess": "OGP data reloaded",
+    "toggleDarkMode": "Toggle Dark Mode",
+    "github": "View Source on GitHub",
+    "loading": "Loading...",
+    "table": {
+      "ogpType": "OGP Type",
+      "tag": "Tag",
+      "content": "Content Attribute",
+      "contentValue": "Content Value",
+      "copy": "Copy to clipboard",
+      "copied": "Copied!"
+    }
+  },
+  "preview": {
+    "sectionTitle": "Preview",
+    "x": {
+      "title": "X Card",
+      "validator": "Open X Card Validator",
+      "summaryLargeImagePc": "Summary with Large Image (PC)",
+      "summaryCardPc": "Summary Card (PC)",
+      "summaryCardSp": "Summary Card (Smartphone)"
+    },
+    "facebook": {
+      "title": "Facebook",
+      "debugger": "Open Facebook Debugger",
+      "preview": "Facebook Link Preview"
+    },
+    "shadcn": {
+      "title": "shadcn/ui Card Preview"
+    },
+    "antd": {
+      "title": "Ant Design Card Preview"
+    },
+    "mui": {
+      "title": "Material UI Card Preview"
+    }
+  },
+  "options": {
+    "title": "OGP Dev Tool Options",
+    "language": "Language",
+    "theme": "Theme",
+    "save": "Save",
+    "saved": "Saved!"
+  },
+  "popup": {
+    "title": "OGP Dev Tool",
+    "currentUrl": "Current URL",
+    "openDevtools": "Open in DevTools"
+  },
+  "common": {
+    "language": "Language",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "ogp": {
+    "tips": {
+      "ogUrl":               "Page URL — must be an absolute URL.",
+      "ogType":              "Content type: website, article, blog, product, etc.",
+      "ogTitle":             "Page title, usually without the site name.",
+      "ogDescription":       "Page description, typically 15–30 words.",
+      "ogSiteName":          "Name of the site.",
+      "ogLocale":            "Language and territory of content, e.g. en_US or ja_JP.",
+      "ogImage":             "Thumbnail image URL (absolute). 1200×630 px or larger recommended.",
+      "ogImageSecureUrl":    "HTTPS URL for the image (used when the page is served over HTTPS).",
+      "ogImageType":         "MIME type of the image, e.g. image/jpeg or image/png.",
+      "ogImageWidth":        "Image width in pixels.",
+      "ogImageHeight":       "Image height in pixels.",
+      "ogImageAlt":          "Alt text for the image, used by screen readers and when the image fails to load.",
+      "twitterCard":         "X card type: summary, summary_large_image, app, or player.",
+      "twitterSite":         "X (@username) of the website.",
+      "twitterCreator":      "X (@username) of the content author.",
+      "twitterTitle":        "Title for the X card. Overrides og:title when set.",
+      "twitterDescription":  "Description for the X card. Overrides og:description when set.",
+      "twitterImage":        "Image URL for the X card. Overrides og:image when set.",
+      "fbAppId":             "Facebook App ID. Must be registered at Meta for Developers.",
+      "articleAuthor":       "Profile URL of the article author.",
+      "articlePublishedTime":"ISO 8601 publish timestamp, e.g. 2024-01-01T00:00:00+00:00.",
+      "articleModifiedTime": "ISO 8601 last-modified timestamp.",
+      "articleSection":      "Category or section name of the article."
+    }
+  }
+}
