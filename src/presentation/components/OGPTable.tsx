@@ -80,16 +80,14 @@ function StatusIcon({ ogpType, contentValue }: StatusIconProps) {
   if (status === 'valid') {
     return (
       <Tooltip title={t('panel.table.valid')} arrow>
-        <CheckCircleOutlineIcon
-          sx={{ fontSize: 16, color: 'success.main', verticalAlign: 'middle' }}
-        />
+        <CheckCircleOutlineIcon color="success" sx={{ fontSize: 16, verticalAlign: 'middle' }} />
       </Tooltip>
     );
   }
   if (status === 'invalid') {
     return (
       <Tooltip title={t('panel.table.invalid')} arrow>
-        <WarningAmberIcon sx={{ fontSize: 16, color: 'warning.main', verticalAlign: 'middle' }} />
+        <WarningAmberIcon color="warning" sx={{ fontSize: 16, verticalAlign: 'middle' }} />
       </Tooltip>
     );
   }
