@@ -19,7 +19,8 @@ type Story = StoryObj<typeof TwitterPreview>;
 const defaultArgs = {
   imageUrl: 'https://via.placeholder.com/1200x630/0073e6/ffffff?text=OGP+Image',
   title: 'Example Page Title',
-  description: 'This is an example description for OGP preview. It shows how your content will appear when shared on X.',
+  description:
+    'This is an example description for OGP preview. It shows how your content will appear when shared on X.',
   origin: 'example.com',
 };
 
@@ -28,6 +29,7 @@ export const NoImage: Story = { args: { ...defaultArgs, imageUrl: null } };
 export const LongTitle: Story = {
   args: {
     ...defaultArgs,
-    title: 'This is a very long title that will be truncated when displayed in the X card preview widget',
+    title:
+      'This is a very long title that will be truncated when displayed in the X card preview widget',
   },
 };

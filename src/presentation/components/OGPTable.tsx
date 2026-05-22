@@ -38,7 +38,11 @@ function CopyButton({ text }: CopyButtonProps) {
 
   return (
     <Tooltip title={copied ? t('panel.table.copied') : t('panel.table.copy')}>
-      <IconButton size="small" onClick={() => copy(text ?? '')} color={copied ? 'success' : 'default'}>
+      <IconButton
+        size="small"
+        onClick={() => copy(text ?? '')}
+        color={copied ? 'success' : 'default'}
+      >
         {copied ? <CheckIcon sx={{ fontSize: 14 }} /> : <ContentCopyIcon sx={{ fontSize: 14 }} />}
       </IconButton>
     </Tooltip>
@@ -54,10 +58,7 @@ function LinkButton({ url }: LinkButtonProps) {
 
   return (
     <Tooltip title={t('panel.table.openLink')}>
-      <IconButton
-        size="small"
-        onClick={() => chrome.tabs.create({ url })}
-      >
+      <IconButton size="small" onClick={() => chrome.tabs.create({ url })}>
         <OpenInNewIcon sx={{ fontSize: 14 }} />
       </IconButton>
     </Tooltip>
@@ -76,7 +77,9 @@ function StatusIcon({ ogpType, contentValue }: StatusIconProps) {
   if (status === 'valid') {
     return (
       <Tooltip title={t('panel.table.valid')} arrow>
-        <CheckCircleOutlineIcon sx={{ fontSize: 16, color: 'success.main', verticalAlign: 'middle' }} />
+        <CheckCircleOutlineIcon
+          sx={{ fontSize: 16, color: 'success.main', verticalAlign: 'middle' }}
+        />
       </Tooltip>
     );
   }

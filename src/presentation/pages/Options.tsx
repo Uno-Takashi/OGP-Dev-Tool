@@ -69,9 +69,7 @@ function Options() {
           <Select
             value={language}
             label={t('options.language')}
-            onChange={(e: SelectChangeEvent) =>
-              setLanguage(e.target.value as SupportedLanguage)
-            }
+            onChange={(e: SelectChangeEvent) => setLanguage(e.target.value as SupportedLanguage)}
           >
             {LANGUAGES.map((l) => (
               <MenuItem key={l.value} value={l.value}>
@@ -83,10 +81,7 @@ function Options() {
 
         <FormControlLabel
           control={
-            <Switch
-              checked={isDarkMode}
-              onChange={(e) => setIsDarkMode(e.target.checked)}
-            />
+            <Switch checked={isDarkMode} onChange={(e) => setIsDarkMode(e.target.checked)} />
           }
           label={t('common.darkMode')}
           sx={{ mb: 3, display: 'block' }}

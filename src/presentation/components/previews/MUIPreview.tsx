@@ -39,7 +39,12 @@ export function MUIPreview({ imageUrl, title, description, origin }: Props) {
           <Typography gutterBottom variant="h6" component="h3" noWrap>
             {title}
           </Typography>
-          <Typography variant="caption" color="text.secondary" gutterBottom sx={{ display: 'block' }}>
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            gutterBottom
+            sx={{ display: 'block' }}
+          >
             {origin}
           </Typography>
           <Typography

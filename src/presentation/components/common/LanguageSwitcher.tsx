@@ -16,21 +16,21 @@ interface LanguageOption {
 }
 
 const LANGUAGE_OPTIONS: LanguageOption[] = [
-  { value: 'en', code: 'EN',    native: 'English' },
+  { value: 'en', code: 'EN', native: 'English' },
   { value: 'ja', code: '日本語', native: '日本語' },
-  { value: 'zh', code: '中文',  native: '中文' },
-  { value: 'de', code: 'DE',    native: 'Deutsch' },
-  { value: 'fr', code: 'FR',    native: 'Français' },
-  { value: 'es', code: 'ES',    native: 'Español' },
-  { value: 'pt', code: 'PT',    native: 'Português' },
+  { value: 'zh', code: '中文', native: '中文' },
+  { value: 'de', code: 'DE', native: 'Deutsch' },
+  { value: 'fr', code: 'FR', native: 'Français' },
+  { value: 'es', code: 'ES', native: 'Español' },
+  { value: 'pt', code: 'PT', native: 'Português' },
   { value: 'ko', code: '한국어', native: '한국어' },
-  { value: 'ru', code: 'RU',    native: 'Русский' },
-  { value: 'ar', code: 'AR',    native: 'العربية' },
-  { value: 'it', code: 'IT',    native: 'Italiano' },
-  { value: 'nl', code: 'NL',    native: 'Nederlands' },
-  { value: 'tr', code: 'TR',    native: 'Türkçe' },
-  { value: 'vi', code: 'VI',    native: 'Tiếng Việt' },
-  { value: 'id', code: 'ID',    native: 'Bahasa Indonesia' },
+  { value: 'ru', code: 'RU', native: 'Русский' },
+  { value: 'ar', code: 'AR', native: 'العربية' },
+  { value: 'it', code: 'IT', native: 'Italiano' },
+  { value: 'nl', code: 'NL', native: 'Nederlands' },
+  { value: 'tr', code: 'TR', native: 'Türkçe' },
+  { value: 'vi', code: 'VI', native: 'Tiếng Việt' },
+  { value: 'id', code: 'ID', native: 'Bahasa Indonesia' },
 ];
 
 export function LanguageSwitcher() {
@@ -53,9 +53,7 @@ export function LanguageSwitcher() {
         value={language}
         label={t('common.language')}
         onChange={handleChange}
-        renderValue={(val) =>
-          LANGUAGE_OPTIONS.find((o) => o.value === val)?.code ?? val
-        }
+        renderValue={(val) => LANGUAGE_OPTIONS.find((o) => o.value === val)?.code ?? val}
       >
         {LANGUAGE_OPTIONS.map((opt) => (
           <MenuItem key={opt.value} value={opt.value}>

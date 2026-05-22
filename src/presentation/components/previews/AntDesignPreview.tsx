@@ -16,11 +16,7 @@ export function AntDesignPreview({ imageUrl, title, description, origin }: Props
   const { t } = useTranslation();
 
   const coverImage = imageUrl ? (
-    <img
-      alt={title}
-      src={imageUrl}
-      style={{ width: '100%', height: 200, objectFit: 'cover' }}
-    />
+    <img alt={title} src={imageUrl} style={{ width: '100%', height: 200, objectFit: 'cover' }} />
   ) : undefined;
 
   return (
@@ -49,10 +45,7 @@ export function AntDesignPreview({ imageUrl, title, description, origin }: Props
             }
             description={
               <>
-                <Text
-                  type="secondary"
-                  style={{ fontSize: 12, display: 'block', marginBottom: 4 }}
-                >
+                <Text type="secondary" style={{ fontSize: 12, display: 'block', marginBottom: 4 }}>
                   {origin}
                 </Text>
                 <Paragraph ellipsis={{ rows: 3 }} style={{ marginBottom: 0 }}>

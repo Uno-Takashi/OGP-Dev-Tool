@@ -84,7 +84,9 @@ function Panel() {
       </AppBar>
 
       {isInitialLoad ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 200 }}>
+        <Box
+          sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 200 }}
+        >
           <CircularProgress />
           <Typography sx={{ ml: 2 }}>{t('panel.loading')}</Typography>
         </Box>
@@ -130,12 +132,7 @@ function Panel() {
             description={description}
             origin={origin}
           />
-          <MUIPreview
-            imageUrl={imageUrl}
-            title={title}
-            description={description}
-            origin={origin}
-          />
+          <MUIPreview imageUrl={imageUrl} title={title} description={description} origin={origin} />
         </Box>
       )}
 

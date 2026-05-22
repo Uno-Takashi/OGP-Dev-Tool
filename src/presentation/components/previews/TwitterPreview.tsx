@@ -20,9 +20,7 @@ interface Props {
 
 export function TwitterPreview({ imageUrl, title, description, origin }: Props) {
   const { t } = useTranslation();
-  const backgroundStyle = imageUrl
-    ? { background: `url(${imageUrl}) center/cover no-repeat` }
-    : {};
+  const backgroundStyle = imageUrl ? { background: `url(${imageUrl}) center/cover no-repeat` } : {};
 
   return (
     <>
