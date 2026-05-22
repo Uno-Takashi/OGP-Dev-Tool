@@ -12,7 +12,11 @@
       "content": "Content Attribute",
       "contentValue": "Content Value",
       "copy": "Copy to clipboard",
-      "copied": "Copied!"
+      "copied": "Copied!",
+      "status": "Status",
+      "filterValid": "Valid only",
+      "valid": "Correctly configured",
+      "invalid": "Value has a format issue"
     }
   },
   "preview": {

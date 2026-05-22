@@ -12,7 +12,11 @@
       "content": "Thuộc tính nội dung",
       "contentValue": "Giá trị nội dung",
       "copy": "Sao chép vào clipboard",
-      "copied": "Đã sao chép!"
+      "copied": "Đã sao chép!",
+      "status": "Trạng thái",
+      "filterValid": "Chỉ hợp lệ",
+      "valid": "Đã cấu hình đúng",
+      "invalid": "Lỗi định dạng"
     }
   },
   "preview": {

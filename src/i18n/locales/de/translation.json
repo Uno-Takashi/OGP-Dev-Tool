@@ -12,7 +12,11 @@
       "content": "Inhaltsattribut",
       "contentValue": "Inhaltswert",
       "copy": "In die Zwischenablage kopieren",
-      "copied": "Kopiert!"
+      "copied": "Kopiert!",
+      "status": "Status",
+      "filterValid": "Nur gültige",
+      "valid": "Korrekt konfiguriert",
+      "invalid": "Formatproblem"
     }
   },
   "preview": {

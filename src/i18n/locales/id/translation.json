@@ -12,7 +12,11 @@
       "content": "Atribut konten",
       "contentValue": "Nilai konten",
       "copy": "Salin ke clipboard",
-      "copied": "Tersalin!"
+      "copied": "Tersalin!",
+      "status": "Status",
+      "filterValid": "Hanya valid",
+      "valid": "Dikonfigurasi dengan benar",
+      "invalid": "Masalah format"
     }
   },
   "preview": {

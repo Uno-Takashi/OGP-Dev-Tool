@@ -12,7 +12,11 @@
       "content": "Atributo de contenido",
       "contentValue": "Valor de contenido",
       "copy": "Copiar al portapapeles",
-      "copied": "¡Copiado!"
+      "copied": "¡Copiado!",
+      "status": "Estado",
+      "filterValid": "Solo válidos",
+      "valid": "Configurado correctamente",
+      "invalid": "Problema de formato"
     }
   },
   "preview": {
