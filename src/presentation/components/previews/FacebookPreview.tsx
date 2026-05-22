@@ -64,8 +64,8 @@ export function FacebookPreview({ imageUrl, title, description, origin }: Props)
         <Box sx={{ p: 1.5, bgcolor: 'background.paper' }}>
           <Typography
             variant="caption"
+            color="text.secondary"
             sx={{
-              color: 'text.secondary',
               textTransform: 'uppercase',
               fontSize: '0.7rem',
             }}
@@ -88,8 +88,8 @@ export function FacebookPreview({ imageUrl, title, description, origin }: Props)
           </Typography>
           <Typography
             variant="body2"
+            color="text.secondary"
             sx={{
-              color: 'text.secondary',
               mt: 0.5,
               overflow: 'hidden',
               display: '-webkit-box',
