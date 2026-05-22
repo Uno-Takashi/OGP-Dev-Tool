@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check spelling
-        uses: client9/misspell-action@master
+        uses: crate-ci/typos-action@v1
 
   action-lint:
     runs-on: ubuntu-latest
