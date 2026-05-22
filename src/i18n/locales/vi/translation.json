@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "Trình kiểm tra Open Graph Protocol",
     "currentUrl": "URL hiện tại",
-    "openDevtools": "Mở DevTools → tab OGP để kiểm tra siêu dữ liệu OGP."
+    "howToUse": "Cách sử dụng",
+    "step1": "Mở trang",
+    "step1Desc": "Điều hướng đến trang web bạn muốn kiểm tra",
+    "step2": "Mở DevTools",
+    "step2Desc": "Nhấn F12 hoặc nhấp chuột phải → Kiểm tra",
+    "step3": "Chọn tab OGP",
+    "step3Desc": "Nhấp vào » ở cuối thanh tab DevTools, rồi chọn \"OGP\"",
+    "step4": "Kiểm tra OGP",
+    "step4Desc": "Xem bảng siêu dữ liệu, xem trước mạng xã hội và xuất dưới dạng JSON hoặc HTML"
   },
   "common": {
     "language": "Ngôn ngữ",

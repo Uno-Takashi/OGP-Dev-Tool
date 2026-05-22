@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "Open Graph Protocol インスペクター",
     "currentUrl": "現在のURL",
-    "openDevtools": "DevTools → OGP タブを開いて OGP メタデータを確認できます。"
+    "howToUse": "使い方",
+    "step1": "ページを開く",
+    "step1Desc": "調べたいウェブサイトに移動してください",
+    "step2": "DevToolsを開く",
+    "step2Desc": "F12キーを押すか、右クリック → 検証",
+    "step3": "OGPタブを選択",
+    "step3Desc": "DevToolsのタブバー末尾の » をクリックし、「OGP」を選択",
+    "step4": "OGPを確認",
+    "step4Desc": "メタデータ表、SNSプレビュー、JSONまたはHTMLエクスポートを利用できます"
   },
   "common": {
     "language": "言語",

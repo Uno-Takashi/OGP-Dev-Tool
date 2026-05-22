@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "Open Graph Protocol Denetleyici",
     "currentUrl": "Geçerli URL",
-    "openDevtools": "OGP meta verilerini incelemek için DevTools → OGP sekmesini açın."
+    "howToUse": "Nasıl kullanılır",
+    "step1": "Sayfa aç",
+    "step1Desc": "İncelemek istediğiniz web sitesine gidin",
+    "step2": "DevTools'u aç",
+    "step2Desc": "F12'ye basın veya sağ tık → İncele",
+    "step3": "OGP sekmesini seç",
+    "step3Desc": "DevTools sekme çubuğunun sonundaki »'ye tıklayın ve \"OGP\"yi seçin",
+    "step4": "OGP'yi incele",
+    "step4Desc": "Meta veri tablosunu, sosyal önizlemeleri görüntüleyin ve JSON veya HTML olarak dışa aktarın"
   },
   "common": {
     "language": "Dil",

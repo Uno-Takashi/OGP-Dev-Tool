@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "Inspektor Open Graph Protocol",
     "currentUrl": "URL saat ini",
-    "openDevtools": "Buka DevTools → tab OGP untuk memeriksa metadata OGP."
+    "howToUse": "Cara menggunakan",
+    "step1": "Buka halaman",
+    "step1Desc": "Navigasi ke situs web yang ingin Anda periksa",
+    "step2": "Buka DevTools",
+    "step2Desc": "Tekan F12, atau klik kanan → Periksa",
+    "step3": "Pilih tab OGP",
+    "step3Desc": "Klik » di ujung bilah tab DevTools, lalu pilih \"OGP\"",
+    "step4": "Periksa OGP",
+    "step4Desc": "Lihat tabel metadata, pratinjau sosial, dan ekspor sebagai JSON atau HTML"
   },
   "common": {
     "language": "Bahasa",

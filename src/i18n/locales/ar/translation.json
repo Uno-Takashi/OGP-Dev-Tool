@@ -51,8 +51,17 @@
   },
   "popup": {
     "title": "OGP Dev Tool",
+    "subtitle": "فاحص بروتوكول Open Graph",
     "currentUrl": "الرابط الحالي",
-    "openDevtools": "افتح DevTools → تبويب OGP لفحص بيانات OGP."
+    "howToUse": "كيفية الاستخدام",
+    "step1": "فتح صفحة",
+    "step1Desc": "انتقل إلى الموقع الذي تريد فحصه",
+    "step2": "فتح DevTools",
+    "step2Desc": "اضغط F12، أو انقر بزر الماوس الأيمن ← فحص",
+    "step3": "اختيار تبويب OGP",
+    "step3Desc": "انقر على » في نهاية شريط تبويبات DevTools ثم اختر \"OGP\"",
+    "step4": "فحص OGP",
+    "step4Desc": "اعرض جدول البيانات الوصفية ومعاينات الشبكات الاجتماعية وصدّرها بتنسيق JSON أو HTML"
   },
   "common": {
     "language": "اللغة",
