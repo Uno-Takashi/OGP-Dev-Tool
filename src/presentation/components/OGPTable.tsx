@@ -156,7 +156,7 @@ export function OGPTable({ tags }: Props) {
                 </TableCell>
                 <TableCell align="left" sx={{ maxWidth: 200, wordBreak: 'break-all' }}>
                   {row.contentValue}
-                  <CopyButton text={row.contentValue} />
+                  {row.contentValue !== null && <CopyButton text={row.contentValue} />}
                   {isUrl(row.contentValue) && <LinkButton url={row.contentValue!} />}
                 </TableCell>
               </TableRow>
