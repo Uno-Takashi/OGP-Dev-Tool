@@ -12,7 +12,11 @@
       "content": "コンテンツ属性",
       "contentValue": "コンテンツ値",
       "copy": "クリップボードにコピー",
-      "copied": "コピーしました！"
+      "copied": "コピーしました！",
+      "status": "状態",
+      "filterValid": "正常のみ表示",
+      "valid": "正しく設定されています",
+      "invalid": "フォーマットに問題があります"
     }
   },
   "preview": {

@@ -12,7 +12,11 @@
       "content": "콘텐츠 속성",
       "contentValue": "콘텐츠 값",
       "copy": "클립보드에 복사",
-      "copied": "복사됨!"
+      "copied": "복사됨!",
+      "status": "상태",
+      "filterValid": "유효한 항목만",
+      "valid": "올바르게 설정됨",
+      "invalid": "형식 오류"
     }
   },
   "preview": {

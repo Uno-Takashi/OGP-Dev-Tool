@@ -12,7 +12,11 @@
       "content": "内容属性",
       "contentValue": "内容值",
       "copy": "复制到剪贴板",
-      "copied": "已复制！"
+      "copied": "已复制！",
+      "status": "状态",
+      "filterValid": "仅显示有效",
+      "valid": "配置正确",
+      "invalid": "格式有问题"
     }
   },
   "preview": {

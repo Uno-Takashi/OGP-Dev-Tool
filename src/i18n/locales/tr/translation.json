@@ -12,7 +12,11 @@
       "content": "İçerik Özelliği",
       "contentValue": "İçerik Değeri",
       "copy": "Panoya kopyala",
-      "copied": "Kopyalandı!"
+      "copied": "Kopyalandı!",
+      "status": "Durum",
+      "filterValid": "Yalnızca geçerli",
+      "valid": "Doğru yapılandırıldı",
+      "invalid": "Biçim sorunu"
     }
   },
   "preview": {

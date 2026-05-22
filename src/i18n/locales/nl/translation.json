@@ -12,7 +12,11 @@
       "content": "Inhoudattribuut",
       "contentValue": "Inhoudswaarde",
       "copy": "Kopiëren naar klembord",
-      "copied": "Gekopieerd!"
+      "copied": "Gekopieerd!",
+      "status": "Status",
+      "filterValid": "Alleen geldig",
+      "valid": "Correct geconfigureerd",
+      "invalid": "Opmaakprobleem"
     }
   },
   "preview": {
