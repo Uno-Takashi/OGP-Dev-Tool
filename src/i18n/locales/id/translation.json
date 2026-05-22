@@ -1,9 +1,11 @@
-{
+﻿{
   "panel": {
     "title": "OGP Dev Tool",
     "reload": "Muat ulang data OGP",
     "reloadSuccess": "Data OGP berhasil dimuat ulang",
     "autoReload": "Muat ulang otomatis saat navigasi",
+    "exportJson": "Ekspor sebagai JSON",
+    "exportHtml": "Ekspor sebagai HTML",
     "github": "Lihat kode sumber di GitHub",
     "loading": "Memuat...",
     "table": {

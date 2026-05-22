@@ -1,9 +1,11 @@
-{
+﻿{
   "panel": {
     "title": "OGP Dev Tool",
     "reload": "Tải lại dữ liệu OGP",
     "reloadSuccess": "Dữ liệu OGP đã được tải lại",
     "autoReload": "Tự động tải lại khi điều hướng",
+    "exportJson": "Xuất dưới dạng JSON",
+    "exportHtml": "Xuất dưới dạng HTML",
     "github": "Xem mã nguồn trên GitHub",
     "loading": "Đang tải...",
     "table": {

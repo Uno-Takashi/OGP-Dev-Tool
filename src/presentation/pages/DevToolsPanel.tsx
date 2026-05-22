@@ -14,6 +14,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import CachedIcon from '@mui/icons-material/Cached';
+import CodeIcon from '@mui/icons-material/Code';
+import DataObjectIcon from '@mui/icons-material/DataObject';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useTranslation } from 'react-i18next';
 import '../../i18n';
@@ -30,6 +32,7 @@ import { MUIPreview } from '../components/previews/MUIPreview';
 import { useOGPData, useAppDispatch, useAppSelector } from '../hooks/useOGPData';
 import { fetchOGPData } from '../store/ogpSlice';
 import { setAutoReload } from '../store/uiSlice';
+import { exportOGPAsJson, exportOGPAsHtml } from '../../shared/utils/ogpExport';
 
 function Panel() {
   const { t } = useTranslation();
@@ -81,6 +84,9 @@ function Panel() {
     dispatch(setAutoReload(next));
   }, [isAutoReload, dispatch]);
 
+  const handleExportJson = useCallback(() => exportOGPAsJson(tags), [tags]);
+  const handleExportHtml = useCallback(() => exportOGPAsHtml(tags), [tags]);
+
   const isInitialLoad = !hasLoaded && isLoading;
   const isReloading = hasLoaded && isLoading;
 
@@ -92,6 +98,30 @@ function Panel() {
             <IconButton onClick={handleReload} color="inherit" size="small" disabled={isLoading}>
               <CachedIcon />
             </IconButton>
+          </Tooltip>
+          <Tooltip title={t('panel.exportJson')}>
+            <span>
+              <IconButton
+                onClick={handleExportJson}
+                color="inherit"
+                size="small"
+                disabled={!hasLoaded || tags.length === 0}
+              >
+                <DataObjectIcon />
+              </IconButton>
+            </span>
+          </Tooltip>
+          <Tooltip title={t('panel.exportHtml')}>
+            <span>
+              <IconButton
+                onClick={handleExportHtml}
+                color="inherit"
+                size="small"
+                disabled={!hasLoaded || tags.length === 0}
+              >
+                <CodeIcon />
+              </IconButton>
+            </span>
           </Tooltip>
           <Tooltip title={t('panel.autoReload')}>
             <Switch
