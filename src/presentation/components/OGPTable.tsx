@@ -102,9 +102,10 @@ export function OGPTable({ tags }: Props) {
   const [filterValid, setFilterValid] = useState(false);
 
   const visibleTags = useMemo(
-    () => filterValid
-      ? tags.filter((row) => validateOGPValue(row.ogpType, row.contentValue) === 'valid')
-      : tags,
+    () =>
+      filterValid
+        ? tags.filter((row) => validateOGPValue(row.ogpType, row.contentValue) === 'valid')
+        : tags,
     [filterValid, tags]
   );
 

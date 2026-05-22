@@ -175,10 +175,7 @@ export function parseOGPTags(metas: NodeListOf<HTMLMetaElement>): OGPTag[] {
   return TAG_DEFINITIONS.map((def) => {
     let contentValue: string | null = null;
     for (const meta of metas) {
-      if (
-        meta.tagName.toLowerCase() === def.tag &&
-        meta.getAttribute(def.name) === def.ogpType
-      ) {
+      if (meta.tagName.toLowerCase() === def.tag && meta.getAttribute(def.name) === def.ogpType) {
         contentValue = meta.getAttribute(def.content);
         break;
       }
