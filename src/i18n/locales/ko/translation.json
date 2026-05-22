@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "OGP 데이터 새로고침",
     "reloadSuccess": "OGP 데이터가 새로고침되었습니다",
-    "toggleDarkMode": "다크 모드 전환",
     "github": "GitHub에서 소스 보기",
     "loading": "로딩 중...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "미리보기",
     "x": {
       "title": "X 카드",
-      "validator": "X 카드 유효성 검사기 열기",
       "summaryLargeImagePc": "큰 이미지 요약 (PC)",
       "summaryCardPc": "요약 카드 (PC)",
       "summaryCardSp": "요약 카드 (스마트폰)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Facebook 디버거 열기",
-      "preview": "Facebook 링크 미리보기"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "shadcn/ui 카드 미리보기"
@@ -47,14 +42,13 @@
   "options": {
     "title": "OGP Dev Tool 설정",
     "language": "언어",
-    "theme": "테마",
     "save": "저장",
     "saved": "저장되었습니다!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "현재 URL",
-    "openDevtools": "DevTools에서 열기"
+    "openDevtools": "DevTools → OGP 탭을 열어 OGP 메타데이터를 확인하세요."
   },
   "common": {
     "language": "언어",

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Box from '@mui/material/Box';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
@@ -98,9 +98,12 @@ export function OGPTable({ tags }: Props) {
   const { t } = useTranslation();
   const [filterValid, setFilterValid] = useState(false);
 
-  const visibleTags = filterValid
-    ? tags.filter((row) => validateOGPValue(row.ogpType, row.contentValue) === 'valid')
-    : tags;
+  const visibleTags = useMemo(
+    () => filterValid
+      ? tags.filter((row) => validateOGPValue(row.ogpType, row.contentValue) === 'valid')
+      : tags,
+    [filterValid, tags]
+  );
 
   return (
     <Box sx={{ mb: 2 }}>

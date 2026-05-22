@@ -1,9 +1,7 @@
-import React from 'react';
 import { Card, Typography } from 'antd';
 import Grid from '@mui/material/Grid';
 import MuiTypography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
-import { useAppSelector } from '../../hooks/useOGPData';
 
 const { Text, Paragraph } = Typography;
 
@@ -16,7 +14,6 @@ interface Props {
 
 export function AntDesignPreview({ imageUrl, title, description, origin }: Props) {
   const { t } = useTranslation();
-  const isDarkMode = useAppSelector((state) => state.ui.isDarkMode);
 
   const coverImage = imageUrl ? (
     <img

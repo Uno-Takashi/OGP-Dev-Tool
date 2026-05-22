@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "OGPデータを再読み込み",
     "reloadSuccess": "OGPデータを再読み込みしました",
-    "toggleDarkMode": "ダークモード切り替え",
     "github": "GitHubでソースを見る",
     "loading": "読み込み中...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "プレビュー",
     "x": {
       "title": "Xカード",
-      "validator": "Xカードバリデータを開く",
       "summaryLargeImagePc": "サマリー大画像カード（PC）",
       "summaryCardPc": "サマリーカード（PC）",
       "summaryCardSp": "サマリーカード（スマートフォン）"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Facebookデバッガーを開く",
-      "preview": "Facebookリンクプレビュー"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "shadcn/ui カードプレビュー"
@@ -47,14 +42,13 @@
   "options": {
     "title": "OGP Dev Tool 設定",
     "language": "言語",
-    "theme": "テーマ",
     "save": "保存",
     "saved": "保存しました！"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "現在のURL",
-    "openDevtools": "DevToolsで開く"
+    "openDevtools": "DevTools → OGP タブを開いて OGP メタデータを確認できます。"
   },
   "common": {
     "language": "言語",
@@ -78,7 +72,7 @@
       "twitterCard": "Xカードの種類を指定します。summary、summary_large_image、app、player のいずれかを指定します。",
       "twitterSite": "サイト管理者のX（@ユーザー名）を指定します。",
       "twitterCreator": "コンテンツ作成者のX（@ユーザー名）を指定します。",
-      "twitterTitle": "XカードのタイトルをArticle指定します。og:title を上書きします。",
+      "twitterTitle": "Xカードのタイトルを指定します。og:title を上書きします。",
       "twitterDescription": "Xカードの説明文を指定します。og:description を上書きします。",
       "twitterImage": "Xカードの画像URLを指定します。og:image を上書きします。",
       "fbAppId": "FacebookアプリIDを指定します。Meta for Developers での取得が必要です。",

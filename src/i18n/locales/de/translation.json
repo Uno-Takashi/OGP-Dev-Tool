@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "OGP-Daten neu laden",
     "reloadSuccess": "OGP-Daten wurden neu geladen",
-    "toggleDarkMode": "Dunkelmodus umschalten",
     "github": "Quellcode auf GitHub anzeigen",
     "loading": "Wird geladen...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Vorschau",
     "x": {
       "title": "X-Karte",
-      "validator": "X-Karten-Validator öffnen",
       "summaryLargeImagePc": "Zusammenfassung mit großem Bild (PC)",
       "summaryCardPc": "Zusammenfassungskarte (PC)",
       "summaryCardSp": "Zusammenfassungskarte (Smartphone)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Facebook-Debugger öffnen",
-      "preview": "Facebook-Link-Vorschau"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "shadcn/ui Kartenvorschau"
@@ -47,14 +42,13 @@
   "options": {
     "title": "OGP Dev Tool Einstellungen",
     "language": "Sprache",
-    "theme": "Design",
     "save": "Speichern",
     "saved": "Gespeichert!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "Aktuelle URL",
-    "openDevtools": "In DevTools öffnen"
+    "openDevtools": "Öffne DevTools → OGP-Tab, um OGP-Metadaten zu prüfen."
   },
   "common": {
     "language": "Sprache",

@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "Перезагрузить данные OGP",
     "reloadSuccess": "Данные OGP перезагружены",
-    "toggleDarkMode": "Переключить тёмный режим",
     "github": "Просмотреть исходный код на GitHub",
     "loading": "Загрузка...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Предпросмотр",
     "x": {
       "title": "Карточка X",
-      "validator": "Открыть валидатор карточки X",
       "summaryLargeImagePc": "Сводка с большим изображением (ПК)",
       "summaryCardPc": "Карточка сводки (ПК)",
       "summaryCardSp": "Карточка сводки (Смартфон)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Открыть отладчик Facebook",
-      "preview": "Предпросмотр ссылки Facebook"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "Предпросмотр карточки shadcn/ui"
@@ -47,14 +42,13 @@
   "options": {
     "title": "Настройки OGP Dev Tool",
     "language": "Язык",
-    "theme": "Тема",
     "save": "Сохранить",
     "saved": "Сохранено!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "Текущий URL",
-    "openDevtools": "Открыть в DevTools"
+    "openDevtools": "Откройте DevTools → вкладку OGP для просмотра OGP-метаданных."
   },
   "common": {
     "language": "Язык",

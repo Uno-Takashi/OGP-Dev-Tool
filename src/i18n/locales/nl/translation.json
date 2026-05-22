@@ -3,7 +3,6 @@
     "title": "OGP Dev Tool",
     "reload": "OGP-gegevens herladen",
     "reloadSuccess": "OGP-gegevens herladen",
-    "toggleDarkMode": "Donkere modus wisselen",
     "github": "Broncode bekijken op GitHub",
     "loading": "Laden...",
     "table": {
@@ -21,18 +20,14 @@
     }
   },
   "preview": {
-    "sectionTitle": "Voorbeeld",
     "x": {
       "title": "X-kaart",
-      "validator": "X-kaartvalidator openen",
       "summaryLargeImagePc": "Samenvatting met grote afbeelding (PC)",
       "summaryCardPc": "Samenvattingskaart (PC)",
       "summaryCardSp": "Samenvattingskaart (Smartphone)"
     },
     "facebook": {
-      "title": "Facebook",
-      "debugger": "Facebook Debugger openen",
-      "preview": "Facebook-linkvoorbeeld"
+      "title": "Facebook"
     },
     "shadcn": {
       "title": "shadcn/ui kaartvoorbeeld"
@@ -47,14 +42,13 @@
   "options": {
     "title": "OGP Dev Tool Opties",
     "language": "Taal",
-    "theme": "Thema",
     "save": "Opslaan",
     "saved": "Opgeslagen!"
   },
   "popup": {
     "title": "OGP Dev Tool",
     "currentUrl": "Huidige URL",
-    "openDevtools": "Openen in DevTools"
+    "openDevtools": "Open DevTools → OGP-tabblad om OGP-metadata te inspecteren."
   },
   "common": {
     "language": "Taal",

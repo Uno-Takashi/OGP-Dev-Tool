@@ -1,4 +1,4 @@
-import React from 'react';
+import { useCallback } from 'react';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -38,12 +38,12 @@ export function LanguageSwitcher() {
   const dispatch = useAppDispatch();
   const language = useAppSelector((state) => state.ui.language);
 
-  const handleChange = (event: SelectChangeEvent) => {
+  const handleChange = useCallback((event: SelectChangeEvent) => {
     const lang = event.target.value as SupportedLanguage;
     dispatch(setLanguage(lang));
     i18n.changeLanguage(lang);
     localStorage.setItem('language', lang);
-  };
+  }, [dispatch, i18n]);
 
   return (
     <FormControl size="small" sx={{ minWidth: 80 }}>
