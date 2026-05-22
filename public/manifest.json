@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "OGP Dev Tool",
   "description": "A developer tool to simulate OGP drawing results.Localhost results can also be easily previewed.",
-  "version": "1.0",
+  "version": "1.1.0",
   "devtools_page": "devtools_page.html",
   "options_ui": {
     "page": "options.html"
@@ -24,21 +24,14 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["<all_urls>"],
       "run_at": "document_start",
-      "js": [
-        "js/vendor.js",
-        "js/content_script.js"
-      ]
+      "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],
   "background": {
     "service_worker": "js/background.js"
   },
   "permissions": [],
-  "host_permissions": [
-    "<all_urls>"
-  ]
+  "host_permissions": ["<all_urls>"]
 }

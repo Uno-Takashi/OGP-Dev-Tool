@@ -3,12 +3,16 @@ name: release
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: "Release version (e.g. 1.2.0)"
+      bump_type:
+        description: "Version bump type"
         required: true
-        type: string
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
       release_note:
-        description: "Release notes"
+        description: "Release notes (optional)"
         required: false
         type: string
 
@@ -19,6 +23,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -29,6 +35,28 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
+      - name: Bump version
+        id: version
+        run: |
+          NEW_VERSION=$(npm version ${{ github.event.inputs.bump_type }} --no-git-tag-version)
+          VERSION_NUM=${NEW_VERSION#v}
+          echo "new_version=${NEW_VERSION}" >> $GITHUB_OUTPUT
+          export VERSION_NUM
+          node << 'EOF'
+          const fs = require('fs');
+          const m = JSON.parse(fs.readFileSync('public/manifest.json', 'utf8'));
+          m.version = process.env.VERSION_NUM;
+          fs.writeFileSync('public/manifest.json', JSON.stringify(m, null, 2) + '\n');
+          EOF
+
+      - name: Commit and push version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json public/manifest.json
+          git commit -m "chore: bump version to ${{ steps.version.outputs.new_version }} [skip ci]"
+          git push origin HEAD:main
+
       - name: Build
         run: npm run build
 
@@ -38,11 +66,12 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: v${{ github.event.inputs.version }}
-          name: v${{ github.event.inputs.version }}
+          tag_name: ${{ steps.version.outputs.new_version }}
+          name: ${{ steps.version.outputs.new_version }}
           body: ${{ github.event.inputs.release_note }}
           files: release.zip
           generate_release_notes: true
+          target_commitish: main
 
       - name: Upload to Chrome Web Store
         uses: mnao305/chrome-extension-upload@v6.0.0
