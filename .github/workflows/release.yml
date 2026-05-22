@@ -38,7 +38,7 @@ jobs:
       - name: Bump version
         id: version
         run: |
-          NEW_VERSION=$(npm version ${{ github.event.inputs.bump_type }} --no-git-tag-version)
+          NEW_VERSION=$(npm version "${{ github.event.inputs.bump_type }}" --no-git-tag-version)
           VERSION_NUM=${NEW_VERSION#v}
           echo "new_version=${NEW_VERSION}" >> $GITHUB_OUTPUT
           export VERSION_NUM
