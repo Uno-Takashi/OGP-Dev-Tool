@@ -14,27 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create size labels if missing
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const labels = [
-              { name: 'XS', color: '3cbf00', description: 'Extra small change (< 10 lines)' },
-              { name: 'S',  color: '5d9801', description: 'Small change (10-49 lines)' },
-              { name: 'M',  color: 'e1b01b', description: 'Medium change (50-199 lines)' },
-              { name: 'L',  color: 'eb6420', description: 'Large change (200-499 lines)' },
-              { name: 'XL', color: 'e11d48', description: 'Extra large change (500+ lines)' },
-            ];
-            for (const label of labels) {
-              try {
-                await github.rest.issues.createLabel({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  ...label,
-                });
-              } catch (e) {
-                if (e.status !== 422) throw e;
-              }
-            }
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create XS --color 3cbf00 --description "Extra small change (< 10 lines)" --repo ${{ github.repository }} 2>/dev/null || true
+          gh label create S  --color 5d9801 --description "Small change (10-49 lines)"      --repo ${{ github.repository }} 2>/dev/null || true
+          gh label create M  --color e1b01b --description "Medium change (50-199 lines)"    --repo ${{ github.repository }} 2>/dev/null || true
+          gh label create L  --color eb6420 --description "Large change (200-499 lines)"    --repo ${{ github.repository }} 2>/dev/null || true
+          gh label create XL --color e11d48 --description "Extra large change (500+ lines)" --repo ${{ github.repository }} 2>/dev/null || true
 
       - name: Apply size label
         uses: srvaroa/labeler@v1
