@@ -17,12 +17,12 @@ import CachedIcon from '@mui/icons-material/Cached';
 import CodeIcon from '@mui/icons-material/Code';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { useTranslation } from 'react-i18next';
 import '../../i18n';
 import { store } from '../store';
 import { AppThemeProvider } from '../contexts/ThemeContext';
 import { DarkModeToggle } from '../components/common/DarkModeToggle';
-import { LanguageSwitcher } from '../components/common/LanguageSwitcher';
 import { OGPTable } from '../components/OGPTable';
 import { TwitterPreview } from '../components/previews/TwitterPreview';
 import { FacebookPreview } from '../components/previews/FacebookPreview';
@@ -145,7 +145,15 @@ function Panel() {
             </IconButton>
           </Tooltip>
           <Box sx={{ flexGrow: 1 }} />
-          <LanguageSwitcher />
+          <Tooltip title={t('panel.settings')}>
+            <IconButton
+              size="small"
+              color="inherit"
+              onClick={() => chrome.runtime.openOptionsPage()}
+            >
+              <SettingsIcon />
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
 

@@ -7,6 +7,7 @@
     "exportJson": "导出为 JSON",
     "exportHtml": "导出为 HTML",
     "github": "在GitHub上查看源码",
+    "settings": "设置",
     "loading": "加载中...",
     "table": {
       "ogpType": "OGP类型",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Open Graph Protocol 检查器",
     "currentUrl": "当前URL",
+    "downloadUrl": "将URL下载为文本文件",
     "howToUse": "使用方法",
     "step1": "打开页面",
     "step1Desc": "导航至您想检查的网站",

@@ -7,6 +7,7 @@
     "exportJson": "تصدير كـ JSON",
     "exportHtml": "تصدير كـ HTML",
     "github": "عرض الكود المصدري على GitHub",
+    "settings": "الإعدادات",
     "loading": "جار التحميل...",
     "table": {
       "ogpType": "نوع OGP",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "فاحص بروتوكول Open Graph",
     "currentUrl": "الرابط الحالي",
+    "downloadUrl": "تنزيل الرابط كملف نصي",
     "howToUse": "كيفية الاستخدام",
     "step1": "فتح صفحة",
     "step1Desc": "انتقل إلى الموقع الذي تريد فحصه",
