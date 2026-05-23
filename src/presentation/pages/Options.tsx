@@ -73,6 +73,7 @@ function Options() {
               const lang = e.target.value as SupportedLanguage;
               setLanguage(lang);
               i18n.changeLanguage(lang);
+              localStorage.setItem('language', lang);
             }}
           >
             {LANGUAGES.map((l) => (

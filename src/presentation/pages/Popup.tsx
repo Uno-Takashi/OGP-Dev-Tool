@@ -18,7 +18,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import type { SelectChangeEvent } from '@mui/material/Select';
-import '../../i18n';
+import { SUPPORTED_LANGUAGES } from '../../i18n';
 import type { SupportedLanguage } from '../../i18n';
 
 interface LanguageOption {
@@ -48,9 +48,12 @@ const LANGUAGE_OPTIONS: LanguageOption[] = [
 function Popup() {
   const { t, i18n } = useTranslation();
   const [url, setUrl] = useState('');
-  const [language, setLanguage] = useState<SupportedLanguage>(
-    () => (localStorage.getItem('language') as SupportedLanguage) ?? 'en'
-  );
+  const [language, setLanguage] = useState<SupportedLanguage>(() => {
+    const stored = localStorage.getItem('language');
+    return stored && (SUPPORTED_LANGUAGES as readonly string[]).includes(stored)
+      ? (stored as SupportedLanguage)
+      : 'en';
+  });
 
   const theme = useMemo(
     () =>
@@ -86,7 +89,7 @@ function Popup() {
     document.body.append(a);
     a.click();
     a.remove();
-    URL.revokeObjectURL(objectUrl);
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 100);
   }, [url]);
 
   const steps = useMemo(
@@ -117,6 +120,7 @@ function Popup() {
             <Select
               value={language}
               onChange={handleLanguageChange}
+              inputProps={{ 'aria-label': t('common.language') }}
               renderValue={(val) => LANGUAGE_OPTIONS.find((o) => o.value === val)?.code ?? val}
             >
               {LANGUAGE_OPTIONS.map((opt) => (
