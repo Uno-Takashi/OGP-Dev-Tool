@@ -1,0 +1,45 @@
+version: 1
+labels:
+  - label: "XS"
+    size:
+      below: 10
+      exclude-files:
+        - "package-lock.json"
+        - "yarn.lock"
+        - "pnpm-lock.yaml"
+        - ".+\\.lock"
+  - label: "S"
+    size:
+      above: 9
+      below: 50
+      exclude-files:
+        - "package-lock.json"
+        - "yarn.lock"
+        - "pnpm-lock.yaml"
+        - ".+\\.lock"
+  - label: "M"
+    size:
+      above: 49
+      below: 200
+      exclude-files:
+        - "package-lock.json"
+        - "yarn.lock"
+        - "pnpm-lock.yaml"
+        - ".+\\.lock"
+  - label: "L"
+    size:
+      above: 199
+      below: 500
+      exclude-files:
+        - "package-lock.json"
+        - "yarn.lock"
+        - "pnpm-lock.yaml"
+        - ".+\\.lock"
+  - label: "XL"
+    size:
+      above: 499
+      exclude-files:
+        - "package-lock.json"
+        - "yarn.lock"
+        - "pnpm-lock.yaml"
+        - ".+\\.lock"
