@@ -7,6 +7,7 @@
     "exportJson": "Экспорт в JSON",
     "exportHtml": "Экспорт в HTML",
     "github": "Просмотреть исходный код на GitHub",
+    "settings": "Настройки",
     "loading": "Загрузка...",
     "table": {
       "ogpType": "Тип OGP",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Инспектор Open Graph Protocol",
     "currentUrl": "Текущий URL",
+    "downloadUrl": "Скачать URL как текстовый файл",
     "howToUse": "Как использовать",
     "step1": "Открыть страницу",
     "step1Desc": "Перейдите на сайт, который хотите проверить",

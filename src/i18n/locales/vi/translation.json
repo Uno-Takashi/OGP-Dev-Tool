@@ -7,6 +7,7 @@
     "exportJson": "Xuất dưới dạng JSON",
     "exportHtml": "Xuất dưới dạng HTML",
     "github": "Xem mã nguồn trên GitHub",
+    "settings": "Cài đặt",
     "loading": "Đang tải...",
     "table": {
       "ogpType": "Loại OGP",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Trình kiểm tra Open Graph Protocol",
     "currentUrl": "URL hiện tại",
+    "downloadUrl": "Tải URL dưới dạng tệp văn bản",
     "howToUse": "Cách sử dụng",
     "step1": "Mở trang",
     "step1Desc": "Điều hướng đến trang web bạn muốn kiểm tra",

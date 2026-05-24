@@ -7,6 +7,7 @@
     "exportJson": "Exporteren als JSON",
     "exportHtml": "Exporteren als HTML",
     "github": "Broncode bekijken op GitHub",
+    "settings": "Instellingen",
     "loading": "Laden...",
     "table": {
       "ogpType": "OGP-type",
@@ -53,6 +54,7 @@
     "title": "OGP Dev Tool",
     "subtitle": "Open Graph Protocol Inspector",
     "currentUrl": "Huidige URL",
+    "downloadUrl": "URL downloaden als tekstbestand",
     "howToUse": "Hoe te gebruiken",
     "step1": "Pagina openen",
     "step1Desc": "Navigeer naar de website die je wilt inspecteren",
