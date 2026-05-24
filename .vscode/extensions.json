@@ -32,6 +32,7 @@
 
     // Code quality
     "streetsidesoftware.code-spell-checker",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "anthropic.claude-code"
   ]
 }

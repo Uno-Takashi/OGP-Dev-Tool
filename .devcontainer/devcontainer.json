@@ -31,7 +31,8 @@
         "redhat.vscode-yaml",
         "yzhang.markdown-all-in-one",
         "streetsidesoftware.code-spell-checker",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "Anthropic.claude-code"
       ]
     }
   }
