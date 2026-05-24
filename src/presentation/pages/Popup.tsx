@@ -106,7 +106,7 @@ function Popup() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ width: 360, p: 2 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
           <Box component="img" src="icon32.png" alt="OGP Dev Tool" sx={{ width: 32, height: 32 }} />
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.2 }}>
@@ -116,21 +116,25 @@ function Popup() {
               {t('popup.subtitle')}
             </Typography>
           </Box>
-          <FormControl size="small" sx={{ minWidth: 70 }}>
-            <Select
-              value={language}
-              onChange={handleLanguageChange}
-              inputProps={{ 'aria-label': t('common.language') }}
-              renderValue={(val) => LANGUAGE_OPTIONS.find((o) => o.value === val)?.code ?? val}
-            >
-              {LANGUAGE_OPTIONS.map((opt) => (
-                <MenuItem key={opt.value} value={opt.value}>
-                  {opt.native}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
         </Box>
+
+        <FormControl size="small" fullWidth sx={{ mb: 1.5 }}>
+          <Select
+            value={language}
+            onChange={handleLanguageChange}
+            inputProps={{ 'aria-label': t('common.language') }}
+            renderValue={(val) => {
+              const opt = LANGUAGE_OPTIONS.find((o) => o.value === val);
+              return opt ? `${opt.code} — ${opt.native}` : val;
+            }}
+          >
+            {LANGUAGE_OPTIONS.map((opt) => (
+              <MenuItem key={opt.value} value={opt.value}>
+                {opt.native}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
         <Divider sx={{ mb: 1.5 }} />
 
