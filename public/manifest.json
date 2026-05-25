@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "OGP Dev Tool",
-  "description": "A developer tool to simulate OGP drawing results.Localhost results can also be easily previewed.",
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
   "version": "2.1.1",
   "devtools_page": "devtools_page.html",
   "options_ui": {

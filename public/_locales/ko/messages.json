@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "OGP Dev Tool"
+  },
+  "extensionDescription": {
+    "message": "OGP 렌더링 결과를 시뮬레이션하는 개발자 도구입니다. 로컬호스트 결과도 쉽게 미리 볼 수 있습니다."
+  }
+}
