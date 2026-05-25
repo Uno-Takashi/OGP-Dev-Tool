@@ -76,7 +76,7 @@
     "storybook": "^10.4.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.7.2",
+    "typescript": "^6.0.3",
     "webpack": "^5.97.1",
     "webpack-cli": "^7.0.2",
     "webpack-merge": "^6.0.1"
