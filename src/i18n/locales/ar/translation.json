@@ -6,6 +6,7 @@
     "autoReload": "إعادة التحميل التلقائي عند التنقل",
     "exportJson": "تصدير كـ JSON",
     "exportHtml": "تصدير كـ HTML",
+    "openInNewTab": "فتح في علامة تبويب جديدة",
     "github": "عرض الكود المصدري على GitHub",
     "settings": "الإعدادات",
     "loading": "جار التحميل...",

@@ -6,6 +6,7 @@
     "autoReload": "页面跳转时自动重载",
     "exportJson": "导出为 JSON",
     "exportHtml": "导出为 HTML",
+    "openInNewTab": "在新标签页中打开",
     "github": "在GitHub上查看源码",
     "settings": "设置",
     "loading": "加载中...",

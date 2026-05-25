@@ -6,6 +6,7 @@
     "autoReload": "Automatisch herladen bij navigatie",
     "exportJson": "Exporteren als JSON",
     "exportHtml": "Exporteren als HTML",
+    "openInNewTab": "Openen in nieuw tabblad",
     "github": "Broncode bekijken op GitHub",
     "settings": "Instellingen",
     "loading": "Laden...",

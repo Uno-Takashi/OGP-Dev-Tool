@@ -6,6 +6,7 @@
     "autoReload": "Gezinmede otomatik yenile",
     "exportJson": "JSON olarak dışa aktar",
     "exportHtml": "HTML olarak dışa aktar",
+    "openInNewTab": "Yeni sekmede aç",
     "github": "GitHub'da kaynağı görüntüle",
     "settings": "Ayarlar",
     "loading": "Yükleniyor...",

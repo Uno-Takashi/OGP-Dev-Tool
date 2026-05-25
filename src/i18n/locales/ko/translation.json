@@ -6,6 +6,7 @@
     "autoReload": "탐색 시 자동 새로고침",
     "exportJson": "JSON으로 내보내기",
     "exportHtml": "HTML로 내보내기",
+    "openInNewTab": "새 탭에서 열기",
     "github": "GitHub에서 소스 보기",
     "settings": "설정",
     "loading": "로딩 중...",

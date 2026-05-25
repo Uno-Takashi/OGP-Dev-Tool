@@ -6,6 +6,7 @@
     "autoReload": "Tự động tải lại khi điều hướng",
     "exportJson": "Xuất dưới dạng JSON",
     "exportHtml": "Xuất dưới dạng HTML",
+    "openInNewTab": "Mở trong tab mới",
     "github": "Xem mã nguồn trên GitHub",
     "settings": "Cài đặt",
     "loading": "Đang tải...",
