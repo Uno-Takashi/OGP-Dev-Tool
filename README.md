@@ -4,8 +4,13 @@
 [![Code Quality](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml/badge.svg)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/code-quality.yml)
 [![Supply Chain](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/supply-chain.yml/badge.svg)](https://github.com/Uno-Takashi/OGP-Dev-Tool/actions/workflows/supply-chain.yml)
 [![Storybook](https://img.shields.io/badge/Storybook-Docs-FF4785?logo=storybook&logoColor=white)](https://uno-takashi.github.io/OGP-Dev-Tool/)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fehhelhhiplgdhpoebcgnhcdcfahmjjo?label=users&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/ogp-dev-tool/fehhelhhiplgdhpoebcgnhcdcfahmjjo)
 
 OGP Dev Tool is a Chrome DevTools extension for developers to instantly preview how Open Graph Protocol (OGP) metadata renders on social networks and UI component libraries — including **localhost** without any uploads.
+
+## Install
+
+**[Install from Chrome Web Store](https://chromewebstore.google.com/detail/ogp-dev-tool/fehhelhhiplgdhpoebcgnhcdcfahmjjo)**
 
 ## Features
 
