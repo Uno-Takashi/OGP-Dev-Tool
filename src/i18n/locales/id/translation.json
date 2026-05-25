@@ -6,6 +6,7 @@
     "autoReload": "Muat ulang otomatis saat navigasi",
     "exportJson": "Ekspor sebagai JSON",
     "exportHtml": "Ekspor sebagai HTML",
+    "openInNewTab": "Buka di tab baru",
     "github": "Lihat kode sumber di GitHub",
     "settings": "Pengaturan",
     "loading": "Memuat...",

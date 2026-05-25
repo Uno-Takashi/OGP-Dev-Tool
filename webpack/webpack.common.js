@@ -11,6 +11,7 @@ module.exports = {
         content_script: path.join(srcDir, "chrome", "content_script.tsx"),
         devtools_page: path.join(srcDir, "chrome", "devtools_page.tsx"),
         devtools_panel: path.join(srcDir, "presentation", "pages", "DevToolsPanel.tsx"),
+        preview: path.join(srcDir, "presentation", "pages", "Preview.tsx"),
     },
     watchOptions: {
         ignored: /node_modules/,

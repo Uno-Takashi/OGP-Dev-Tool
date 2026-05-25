@@ -17,6 +17,7 @@ import CachedIcon from '@mui/icons-material/Cached';
 import CodeIcon from '@mui/icons-material/Code';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useTranslation } from 'react-i18next';
 import '../../i18n';
@@ -40,6 +41,8 @@ function Panel() {
   const { tags, isLoading, error, imageUrl, title, description, origin, siteName } = useOGPData();
   const hasLoaded = useAppSelector((state) => state.ogp.hasLoaded);
   const isAutoReload = useAppSelector((state) => state.ui.isAutoReload);
+  const isDarkMode = useAppSelector((state) => state.ui.isDarkMode);
+  const language = useAppSelector((state) => state.ui.language);
 
   const [showToast, setShowToast] = useState(false);
   const isExplicitReload = useRef(false);
@@ -87,6 +90,11 @@ function Panel() {
   const handleExportJson = useCallback(() => exportOGPAsJson(tags), [tags]);
   const handleExportHtml = useCallback(() => exportOGPAsHtml(tags), [tags]);
 
+  const handleOpenInNewTab = useCallback(() => {
+    const encoded = encodeURIComponent(JSON.stringify({ tags, isDarkMode, language }));
+    chrome.tabs.create({ url: `${chrome.runtime.getURL('preview.html')}#data=${encoded}` });
+  }, [tags, isDarkMode, language]);
+
   const isInitialLoad = !hasLoaded && isLoading;
   const isReloading = hasLoaded && isLoading;
 
@@ -129,6 +137,18 @@ function Panel() {
                 disabled={!hasLoaded || tags.length === 0}
               >
                 <CodeIcon />
+              </IconButton>
+            </span>
+          </Tooltip>
+          <Tooltip title={t('panel.openInNewTab')}>
+            <span>
+              <IconButton
+                onClick={handleOpenInNewTab}
+                color="inherit"
+                size="small"
+                disabled={!hasLoaded || isLoading}
+              >
+                <OpenInNewIcon />
               </IconButton>
             </span>
           </Tooltip>

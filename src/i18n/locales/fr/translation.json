@@ -6,6 +6,7 @@
     "autoReload": "Rechargement automatique à la navigation",
     "exportJson": "Exporter en JSON",
     "exportHtml": "Exporter en HTML",
+    "openInNewTab": "Ouvrir dans un nouvel onglet",
     "github": "Voir le code source sur GitHub",
     "settings": "Paramètres",
     "loading": "Chargement...",
