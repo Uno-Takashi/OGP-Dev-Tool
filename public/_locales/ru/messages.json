@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "OGP Dev Tool"
+  },
+  "extensionDescription": {
+    "message": "Инструмент разработчика для симуляции результатов отображения OGP. Результаты localhost также можно легко просматривать."
+  }
+}
