@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import { useTranslation } from 'react-i18next';
-import '../../i18n';
+import i18n, { type SupportedLanguage } from '../../i18n';
 import type { OGPTag } from '../../domain/entities/OGPMetadata';
-import type { SupportedLanguage } from '../../i18n';
 import { store } from '../store';
 import { setDarkMode, setLanguage } from '../store/uiSlice';
 import { AppThemeProvider } from '../contexts/ThemeContext';
@@ -23,35 +21,23 @@ interface PreviewData {
   language: SupportedLanguage;
 }
 
-// Initialize store from URL hash before first render to avoid theme flash
-const _params = new URLSearchParams(window.location.hash.slice(1));
-const _raw = _params.get('data');
-if (_raw) {
+function parseHashData(): OGPTag[] {
+  const params = new URLSearchParams(globalThis.location.hash.slice(1));
+  const raw = params.get('data');
+  if (!raw) return [];
   try {
-    const parsed = JSON.parse(decodeURIComponent(_raw)) as PreviewData;
-    store.dispatch(setDarkMode(parsed.isDarkMode));
-    store.dispatch(setLanguage(parsed.language));
+    const { tags, isDarkMode, language } = JSON.parse(decodeURIComponent(raw)) as PreviewData;
+    store.dispatch(setDarkMode(isDarkMode));
+    store.dispatch(setLanguage(language));
+    void i18n.changeLanguage(language);
+    return tags;
   } catch {
-    // ignore invalid hash data
+    return [];
   }
 }
 
 function Preview() {
-  const { i18n } = useTranslation();
-  const [tags, setTags] = useState<OGPTag[]>([]);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.hash.slice(1));
-    const raw = params.get('data');
-    if (!raw) return;
-    try {
-      const { tags: t, language: l } = JSON.parse(decodeURIComponent(raw)) as PreviewData;
-      setTags(t);
-      void i18n.changeLanguage(l);
-    } catch {
-      // ignore invalid hash data
-    }
-  }, [i18n]);
+  const [tags] = useState<OGPTag[]>(parseHashData);
 
   const imageUrl = tags.find((t) => t.ogpType === 'og:image')?.contentValue ?? null;
   const title = tags.find((t) => t.ogpType === 'og:title')?.contentValue ?? '';
@@ -71,12 +57,7 @@ function Preview() {
 
       <Divider sx={{ my: 2 }} />
 
-      <TwitterPreview
-        imageUrl={imageUrl}
-        title={title}
-        description={description}
-        origin={origin}
-      />
+      <TwitterPreview imageUrl={imageUrl} title={title} description={description} origin={origin} />
       <FacebookPreview
         imageUrl={imageUrl}
         title={title}
@@ -99,12 +80,7 @@ function Preview() {
         description={description}
         origin={origin}
       />
-      <MUIPreview
-        imageUrl={imageUrl}
-        title={title}
-        description={description}
-        origin={origin}
-      />
+      <MUIPreview imageUrl={imageUrl} title={title} description={description} origin={origin} />
     </Box>
   );
 }
