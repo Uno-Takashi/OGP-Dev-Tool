@@ -45,7 +45,7 @@
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^10.4.1",
+    "@storybook/addon-a11y": "^10.4.2",
     "@storybook/addon-docs": "^10.4.2",
     "@storybook/addon-onboarding": "^10.4.1",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.3",
