@@ -29,12 +29,13 @@ updates:
           - "i18next"
           - "react-i18next"
           - "i18next-*"
-      webpack:
+      rspack:
         patterns:
-          - "webpack"
-          - "webpack-*"
-          - "*-loader"
-          - "*-plugin"
+          - "@rspack/*"
+      storybook:
+        patterns:
+          - "@storybook/*"
+          - "storybook"
 
   - package-ecosystem: "github-actions"
     directory: "/"

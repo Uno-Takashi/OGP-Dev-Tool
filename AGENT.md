@@ -28,7 +28,7 @@ src/
 │   │                     # AntDesignPreview, MUIPreview
 │   ├── contexts/         # ThemeContext (MUI theme driven by Redux)
 │   ├── hooks/            # useOGPData, useAppDispatch, useAppSelector
-│   ├── pages/            # DevToolsPanel, Popup, Options (webpack entries)
+│   ├── pages/            # DevToolsPanel, Popup, Options (rspack entries)
 │   └── store/            # Redux Toolkit: ogpSlice + uiSlice
 ├── i18n/                 # react-i18next config + locale JSON
 │   └── locales/          # 15 languages: en, ja, zh, de, fr, es, pt,
@@ -44,23 +44,25 @@ src/
 
 ## Key Technologies
 
-| Purpose | Library |
-|---|---|
-| UI Framework | React 19 |
-| Language | TypeScript 5 |
-| UI Components | Material UI v9 (`@mui/material`) |
-| Design Preview | Ant Design v5 (`antd`) |
-| State Management | Redux Toolkit v2 + react-redux v9 |
-| i18n | i18next v26 + react-i18next v17 |
-| Build | webpack 5 + ts-loader |
-| CSS | SCSS + Tailwind CSS v4 |
-| Testing | Jest v30 + jest-environment-jsdom + ts-jest |
-| Linting | ESLint v9 (flat config `eslint.config.js`) + unicorn, security plugins |
-| Formatting | Prettier 3 (`.prettierrc.json`) |
+| Purpose          | Library                                                                |
+| ---------------- | ---------------------------------------------------------------------- |
+| UI Framework     | React 19                                                               |
+| Language         | TypeScript 5                                                           |
+| UI Components    | Material UI v9 (`@mui/material`)                                       |
+| Design Preview   | Ant Design v5 (`antd`)                                                 |
+| State Management | Redux Toolkit v2 + react-redux v9                                      |
+| i18n             | i18next v26 + react-i18next v17                                        |
+| Build            | Rspack + builtin:swc-loader                                            |
+| Package Manager  | pnpm                                                                   |
+| CSS              | SCSS + Tailwind CSS v4                                                 |
+| Testing          | Jest v30 + jest-environment-jsdom + ts-jest                            |
+| Linting          | ESLint v9 (flat config `eslint.config.js`) + unicorn, security plugins |
+| Formatting       | Prettier 3 (`.prettierrc.json`)                                        |
 
 ## Import Paths
 
 Path depth from file to `src/` root:
+
 - `src/presentation/components/*.tsx` → use `../../` to reach `src/`
 - `src/presentation/components/common/*.tsx` → use `../../../` to reach `src/`
 - `src/presentation/components/previews/*.tsx` → use `../../../` to reach `src/`
@@ -75,29 +77,29 @@ Path depth from file to `src/` root:
 **After making any code changes, always verify the build via Docker:**
 
 ```bash
-docker compose run --rm typescript npm run build
+docker compose run --rm typescript pnpm run build
 ```
 
-This is the canonical build verification step. Direct `npm run build` can also be used locally, but the Docker build is the definitive check to ensure the container environment is consistent.
+This is the canonical build verification step. Direct `pnpm run build` can also be used locally, but the Docker build is the definitive check to ensure the container environment is consistent.
 
 Other useful commands (run via Docker or locally):
 
 ```bash
-docker compose run --rm typescript npm run type-check  # TypeScript check
-docker compose run --rm typescript npm run lint        # ESLint
-docker compose run --rm typescript npm run test        # Jest tests
-docker compose up                                      # webpack watch mode
+docker compose run --rm typescript pnpm run type-check  # TypeScript check
+docker compose run --rm typescript pnpm run lint        # ESLint
+docker compose run --rm typescript pnpm run test        # Jest tests
+docker compose up                                       # rspack watch mode
 ```
 
 Or run directly without Docker:
 
 ```bash
-npm run watch       # Dev build with watch
-npm run build       # Production build
-npm run test        # Jest tests
-npm run lint        # ESLint
-npm run type-check  # tsc --noEmit
-npm run format      # Prettier
+pnpm run watch       # Dev build with watch (rspack)
+pnpm run build       # Production build (rspack)
+pnpm run test        # Jest tests
+pnpm run lint        # ESLint
+pnpm run type-check  # tsc --noEmit
+pnpm run format      # Prettier
 ```
 
 Build output: `dist/`. Load in Chrome: chrome://extensions → Developer mode → Load unpacked → `dist/`
@@ -110,6 +112,7 @@ Build output: `dist/`. Load in Chrome: chrome://extensions → Developer mode �
 - **Options Page** — Language + theme prefs saved to `localStorage`
 
 **Message flow:**
+
 ```
 DevTools Panel → chrome.tabs.sendMessage(tabId) → Content Script → parse DOM → sendResponse(OGPTag[])
 ```
@@ -135,7 +138,7 @@ When adding UI strings, add the key to **all 15** locale files.
 
 ```typescript
 const { t } = useTranslation();
-t('panel.reload') // → "Reload OGP data"
+t('panel.reload'); // → "Reload OGP data"
 ```
 
 ## Adding a New OGP Preview
@@ -158,16 +161,17 @@ t('panel.reload') // → "Reload OGP data"
 
 ## CI/CD Workflows
 
-| Workflow | Trigger | Purpose |
-|---|---|---|
-| `build.yml` | Push/PR to `main` | Type check, lint, test, build |
-| `code-quality.yml` | Every push | Security scan, spell/link check, actionlint |
-| `supply-chain.yml` | Push/PR to `main` + weekly | npm audit, Dependency Review, OSSF Scorecard |
-| `release.yml` | Manual dispatch | Version bump (patch/minor/major) → build → GitHub Release → Chrome Web Store |
+| Workflow           | Trigger                    | Purpose                                                                      |
+| ------------------ | -------------------------- | ---------------------------------------------------------------------------- |
+| `build.yml`        | Push/PR to `main`          | Type check, lint, test, build                                                |
+| `code-quality.yml` | Every push                 | Security scan, spell/link check, actionlint                                  |
+| `supply-chain.yml` | Push/PR to `main` + weekly | pnpm audit, Dependency Review, OSSF Scorecard                                |
+| `release.yml`      | Manual dispatch            | Version bump (patch/minor/major) → build → GitHub Release → Chrome Web Store |
 
 ### Release Process
 
 Trigger `release.yml` via GitHub Actions → Workflow Dispatch:
+
 1. Select bump type: `patch` / `minor` / `major`
 2. Optionally add release notes
 3. Workflow automatically: bumps `package.json` + `manifest.json`, commits back to `main`, builds, creates GitHub Release with zip, uploads to Chrome Web Store
@@ -175,6 +179,7 @@ Trigger `release.yml` via GitHub Actions → Workflow Dispatch:
 ### Chrome Web Store Publishing Secrets
 
 Set in repository secrets:
+
 - `EXTENSION_ID` — Chrome Web Store extension ID
 - `CLIENT_ID` — Google OAuth 2.0 client ID
 - `CLIENT_SECRET` — Google OAuth 2.0 client secret

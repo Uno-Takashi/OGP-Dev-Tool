@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       bump_type:
-        description: "Version bump type"
+        description: 'Version bump type'
         required: true
         type: choice
         options:
@@ -12,7 +12,7 @@ on:
           - minor
           - major
       release_note:
-        description: "Release notes (optional)"
+        description: 'Release notes (optional)'
         required: false
         type: string
 
@@ -26,19 +26,32 @@ jobs:
         with:
           ref: main
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "24"
-          cache: "npm"
+          node-version: '24'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+        run: pnpm install --frozen-lockfile
 
       - name: Bump version
         id: version
         run: |
-          NEW_VERSION=$(npm version "${{ github.event.inputs.bump_type }}" --no-git-tag-version)
+          NEW_VERSION=$(node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            const [major, minor, patch] = pkg.version.split('.').map(Number);
+            const bump = '${{ github.event.inputs.bump_type }}';
+            if (bump === 'major') pkg.version = (major+1)+'.0.0';
+            else if (bump === 'minor') pkg.version = major+'.'+(minor+1)+'.0';
+            else pkg.version = major+'.'+minor+'.'+(patch+1);
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+            console.log('v' + pkg.version);
+          ")
           VERSION_NUM=${NEW_VERSION#v}
           echo "new_version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
           export VERSION_NUM
@@ -53,12 +66,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add package.json package-lock.json public/manifest.json
+          git add package.json pnpm-lock.yaml public/manifest.json
           git commit -m "chore: bump version to ${{ steps.version.outputs.new_version }} [skip ci]"
           git push origin HEAD:main
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Package extension
         run: zip -r ogp-dev-tool_${{ steps.version.outputs.new_version }}.zip dist/

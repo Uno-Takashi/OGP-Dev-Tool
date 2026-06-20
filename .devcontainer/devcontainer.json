@@ -1,8 +1,16 @@
 {
   "name": "OGP Dev Tool",
-  "dockerComposeFile": ["../docker-compose.yml"],
-  "service": "typescript",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24",
+      "pnpmVersion": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
   "workspaceFolder": "/app/",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
+  "postCreateCommand": "corepack enable && pnpm install",
   "customizations": {
     "vscode": {
       "settings": {
@@ -33,6 +41,42 @@
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
         "Anthropic.claude-code"
+      ]
+    },
+    "copilot": {
+      "terminalCommandAllowList": [
+        "pnpm install",
+        "pnpm run watch",
+        "pnpm run build",
+        "pnpm run clean",
+        "pnpm run lint",
+        "pnpm run lint:fix",
+        "pnpm run type-check",
+        "pnpm run format",
+        "pnpm run format:check",
+        "pnpm run storybook",
+        "pnpm run build-storybook",
+        "pnpm add *",
+        "pnpm remove *",
+        "rspack *",
+        "tsc --noEmit",
+        "eslint *",
+        "prettier *",
+        "rimraf dist",
+        "ls *",
+        "cat *",
+        "find *",
+        "grep *",
+        "tree *",
+        "head *",
+        "tail *",
+        "wc *",
+        "diff *",
+        "pwd",
+        "echo *",
+        "which *",
+        "node *",
+        "npx *"
       ]
     }
   }

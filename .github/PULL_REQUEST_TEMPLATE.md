@@ -21,9 +21,9 @@
 
 <!-- Describe how you tested this change -->
 
-- [ ] Ran `npm test` — all tests pass
-- [ ] Ran `npm run type-check` — no type errors
-- [ ] Ran `npm run lint` — no lint errors
+- [ ] Ran `pnpm test` — all tests pass
+- [ ] Ran `pnpm run type-check` — no type errors
+- [ ] Ran `pnpm run lint` — no lint errors
 - [ ] Manually loaded extension in Chrome and verified behavior
 
 ## Screenshots (if UI changes)
