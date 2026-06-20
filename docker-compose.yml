@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: ogp-dev-tool
-    command: npm run watch
+    command: pnpm run watch
     tty: true
     volumes:
       - ./:/app
