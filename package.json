@@ -54,7 +54,7 @@
     "@storybook/addon-onboarding": "^10.4.2",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.3",
     "@storybook/react-webpack5": "^10.4.2",
-    "@types/chrome": "^0.1.43",
+    "@types/chrome": "^0.2.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
