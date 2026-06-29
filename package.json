@@ -23,7 +23,7 @@
     "url": "https://github.com/Uno-Takashi/OGP-Dev-Tool.git"
   },
   "dependencies": {
-    "@ant-design/icons": "^6.2.5",
+    "@ant-design/icons": "^6.3.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^9.0.1",
