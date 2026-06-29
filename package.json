@@ -79,6 +79,6 @@
     "storybook": "^10.4.2",
     "style-loader": "^4.0.0",
     "typescript": "^6.0.3",
-    "webpack": "^5.97.1"
+    "webpack": "^5.108.1"
   }
 }
