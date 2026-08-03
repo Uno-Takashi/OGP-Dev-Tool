@@ -30,7 +30,7 @@
     "@mui/material": "^9.1.2",
     "@reduxjs/toolkit": "^2.5.0",
     "@tailwindcss/postcss": "^4.3.3",
-    "antd": "^6.4.4",
+    "antd": "^6.5.2",
     "assert": "^2.1.0",
     "buffer": "^6.0.3",
     "clsx": "^2.1.1",
