@@ -87,7 +87,7 @@ jobs:
           target_commitish: main
 
       - name: Upload to Chrome Web Store
-        uses: mnao305/chrome-extension-upload@v6.0.0
+        uses: mnao305/chrome-extension-upload@v7.0.0
         with:
           file-path: ogp-dev-tool_${{ steps.version.outputs.new_version }}.zip
           extension-id: ${{ secrets.EXTENSION_ID }}
