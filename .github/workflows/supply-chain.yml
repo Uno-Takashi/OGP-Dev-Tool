@@ -23,7 +23,7 @@ jobs:
         uses: pnpm/action-setup@v6
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: 'pnpm'
@@ -65,7 +65,7 @@ jobs:
           persist-credentials: false
 
       - name: Run OSSF Scorecard
-        uses: ossf/scorecard-action@v2.4.4
+        uses: ossf/scorecard-action@v2.5.0
         with:
           results_file: results.sarif
           results_format: sarif
