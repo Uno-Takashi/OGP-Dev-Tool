@@ -91,6 +91,7 @@ jobs:
         with:
           file-path: ogp-dev-tool_${{ steps.version.outputs.new_version }}.zip
           extension-id: ${{ secrets.EXTENSION_ID }}
+          publisher-id: ${{ secrets.PUBLISHER_ID }}
           client-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           refresh-token: ${{ secrets.REFRESH_TOKEN }}

@@ -181,6 +181,7 @@ Trigger `release.yml` via GitHub Actions → Workflow Dispatch:
 Set in repository secrets:
 
 - `EXTENSION_ID` — Chrome Web Store extension ID
+- `PUBLISHER_ID` — Chrome Web Store publisher ID (Developer Dashboard → Publisher → Settings)
 - `CLIENT_ID` — Google OAuth 2.0 client ID
 - `CLIENT_SECRET` — Google OAuth 2.0 client secret
 - `REFRESH_TOKEN` — OAuth refresh token
